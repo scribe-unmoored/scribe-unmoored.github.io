@@ -1,1 +1,18 @@
+body {
+  background-color: #e8dcc2;
+  color: #2b2118;
+  font-family: Georgia, serif;
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px;
+  line-height: 1.6;
+}
 
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
