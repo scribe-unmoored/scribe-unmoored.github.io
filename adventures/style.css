@@ -89,7 +89,7 @@ h1 {
     }
 }
 
-.sidebar a {
+.sidebar a:not(.wheel-link) {
   display: block;
   color: #c5a35a;
   text-decoration: none;
