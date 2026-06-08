@@ -121,6 +121,10 @@ h1 {
     text-decoration: none;
 }
 
+.story pre {
+    white-space: pre-wrap;
+}
+
 .content {
   flex: 1;
   background: #151515;
