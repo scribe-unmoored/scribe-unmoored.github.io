@@ -121,6 +121,34 @@ h1 {
     text-decoration: none;
 }
 
+#themeButton {
+  background: transparent;
+  color: #c5a35a;
+  border: 1px solid #c5a35a;
+  padding: 12px 24px;
+  font-family: "Cinzel", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#themeButton:hover {
+  background-color: rgba(197, 163, 90, 0.1);
+  color: #e2d2a2;
+  border-color: #e2d2a2;
+}
+
+#themeButton:active {
+  transform: translateY(1px);
+}
+
+#themeButton:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(197, 163, 90, 0.4);
+}
+
 .content {
   flex: 1;
   background: #151515;
