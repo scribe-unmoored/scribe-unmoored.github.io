@@ -28,7 +28,7 @@ body {
   color: #9a9488;
   font-size: 3.00rem;
   letter-spacing: 0.5em;
-  font-family: "Cinzel", seriff;
+  font-family: "Cinzel", serif;
 }
 
 h1 {
@@ -109,6 +109,7 @@ h1 {
     color: #8a2d2d;
     opacity: 0.8;
     letter-spacing: 0.05em;
+    margin-bottom: 18px
 
     text-shadow:
         0 0 3px rgba(138,45,45,0.4);  
