@@ -65,7 +65,27 @@
       clearInterval(t);
       window.goatcounter.visit_count({
         append: '#visitor-count',
-        path: 'TOTAL'
+        path: 'TOTAL',
+        type: 'html',
+        style: `
+          div {
+            display: inline;
+            border: 0;
+            background: transparent;
+            color: inherit;
+            font: inherit;
+          }
+
+          #gcvc-for,
+          #gcvc-by {
+            display: none;
+          }
+
+          #gcvc-views {
+            color: #c5a35a;
+            font: inherit;
+          }
+        `
       });
     }
   }, 100);
