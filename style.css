@@ -171,3 +171,31 @@ h1 {
   padding-bottom: 2rem;
   opacity: 0.8;
 }
+
+.warning-container {
+max-width: 700px;
+margin: 4rem auto;
+text-align: center;
+}
+
+.halt-title {
+font-family: 'Cinzel', serif;
+font-size: 3rem;
+}
+
+.guard-image {
+margin: 1.5rem 0;
+}
+
+.warning-text {
+margin: 1rem 0;
+}
+
+.warning-buttons {
+margin-top: 2rem;
+}
+
+.warning-buttons a {
+margin: 0 1rem;
+}
+
