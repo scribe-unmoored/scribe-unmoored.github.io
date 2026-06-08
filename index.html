@@ -54,23 +54,22 @@
         <br>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;- Scribe</p>
         <div class="visitor-counter">
-          Dreamers Welcomed: <span id="visitor-count"></span>
+          Moths Gathered: <span id="visitor-count"></span>
         </div>
       </main>
     </div>
   </div>
   <script>
-    var t = setInterval(function() {
-      if (window.goatcounter && window.goatcounter.visit_count) {
-        clearInterval(t);
-        window.goatcounter.visit_count({
-          append: '#visitor-count',
-          path: 'TOTAL',
-          no_branding: true
-        });
-      }
-    }, 100);
-  </script>
+  var t = setInterval(function() {
+    if (window.goatcounter && window.goatcounter.visit_count) {
+      clearInterval(t);
+      window.goatcounter.visit_count({
+        append: '#visitor-count',
+        path: 'TOTAL'
+      });
+    }
+  }, 100);
+</script>
 </body>
 <footer class="copyright">
   <p>The Elder Scrolls and all related intellectual property are owned by Bethesda Softworks. </p>
