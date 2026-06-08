@@ -41,7 +41,7 @@
         <br>
         <p>And remember where you were, when the Dragon Broke</p>
         <br>
-        <button id="themeButton">Play Theme</button>
+        <button id="themeButton">Play/Pause Theme</button>
         <audio id="themeAudio">
           <source src="../../music/brasstower.wav">
         </audio>
@@ -50,8 +50,17 @@
     </div>
   </div>
   <script>
-  document.getElementById("themeButton").addEventListener("click", function() {
-      document.getElementById("themeAudio").play();
+  const button = document.getElementById("themeButton");
+  const audio = document.getElementById("themeAudio");
+  
+  button.addEventListener("click", function() {
+      if (audio.paused) {
+          audio.play();
+          button.textContent = "♫ Hear Theme ♫";
+      } else {
+          audio.pause();
+          button.textContent = "♫ Silence Theme ♫";
+      }
   });
   </script>
 </body>
