@@ -1,18 +1,78 @@
 body {
-  background-color: #e8dcc2;
-  color: #2b2118;
-  font-family: Georgia, serif;
-  max-width: 800px;
-  margin: 80px auto;
-  padding: 40px;
-  line-height: 1.6;
+  margin: 0;
+  background: #0b0b0b;
+  color: #d8d5cc;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.site-header {
+  text-align: center;
+  border-top: 1px solid #c5a35a;
+  border-bottom: 1px solid #c5a35a;
+  padding: 32px 0;
+  margin-bottom: 32px;
+}
+
+.website-title {
+  color: #9a9488;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
 }
 
 h1 {
-  text-align: center;
+  color: #c5a35a;
   font-size: 3rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
 }
 
-p {
-  font-size: 1.2rem;
+.subtitle {
+  color: #e2d2a2;
+  font-style: italic;
+}
+
+.layout {
+  display: flex;
+  gap: 32px;
+}
+
+.sidebar {
+  width: 220px;
+  border-right: 1px solid #3a3323;
+  padding-right: 24px;
+}
+
+.sidebar a {
+  display: block;
+  color: #c5a35a;
+  text-decoration: none;
+  margin-bottom: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.sidebar a:hover {
+  color: #e2d2a2;
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+  background: #151515;
+  border: 1px solid #3a3323;
+  padding: 32px;
+  line-height: 1.7;
+}
+
+.content h2 {
+  color: #c5a35a;
+  margin-top: 0;
 }
