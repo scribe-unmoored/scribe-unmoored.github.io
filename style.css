@@ -149,24 +149,6 @@ h1 {
   color: #c5a35a;
 }
 
-#visitor-count div {
-  display: inline !important;
-  border: 0 !important;
-  background: transparent !important;
-  color: inherit !important;
-  font: inherit !important;
-}
-
-#visitor-count #gcvc-for,
-#visitor-count #gcvc-by {
-  display: none !important;
-}
-
-#visitor-count #gcvc-views {
-  color: #c5a35a !important;
-  font: inherit !important;
-}
-
 .copyright {
   text-align: center;
   font-size: 0.75rem;
