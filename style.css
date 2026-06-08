@@ -136,13 +136,17 @@ h1 {
 
 .content {
   flex: 1;
-  background: #151515;
-  border: 1px solid #3a3323;
-  padding: 32px;
   line-height: 1.7;
 }
 
-.content h2 {
+.content-box {
+  background: #151515;
+  border: 1px solid #3a3323;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.content-box h2 {
   color: #c5a35a;
   margin-top: 0;
 }
