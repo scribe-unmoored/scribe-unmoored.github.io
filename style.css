@@ -121,14 +121,6 @@ h1 {
     text-decoration: none;
 }
 
-.story pre {
-    white-space: pre-wrap;
-    font-family: inherit;
-    line-height: inherit;
-    color: inherit;
-    text-indent: 0;
-}
-
 .content {
   flex: 1;
   background: #151515;
