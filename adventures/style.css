@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Daedric";
+    src: url("../fonts/OMWAyembedt.otf") format("opentype");
+}
+
 body {
   margin: 0;
   background: #0b0b0b;
@@ -101,7 +106,9 @@ h1 {
 
 .sealed {
     font-family: "Daedric";
-    color: #8f7a48;
+    color: #7c6940;
+    opacity: 0.8;
+    letter-spacing: 0.05em;
 }
 
 .published {
