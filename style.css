@@ -146,19 +146,25 @@ h1 {
 }
 
 #visitor-count {
-  display: inline-block;
-  width: 55px;
-  height: 28px;
-  overflow: hidden;
-  vertical-align: middle;
-  position: relative;
+  color: #c5a35a;
 }
 
-#visitor-count iframe {
-  position: relative;
-  left: -72px;
-  top: -26px;
-  border: 0;
+#visitor-count div {
+  display: inline !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+  font: inherit !important;
+}
+
+#visitor-count #gcvc-for,
+#visitor-count #gcvc-by {
+  display: none !important;
+}
+
+#visitor-count #gcvc-views {
+  color: #c5a35a !important;
+  font: inherit !important;
 }
 
 .copyright {
