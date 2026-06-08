@@ -40,11 +40,16 @@
         <br>
         <button id="themeButton">Play Theme</button>
         <audio id="themeAudio">
-          <source src="../../music/Brass_Tower.wav" type="audio/mpeg">
+          <source src="../../music/Brass_Tower.wav">
         </audio>
         
       </main>
     </div>
   </div>
+  <script>
+  document.getElementById("themeButton").addEventListener("click", function() {
+      document.getElementById("themeAudio").play();
+  });
+  </script>
 </body>
 </html>
