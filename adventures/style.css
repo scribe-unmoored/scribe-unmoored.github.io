@@ -50,6 +50,27 @@ h1 {
   padding-right: 24px;
 }
 
+.wheel-link {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.wheel-link img {
+    width: 120px;
+    max-width: 80px;
+    animation: slowspin 60s linear infinite;
+}
+
+@keyframes slowspin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .sidebar a {
   display: block;
   color: #c5a35a;
