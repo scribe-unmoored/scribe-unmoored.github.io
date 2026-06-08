@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALT!</title>
+
+```
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+<div class="warning-container">
+
+```
+<h1 class="halt-title">HALT!</h1>
+
+<img
+    src="images/main/DF-enemy-Guard.gif"
+    alt="Daggerfall Guard"
+    class="guard-image"
+>
+
+<p class="warning-text">
+    This archive has been sealed by order of the Scribe. 
+</p>
+<p class="warning-text">
+    It contains lewd, violent, or otherwise impolite content suitable only for an adult audience. 
+</p>
+
+<p class="warning-text">
+    Do you wish to proceed, Dreamer?
+</p>
+
+<div class="warning-buttons">
+    <a id="proceed-button" href="#">Proceed</a>
+    <a href="index.html" class="return-link">Return to Archive</a>
+</div>
+```
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const target = params.get("target");
+
+if (target) {
+    document.getElementById("proceed-button").href = target;
+}
+</script>
+
+</body>
+</html>
