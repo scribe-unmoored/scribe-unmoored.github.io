@@ -60,36 +60,36 @@
     </div>
   </div>
   <script>
-  var t = setInterval(function() {
-    if (window.goatcounter && window.goatcounter.visit_count) {
-      clearInterval(t);
-      window.goatcounter.visit_count({
-        append: '#visitor-count',
-        path: 'TOTAL',
-        type: 'html',
-        style: `
-          div {
-            display: inline;
-            border: 0;
-            background: transparent;
-            color: inherit;
-            font: inherit;
-          }
-
-          #gcvc-for,
-          #gcvc-by {
-            display: none;
-          }
-
-          #gcvc-views {
-            color: #c5a35a;
-            font: inherit;
-          }
-        `
-      });
-    }
-  }, 100);
-</script>
+    var t = setInterval(function() {
+      if (window.goatcounter && window.goatcounter.visit_count) {
+        clearInterval(t);
+        window.goatcounter.visit_count({
+          append: '#visitor-count',
+          path: 'TOTAL',
+          type: 'html',
+          style: `
+            div {
+              display: inline;
+              border: 0;
+              background: transparent;
+              color: inherit;
+              font: inherit;
+            }
+  
+            #gcvc-for,
+            #gcvc-by {
+              display: none;
+            }
+  
+            #gcvc-views {
+              color: #c5a35a;
+              font: inherit;
+            }
+          `
+        });
+      }
+    }, 100);
+  </script>
 </body>
 <footer class="copyright">
   <p>The Elder Scrolls and all related intellectual property are owned by Bethesda Softworks. </p>
