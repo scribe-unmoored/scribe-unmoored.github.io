@@ -133,3 +133,13 @@ h1 {
   color: #c5a35a;
   margin-top: 0;
 }
+
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #777;
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+  opacity: 0.8;
+}
