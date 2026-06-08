@@ -58,7 +58,7 @@ h1 {
 .wheel-link img {
     width: 120px;
     max-width: 120px;
-    animation: slowspin 60s linear infinite;
+    animation: slowspin 120s linear infinite;
 
     transition:
       transform 0.3s ease,
@@ -66,7 +66,7 @@ h1 {
 }
 
 .wheel-link img:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
 
     filter:
         brightness(1.15)
