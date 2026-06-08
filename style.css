@@ -196,6 +196,17 @@ margin-top: 2rem;
 }
 
 .warning-buttons a {
-margin: 0 1rem;
+    color: #c5a35a;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+
+    margin: 0 1rem;
+}
+
+.warning-buttons a:hover {
+    color: #e2d2a2;
+    text-decoration: underline;
 }
 
