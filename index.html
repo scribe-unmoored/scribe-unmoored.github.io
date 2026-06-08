@@ -61,29 +61,19 @@
   </div>
   <script>
   var t = setInterval(function() {
-    if (window.goatcounter && window.goatcounter.visit_count) {
+    if (window.goatcounter && window.goatcounter.get_data) {
       clearInterval(t);
-      window.goatcounter.visit_count({
-        append: '#visitor-count',
-        path: 'TOTAL',
-        type: 'html',
-        style: `
-          div {
-            display: inline;
-            border: 0;
-            background: transparent;
-          }
 
-          #gcvc-for,
-          #gcvc-by {
-            display: none;
-          }
+      let path = "TOTAL";
 
-          #gcvc-views {
-            color: #c5a35a;
-          }
-        `
-      });
+      fetch("https://scribe-unmoored.goatcounter.com/counter/" + encodeURIComponent(path) + ".json")
+        .then(response => response.json())
+        .then(data => {
+          document.querySelector("#visitor-count").innerText = data.count;
+        })
+        .catch(error => {
+          document.querySelector("#visitor-count").innerText = "UNKNOWN";
+        });
     }
   }, 100);
 </script>
