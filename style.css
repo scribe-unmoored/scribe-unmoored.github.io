@@ -57,6 +57,7 @@ h1 {
 
 .wheel-link img {
     width: 120px;
+    max-width: 80px;
     transition: transform 0.3s ease;
 }
 
