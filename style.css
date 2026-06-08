@@ -123,6 +123,9 @@ h1 {
 
 .story pre {
     white-space: pre-wrap;
+    font-family: inherit;
+    line-height: inherit;
+    color: inherit;
 }
 
 .content {
