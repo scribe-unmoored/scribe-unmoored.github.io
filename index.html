@@ -53,11 +53,24 @@
         <p>The remaining pages are many, and their words alien. I ask that you join me on the journey of their dec0ding.</p>
         <br>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;- Scribe</p>
-          
-        </p>
+        <div class="visitor-counter">
+          VISITORS: <span id="visitor-count"></span>
+        </div>
       </main>
     </div>
   </div>
+  <script>
+    var t = setInterval(function() {
+      if (window.goatcounter && window.goatcounter.visit_count) {
+        clearInterval(t);
+        window.goatcounter.visit_count({
+          append: '#visitor-count',
+          path: 'TOTAL',
+          no_branding: true
+        });
+      }
+    }, 100);
+  </script>
 </body>
 <footer class="copyright">
   <p>The Elder Scrolls and all related intellectual property are owned by Bethesda Softworks. This is an unofficial, non-commercial fan work. All original characters, stories, text, and music are © 2026 The Scribe Unmoored.</p>
