@@ -2,7 +2,7 @@ body {
   margin: 0;
   background: #0b0b0b;
   color: #d8d5cc;
-  font-family: "Cinzel", serif;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .page {
@@ -23,6 +23,7 @@ body {
   color: #9a9488;
   font-size: 0.75rem;
   letter-spacing: 0.15em;
+  font-family: "Cinzel", seriff;
 }
 
 h1 {
