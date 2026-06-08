@@ -109,6 +109,9 @@ h1 {
     color: #8a2d2d;
     opacity: 0.8;
     letter-spacing: 0.05em;
+
+    text-shadow:
+        0 0 3px rgba(138,45,45,0.4);  
 }
 
 .published {
