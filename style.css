@@ -50,6 +50,20 @@ h1 {
   padding-right: 24px;
 }
 
+.wheel-link {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.wheel-link img {
+    width: 120px;
+    transition: transform 0.3s ease;
+}
+
+.wheel-link img:hover {
+    transform: rotate(1.0deg);
+}
+
 .sidebar a {
   display: block;
   color: #c5a35a;
