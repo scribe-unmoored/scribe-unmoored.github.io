@@ -173,15 +173,19 @@ h1 {
 }
 
 .chapter-date .line {
+  font-family: "Garamond", serif;  
   opacity: 0;
+  margin: 4rem 0 5rem 0;
+  padding: 0.5rem 0;  
   transform: translateY(6px);
+  font-weight: 600;
   animation: fadeInUp 0.8s ease forwards;
 }
 
 /* staggered delays */
-.chapter-date .line-1 { animation-delay: 0.2s; }
-.chapter-date .line-2 { animation-delay: 0.8s; }
-.chapter-date .line-3 { animation-delay: 1.4s; }
+.chapter-date .line-1 { animation-delay: 0.8s; }
+.chapter-date .line-2 { animation-delay: 1.7s; }
+.chapter-date .line-3 { animation-delay: 3.5s; }
 
 @keyframes fadeInUp {
   from {
