@@ -173,19 +173,19 @@ h1 {
 }
 
 .chapter-date .line {
+  color: #e2d2a2;  
   font-family: "Cinzel", serif;  
   opacity: 0;
   margin: 4rem 0 5rem 0;  
   transform: translateY(6px);
   font-weight: 800;
   animation: fadeInUp 0.8s ease forwards;
-  color: #e2d2a2;
 }
 
 /* staggered delays */
 .chapter-date .line-1 { animation-delay: 0.8s; }
 .chapter-date .line-2 { animation-delay: 1.7s; }
-.chapter-date .line-3 { animation-delay: 3.5s; }
+.chapter-date .line-3 { animation-delay: 3.3s; }
 
 @keyframes fadeInUp {
   from {
