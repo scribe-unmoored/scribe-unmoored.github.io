@@ -173,13 +173,13 @@ h1 {
 }
 
 .chapter-date .line {
-  font-family: "Garamond", serif;  
+  font-family: "Cinzel", serif;  
   opacity: 0;
-  margin: 4rem 0 5rem 0;
-  padding: 0.5rem 0;  
+  margin: 4rem 0 5rem 0;  
   transform: translateY(6px);
-  font-weight: 600;
+  font-weight: 800;
   animation: fadeInUp 0.8s ease forwards;
+  color: #e2d2a2;
 }
 
 /* staggered delays */
