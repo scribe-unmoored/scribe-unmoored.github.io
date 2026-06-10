@@ -48,7 +48,8 @@ const params = new URLSearchParams(window.location.search);
 const target = params.get("target");
 
 if (target) {
-    document.getElementById("proceed-button").href = target;
+    document.getElementById("proceed-button").href =
+        new URL(target, window.location.href).href;
 }
 </script>
 
