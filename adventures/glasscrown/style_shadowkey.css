@@ -22,8 +22,8 @@
 
 body {
   margin: 0;
-  background: #06040A;            /* velvet midnight background */
-  color: #C6B8E3;                 /* default text color */
+  background: #06040A;            
+  color: #C6B8E3;                 
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -35,16 +35,16 @@ body {
 
 .site-header {
   text-align: center;
-  border-top: 1px solid #241735;     /* plum border lines */
+  border-top: 1px solid #241735;     
   border-bottom: 1px solid #241735;
   padding: 32px 0;
   margin-bottom: 32px;
 }
 
 .website-title {
-  color: #DDD3F4;    /* moonlit title color */
-  font-size: 4.00rem;
-  letter-spacing: 0.5em;
+  color: #DDD3F4;    
+  font-size: 5.00rem;
+  letter-spacing: 0.7em;
   font-family: "Shadowkey";
 }
 
@@ -94,7 +94,7 @@ h1 {
 
     filter:
         brightness(1.15)
-        drop-shadow(0 0 4px #6A56A5) /* occult glow */
+        drop-shadow(0 0 4px #6A56A5) 
         drop-shadow(0 0 8px #6A56A5);
 }
 
@@ -124,12 +124,10 @@ h1 {
   text-decoration: underline;
 }
 
-/*if this is too dark, try #51307A*/
-
 /*typical color: #8a2d2d*/
 .sealed {
     font-family: "Daedric";
-    color: #5E4AA0; /* forbidden magic purple */
+    color: #8a2d2d;
     opacity: 0.85;
     letter-spacing: 0.05em;
     margin-bottom: 18px;
