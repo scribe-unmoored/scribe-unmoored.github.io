@@ -34,7 +34,7 @@ body {
   color: #9FB7C2;   /* cold dragonsteel silver-blue */
   font-size: 3.00rem;
   letter-spacing: 0.5em;
-  font-family: "Cinzel", serif;
+  font-family: "Battlespire";
 }
 
 h1 {
@@ -119,7 +119,7 @@ h1 {
 }
 
 .published {
-    font-family: "Cinzel";
+    font-family: "Battlespire";
     color: #D4AF37;
     text-decoration: none;
 }
