@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background: #1C0707;            /*background color*/
+  background: #370308;            /*background color*/
   color: #CAA560;                /*default text color*/
   font-family: Georgia, "Times New Roman", serif;
 }
@@ -25,7 +25,7 @@ body {
 }
 
 .website-title {
-  color: #8A1313;    /*title color*/
+  color: #D2C38A;    /*title color*/
   font-size: 3.00rem;
   letter-spacing: 0.5em;
   font-family: "Cinzel", serif;
