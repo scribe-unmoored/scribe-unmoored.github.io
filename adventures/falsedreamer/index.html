@@ -32,6 +32,10 @@
       <main class="content">
         <section class="content-box">
           <h2>Last Seed 16, 3E427</h2>
+          <button id="themeButton" class="theme-button">▶ Play Theme</button>
+          <audio id="themeAudio">
+            <source src="../../music/falsedreamer.wav">
+          </audio>
           <br>
           <p>A Tower has fallen. By the works of two heroes, Tamriel is safe.</p>
           <p>Forgotten, one is sent away. A prisoner of the Empire. The other, her fate unknown, is lost to time.</p>
@@ -44,5 +48,19 @@
       </main>
     </div>
   </div>
+  <script>
+    const button = document.getElementById("themeButton");
+    const audio = document.getElementById("themeAudio");
+    
+    button.addEventListener("click", function() {
+        if (audio.paused) {
+            audio.play();
+            button.textContent = "♫ Silence Theme ♫";
+        } else {
+            audio.pause();
+            button.textContent = "♫ Hear Theme ♫";
+        }
+    });
+  </script>  
 </body>
 </html>
