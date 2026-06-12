@@ -3,6 +3,11 @@
     src: url("../../fonts/OMWAyembedt.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "Morrowind";
+    src: url("../../fonts/GranthamLight.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   background: #140003;            /*background color*/
