@@ -18,8 +18,6 @@
     src: url("../../fonts/Aramente-Regular.ttf") format("truetype");
 }
 
-/*#140003 is the color right now*/
-
 body {
   margin: 0;
   background: #0B0E10;            /*background color*/
