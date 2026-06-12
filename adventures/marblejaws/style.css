@@ -5,8 +5,8 @@
 
 body {
   margin: 0;
-  background: #0b0b0b;
-  color: #d8d5cc;
+  background: #0E0F12;            /* deep quarry shadow */
+  color: #D8D6D2;                /* cold marble-lit text */
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -18,21 +18,21 @@ body {
 
 .site-header {
   text-align: center;
-  border-top: 1px solid #c5a35a;
-  border-bottom: 1px solid #c5a35a;
+  border-top: 1px solid #6F6A62;     /* carved stone line */
+  border-bottom: 1px solid #6F6A62;
   padding: 32px 0;
   margin-bottom: 32px;
 }
 
 .website-title {
-  color: #9a9488;
+  color: #E6E2DA;    /* polished marble face */
   font-size: 3.00rem;
   letter-spacing: 0.5em;
   font-family: "Cinzel", serif;
 }
 
 h1 {
-  color: #c5a35a;
+  color: #C5A35A;  /* restrained imperial metal accent (kept as relic logic) */
   font-size: 1.00rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -40,7 +40,7 @@ h1 {
 }
 
 .subtitle {
-  color: #e2d2a2;
+  color: #9A948C; /* softened stone inscription grey */
   font-style: italic;
 }
 
@@ -51,10 +51,12 @@ h1 {
 
 .sidebar {
   width: 220px;
-  border-right: 1px solid #3a3323;
+  border-right: 1px solid #5C5852;  /* iron-stone seam */
   padding-right: 24px;
 }
 
+
+/*homepage link setup*/
 .wheel-link {
     display: block;
     margin-bottom: 30px;
@@ -74,24 +76,19 @@ h1 {
     transform: scale(1.15);
 
     filter:
-        brightness(1.15)
-        drop-shadow(0 0 4px #c5a35a)
-        drop-shadow(0 0 8px #c5a35a);
+        brightness(1.12)
+        drop-shadow(0 0 6px rgba(230, 226, 218, 0.25)); /* marble sheen */
 }
 
 @keyframes slowspin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
+
 
 .sidebar a:not(.wheel-link) {
   display: block;
-  color: #c5a35a;
+  color: #BDB7AE; /* carved inscription text */
   text-decoration: none;
   margin-bottom: 18px;
   letter-spacing: 0.08em;
@@ -100,31 +97,31 @@ h1 {
 }
 
 .sidebar a:hover {
-  color: #e2d2a2;
+  color: #E6E2DA; /* marble highlight */
   text-decoration: underline;
 }
 
 .sealed {
     font-family: "Daedric";
-    color: #8a2d2d;
-    opacity: 0.8;
+    color: #8C2F2F; /* iron-blood stain in stone */
+    opacity: 0.85;
     letter-spacing: 0.05em;
     margin-bottom: 18px;
 
     text-shadow:
-        0 0 3px rgba(138,45,45,0.4);  
+        0 0 6px rgba(140,47,47,0.35);
 }
 
 .published {
     font-family: "Cinzel";
-    color: #c5a35a;
+    color: #C5A35A;
     text-decoration: none;
 }
 
 #themeButton {
   background: transparent;
-  color: #c5a35a;
-  border: 1px solid #c5a35a;
+  color: #BDB7AE;
+  border: 1px solid #5C5852;
   padding: 12px 24px;
   font-family: "Cinzel", serif;
   font-size: 0.9rem;
@@ -135,9 +132,9 @@ h1 {
 }
 
 #themeButton:hover {
-  background-color: rgba(197, 163, 90, 0.1);
-  color: #e2d2a2;
-  border-color: #e2d2a2;
+  background-color: rgba(230, 226, 218, 0.06); /* faint polished stone reflection */
+  color: #E6E2DA;
+  border-color: #BDB7AE;
 }
 
 #themeButton:active {
@@ -146,19 +143,19 @@ h1 {
 
 #themeButton:focus {
   outline: none;
-  box-shadow: 0 0 6px rgba(197, 163, 90, 0.4);
+  box-shadow: 0 0 6px rgba(230, 226, 218, 0.25);
 }
 
 .content {
   flex: 1;
-  background: #151515;
-  border: 1px solid #3a3323;
+  background: #14161A; /* carved interior slab */
+  border: 1px solid #5C5852;
   padding: 32px;
   line-height: 1.7;
 }
 
 .content h2 {
-  color: #c5a35a;
+  color: #C5A35A; /* relic inscription header */
   margin-top: 0;
 }
 
@@ -166,14 +163,14 @@ h1 {
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  color: #777;
+  color: #8F8A83;
   margin-top: 5rem;
   padding-bottom: 2rem;
   opacity: 0.8;
 }
 
 .chapter-date .line {
-  color: #e2d2a2;  
+  color: #D8D6D2;  
   font-family: "Cinzel", serif;  
   opacity: 0;
   margin: 4rem 0 5rem 0;  
