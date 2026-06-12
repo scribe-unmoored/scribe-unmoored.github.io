@@ -131,6 +131,12 @@ h1 {
     text-decoration: none;
 }
 
+.published a {
+    font-family: "Morrowind";
+    color: #9E7134; /*color of unlocked entries; should be the same as sidebar text*/
+    text-decoration: none;
+}
+
 #themeButton {
   background: transparent;
   color: #9E7134; /*color of play button for music, should be same as sidebar text*/
