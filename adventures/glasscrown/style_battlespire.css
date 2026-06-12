@@ -10,8 +10,8 @@
 
 body {
   margin: 0;
-  background: #0A0A0C;
-  color: #D7D2C6; 
+  background: #070A0F;
+  color: #D6E1E6; 
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -23,21 +23,21 @@ body {
 
 .site-header {
   text-align: center;
-  border-top: 1px solid #B79A5C; 
-  border-bottom: 1px solid #B79A5C;
+  border-top: 1px solid #4FB6B0; 
+  border-bottom: 1px solid #4FB6B0;
   padding: 32px 0;
   margin-bottom: 32px;
 }
 
 .website-title {
-  color: #9E98A8; 
+  color: #A7B3C9; 
   font-size: 3.00rem;
   letter-spacing: 0.5em;
   font-family: "Cinzel", serif;
 }
 
 h1 {
-  color: #C5A35A;
+  color: #F2C66D;
   font-size: 1.00rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -45,7 +45,7 @@ h1 {
 }
 
 .subtitle {
-  color: #E0D3A6; 
+  color: #7FCFD1; 
   font-style: italic;
 }
 
@@ -56,7 +56,7 @@ h1 {
 
 .sidebar {
   width: 220px;
-  border-right: 1px solid #3B2F2A; 
+  border-right: 1px solid #2E3A3F; 
   padding-right: 24px;
 }
 
@@ -79,9 +79,9 @@ h1 {
     transform: scale(1.15);
 
     filter:
-        brightness(1.15)
-        drop-shadow(0 0 4px #7A6BB8) 
-        drop-shadow(0 0 8px #7A6BB8);
+        brightness(1.2)
+        drop-shadow(0 0 6px #4FB6B0) 
+        drop-shadow(0 0 10px #4FB6B0);
 }
 
 @keyframes slowspin {
@@ -91,7 +91,7 @@ h1 {
 
 .sidebar a:not(.wheel-link) {
   display: block;
-  color: #C5A35A;
+  color: #F2C66D;
   text-decoration: none;
   margin-bottom: 18px;
   letter-spacing: 0.08em;
@@ -100,32 +100,32 @@ h1 {
 }
 
 .sidebar a:hover {
-  color: #E0D3A6; 
+  color: #7FCFD1; 
   text-decoration: underline;
 }
 
 .sealed {
     font-family: "Daedric";
-    color: #7A2E2E; 
+    color: #D94B4B; 
     opacity: 0.85;
     letter-spacing: 0.05em;
     margin-bottom: 18px;
 
     text-shadow:
-        0 0 4px rgba(122,46,46,0.5),
-        0 0 10px rgba(122,46,46,0.25);
+        0 0 4px rgba(217,75,75,0.5),
+        0 0 10px rgba(217,75,75,0.25);
 }
 
 .published {
     font-family: "Cinzel";
-    color: #C5A35A;
+    color: #F2C66D;
     text-decoration: none;
 }
 
 #themeButton {
   background: transparent;
-  color: #C5A35A;
-  border: 1px solid #C5A35A;
+  color: #F2C66D;
+  border: 1px solid #F2C66D;
   padding: 12px 24px;
   font-family: "Cinzel", serif;
   font-size: 0.9rem;
@@ -136,9 +136,9 @@ h1 {
 }
 
 #themeButton:hover {
-  background-color: rgba(122, 46, 46, 0.12); 
-  color: #E0D3A6;
-  border-color: #7A2E2E;
+  background-color: rgba(79, 182, 176, 0.12); 
+  color: #7FCFD1;
+  border-color: #4FB6B0;
 }
 
 #themeButton:active {
@@ -147,19 +147,19 @@ h1 {
 
 #themeButton:focus {
   outline: none;
-  box-shadow: 0 0 6px rgba(122, 46, 46, 0.45);
+  box-shadow: 0 0 6px rgba(79, 182, 176, 0.45);
 }
 
 .content {
   flex: 1;
-  background: #141416; 
-  border: 1px solid #3B2F2A;
+  background: #0B0F14; 
+  border: 1px solid #2E3A3F;
   padding: 32px;
   line-height: 1.7;
 }
 
 .content h2 {
-  color: #C5A35A;
+  color: #F2C66D;
   margin-top: 0;
 }
 
@@ -167,14 +167,14 @@ h1 {
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  color: #8B8496; 
+  color: #8FA6B3; 
   margin-top: 5rem;
   padding-bottom: 2rem;
   opacity: 0.8;
 }
 
 .chapter-date .line {
-  color: #E0D3A6;
+  color: #7FCFD1;
   font-family: "Cinzel", serif;
   opacity: 0;
   margin: 4rem 0 5rem 0;
