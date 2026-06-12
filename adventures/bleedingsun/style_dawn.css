@@ -34,7 +34,7 @@ body {
   color: #D8C2C7;   /* faded noble marble */
   font-size: 3.00rem;
   letter-spacing: 0.5em;
-  font-family: "Cinzel", serif;
+  font-family: "Vampire";
 }
 
 h1 {
@@ -119,7 +119,7 @@ h1 {
 }
 
 .published {
-    font-family: "Cinzel";
+    font-family: "Vampire";
     color: #D8C2C7;
     text-decoration: none;
 }
