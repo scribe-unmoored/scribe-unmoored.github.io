@@ -126,17 +126,17 @@ h1 {
         0 0 3px rgba(138,45,45,0.4);  
 }
 
-.published {
+.sidebar a.published {
     font-family: "Morrowind";
-    color: #9E7134; /*color of unlocked entries; should be the same as sidebar text*/
-    text-decoration: none;
+    color: #9E7134; /*Should be same color as h2*/
 }
 
-.published a {
+/*
+.published {
     font-family: "Morrowind";
-    color: #9E7134; /*color of unlocked entries; should be the same as sidebar text*/
+    color: #9E7134;
     text-decoration: none;
-}
+}*/
 
 #themeButton {
   background: transparent;
