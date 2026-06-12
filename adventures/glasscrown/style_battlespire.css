@@ -5,13 +5,13 @@
 
 @font-face {
     font-family: "Battlespire";
-    src: url("../../fonts/Aramente-Regular.ttf") format("truetype");
+    src: url("../../fonts/Amarante-Regular.ttf") format("opentype");
 }
 
 body {
   margin: 0;
-  background: #07070A;          
-  color: #D6D0C2;                
+  background: #0A0A0C;
+  color: #D7D2C6; 
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -23,21 +23,21 @@ body {
 
 .site-header {
   text-align: center;
-  border-top: 1px solid #3A2F2A;     
-  border-bottom: 1px solid #3A2F2A;    
+  border-top: 1px solid #B79A5C; 
+  border-bottom: 1px solid #B79A5C;
   padding: 32px 0;
   margin-bottom: 32px;
 }
 
 .website-title {
-  color: #E2D6B8;  
+  color: #9E98A8; 
   font-size: 3.00rem;
   letter-spacing: 0.5em;
-  font-family: "Battlespire";
+  font-family: "Cinzel", serif;
 }
 
 h1 {
-  color: #B79A5C; 
+  color: #C5A35A;
   font-size: 1.00rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -45,7 +45,7 @@ h1 {
 }
 
 .subtitle {
-  color: #8B8496;
+  color: #E0D3A6; 
   font-style: italic;
 }
 
@@ -56,12 +56,10 @@ h1 {
 
 .sidebar {
   width: 220px;
-  border-right: 1px solid #3A2F2A;
+  border-right: 1px solid #3B2F2A; 
   padding-right: 24px;
 }
 
-
-/*homepage link setup*/
 .wheel-link {
     display: block;
     margin-bottom: 30px;
@@ -82,58 +80,52 @@ h1 {
 
     filter:
         brightness(1.15)
-        drop-shadow(0 0 4px #6B5FA8) 
-        drop-shadow(0 0 8px #6B5FA8);
+        drop-shadow(0 0 4px #7A6BB8) 
+        drop-shadow(0 0 8px #7A6BB8);
 }
 
 @keyframes slowspin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-
-.sidebar  a:not(.wheel-link){
+.sidebar a:not(.wheel-link) {
   display: block;
-  color: #B79A5C;
+  color: #C5A35A;
   text-decoration: none;
   margin-bottom: 18px;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
   font-size: 0.9rem;
 }
 
-/*hover behavior for sidebar*/
 .sidebar a:hover {
-  color: #6B5FA8; 
+  color: #E0D3A6; 
   text-decoration: underline;
 }
 
-/*typical color: */
 .sealed {
     font-family: "Daedric";
-    color: #7A6BB8; 
+    color: #7A2E2E; 
     opacity: 0.85;
     letter-spacing: 0.05em;
     margin-bottom: 18px;
 
     text-shadow:
-        0 0 4px rgba(107,95,168,0.45);
+        0 0 4px rgba(122,46,46,0.5),
+        0 0 10px rgba(122,46,46,0.25);
 }
 
 .published {
-    font-family: "Battlespire";
-    color: #B79A5C;
+    font-family: "Cinzel";
+    color: #C5A35A;
     text-decoration: none;
 }
 
 #themeButton {
   background: transparent;
-  color: #B79A5C;
-  border: 1px solid #B79A5C;
+  color: #C5A35A;
+  border: 1px solid #C5A35A;
   padding: 12px 24px;
   font-family: "Cinzel", serif;
   font-size: 0.9rem;
@@ -144,9 +136,9 @@ h1 {
 }
 
 #themeButton:hover {
-  background-color: rgba(107, 95, 168, 0.12); 
-  color: #E2D6B8;
-  border-color: #6B5FA8;
+  background-color: rgba(122, 46, 46, 0.12); 
+  color: #E0D3A6;
+  border-color: #7A2E2E;
 }
 
 #themeButton:active {
@@ -155,19 +147,19 @@ h1 {
 
 #themeButton:focus {
   outline: none;
-  box-shadow: 0 0 6px rgba(107, 95, 168, 0.45);
+  box-shadow: 0 0 6px rgba(122, 46, 46, 0.45);
 }
 
 .content {
   flex: 1;
-  background: #0B0C10; 
-  border: 1px solid #3A2F2A;
+  background: #141416; 
+  border: 1px solid #3B2F2A;
   padding: 32px;
   line-height: 1.7;
 }
 
 .content h2 {
-  color: #B79A5C; 
+  color: #C5A35A;
   margin-top: 0;
 }
 
@@ -175,17 +167,17 @@ h1 {
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  color: #6E6A78;
+  color: #8B8496; 
   margin-top: 5rem;
   padding-bottom: 2rem;
   opacity: 0.8;
 }
 
 .chapter-date .line {
-  color: #8B8496;
-  font-family: "Cinzel", serif;  
+  color: #E0D3A6;
+  font-family: "Cinzel", serif;
   opacity: 0;
-  margin: 4rem 0 5rem 0;  
+  margin: 4rem 0 5rem 0;
   transform: translateY(6px);
   font-weight: 800;
   animation: fadeInUp 0.8s ease forwards;
