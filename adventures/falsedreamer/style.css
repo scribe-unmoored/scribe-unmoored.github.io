@@ -110,7 +110,7 @@ h1 {
 
 /*hover behavior for sidebar*/
 .sidebar a:hover {
-  color: #8D7857; /*color that appears when you hover over a link*/
+  color: #D2C38A; /*color that appears when you hover over a link*/
   text-decoration: underline;
 }
 
