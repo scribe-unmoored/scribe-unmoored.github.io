@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRASS TOWER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body>
+  <div class="page">
+    <header class="site-header">
+      <p class="website-title">BRASS TOWER</p>
+      <p class="subtitle">Episode II of The Adventures...</p>
+    </header>
+
+    <div class="layout">
+      <nav class="sidebar">
+        <a href="/index.html" class="wheel-link">
+        <img src="../../images/main/gold.png" alt="Homepage"> 
+        </a>
+        <a class="published" href="chapter_1">Chapter 1</a>
+        <div class="sealed">Chapter Two</div>
+       
+      </nav>
+
+      <main class="content">
+        <h2>Morning Star 4, 3E405.</h2>
+        <button id="themeButton" class="theme-button">▶ Play Theme</button>
+        <audio id="themeAudio">
+          <source src="../../music/brasstower.wav">
+        </audio>
+        <br>
+        <p>The Wheel turns. In its revolutions, fate has shifted. A Blade comes from the east, wielded by no hand but his own. An agent, hailing from the halls of Summerset, rises to meet him.</p>
+        <p>He is a mage, born beneath the stars of the spelldrinker. She is a duelist, bearing words sharper than steel. The latter seeks a scandal bold enough to topple an Empire. The former, to lay to rest a king betrayed.</p>
+        <p>These are the waning years of the third era; the legends of the Elder Scrolls, retold.</p>
+        <p>Join me on a journey that will span eras.</p>
+        <br>
+        <p>And remember where you were...
+        <br>
+        <p>...when the Dragon Broke.</p>  
+      </main>
+    </div>
+  </div>
+  <script>
+  const button = document.getElementById("themeButton");
+  const audio = document.getElementById("themeAudio");
+  
+  button.addEventListener("click", function() {
+      if (audio.paused) {
+          audio.play();
+          button.textContent = "♫ Silence Theme ♫";
+      } else {
+          audio.pause();
+          button.textContent = "♫ Hear Theme ♫";
+      }
+  });
+  </script>
+</body>
+<footer class="copyright">
+  <p>The Elder Scrolls and all related intellectual property are owned by Bethesda Softworks. </p>
+  <p>This is an unofficial, non-commercial fan work.</p>
+  <p>All original characters, stories, text, and music are © 2026 The Scribe Unmoored.</p>
+</footer>
+</html>
