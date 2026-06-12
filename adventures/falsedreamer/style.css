@@ -108,7 +108,7 @@ h1 {
   font-size: 0.9rem;
 }
 
-<!--hover behavior-->
+/*hover behavior for sidebar*/
 .sidebar a:hover {
   color: #8D7857; /*color that appears when you hover over a link*/
   text-decoration: underline;
@@ -126,7 +126,7 @@ h1 {
 }
 
 .published {
-    font-family: "Cinzel";
+    font-family: "Morrowind";
     color: #9E7134; /*color of unlocked entries; should be the same as sidebar text*/
     text-decoration: none;
 }
