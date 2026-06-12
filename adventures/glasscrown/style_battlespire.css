@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "Daedric";
+    src: url("../../fonts/OMWAyembedt.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Arena";
+    src: url("../../fonts/DorovarFLF-Carolus.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Shadowkey";
+    src: url("../../fonts/Copperplate-Gothic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Battlespire";
+    src: url("../../fonts/Aramente-Regular.ttf") format("truetype");
+}
+
+/*#140003 is the color right now*/
+
+body {
+  margin: 0;
+  background: #0B0E10;            /*background color*/
+  color: #B89B6B;                /*default text color*/
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.site-header {
+  text-align: center;
+  border-top: 1px solid #6F523A;     /*border lines*/
+  border-bottom: 1px solid #6F523A;    
+  padding: 32px 0;
+  margin-bottom: 32px;
+}
+
+.website-title {
+  color: #C2B29A;    /*title color*/
+  font-size: 3.00rem;
+  letter-spacing: 0.5em;
+  font-family: "Shadowkey";
+}
+
+h1 {
+  color: #c5a35a;  /*this is unused currently*/
+  font-size: 1.00rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subtitle {
+  color: #7D7364; /*subtitle*/
+  font-style: italic;
+}
+
+.layout {
+  display: flex;
+  gap: 32px;
+}
+
+.sidebar {
+  width: 220px;
+  border-right: 1px solid #4B392C;  /*grey border of the side menu*/
+  padding-right: 24px;
+}
+
+
+/*homepage link setup*/
+.wheel-link {
+    display: block;
+    margin-bottom: 30px;
+    font-family: "Shadowkey";
+Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
