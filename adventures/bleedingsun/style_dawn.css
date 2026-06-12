@@ -3,10 +3,15 @@
     src: url("../../fonts/OMWAyembedt.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "Vampire";
+    src: url("../../fonts/KONSTANTINE.otf") format("opentype");
+}
+
 body {
   margin: 0;
-  background: #0b0b0b;
-  color: #d8d5cc;
+  background: #070407;   /* near-black velvet night */
+  color: #E7DDE0;       /* pale, blood-bleached parchment */
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -18,21 +23,22 @@ body {
 
 .site-header {
   text-align: center;
-  border-top: 1px solid #c5a35a;
-  border-bottom: 1px solid #c5a35a;
+  border-top: 1px solid #3B1B22;   /* old iron stained with blood */
+  border-bottom: 1px solid #3B1B22;
   padding: 32px 0;
   margin-bottom: 32px;
+  background: #12080B;   /* interior of a sealed crypt */
 }
 
 .website-title {
-  color: #9a9488;
+  color: #D8C2C7;   /* faded noble marble */
   font-size: 3.00rem;
   letter-spacing: 0.5em;
   font-family: "Cinzel", serif;
 }
 
 h1 {
-  color: #c5a35a;
+  color: #8B1E2D;   /* vampiric seal red */
   font-size: 1.00rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -40,7 +46,7 @@ h1 {
 }
 
 .subtitle {
-  color: #e2d2a2;
+  color: #A48A92;   /* dusted rose-shadow */
   font-style: italic;
 }
 
@@ -51,10 +57,11 @@ h1 {
 
 .sidebar {
   width: 220px;
-  border-right: 1px solid #3a3323;
+  border-right: 1px solid #2A141A;  /* blackened iron */
   padding-right: 24px;
 }
 
+/* wheel link */
 .wheel-link {
     display: block;
     margin-bottom: 30px;
@@ -74,24 +81,19 @@ h1 {
     transform: scale(1.15);
 
     filter:
-        brightness(1.15)
-        drop-shadow(0 0 4px #c5a35a)
-        drop-shadow(0 0 8px #c5a35a);
+        brightness(1.2)
+        drop-shadow(0 0 10px rgba(139,30,45,0.55))  /* blood glow */
+        drop-shadow(0 0 18px rgba(164,138,146,0.25)); /* pale ghost light */
 }
 
 @keyframes slowspin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .sidebar a:not(.wheel-link) {
   display: block;
-  color: #c5a35a;
+  color: #D8C2C7;   /* faded parchment silver */
   text-decoration: none;
   margin-bottom: 18px;
   letter-spacing: 0.08em;
@@ -100,31 +102,32 @@ h1 {
 }
 
 .sidebar a:hover {
-  color: #e2d2a2;
+  color: #8B1E2D;   /* vampiric red hover */
   text-decoration: underline;
 }
 
 .sealed {
     font-family: "Daedric";
-    color: #8a2d2d;
-    opacity: 0.8;
+    color: #8B1E2D;   /* blood rune script */
+    opacity: 0.95;
     letter-spacing: 0.05em;
     margin-bottom: 18px;
 
     text-shadow:
-        0 0 3px rgba(138,45,45,0.4);  
+        0 0 6px rgba(139,30,45,0.55),
+        0 0 14px rgba(59,27,34,0.35); /* deep crypt glow */
 }
 
 .published {
     font-family: "Cinzel";
-    color: #c5a35a;
+    color: #D8C2C7;
     text-decoration: none;
 }
 
 #themeButton {
   background: transparent;
-  color: #c5a35a;
-  border: 1px solid #c5a35a;
+  color: #D8C2C7;
+  border: 1px solid #3B1B22;
   padding: 12px 24px;
   font-family: "Cinzel", serif;
   font-size: 0.9rem;
@@ -135,9 +138,9 @@ h1 {
 }
 
 #themeButton:hover {
-  background-color: rgba(197, 163, 90, 0.1);
-  color: #e2d2a2;
-  border-color: #e2d2a2;
+  background-color: rgba(139, 30, 45, 0.12); /* blood wash */
+  color: #8B1E2D;
+  border-color: #8B1E2D;
 }
 
 #themeButton:active {
@@ -146,19 +149,19 @@ h1 {
 
 #themeButton:focus {
   outline: none;
-  box-shadow: 0 0 6px rgba(197, 163, 90, 0.4);
+  box-shadow: 0 0 10px rgba(139, 30, 45, 0.45);
 }
 
 .content {
   flex: 1;
-  background: #151515;
-  border: 1px solid #3a3323;
+  background: #0E070A;   /* castle interior at night */
+  border: 1px solid #2A141A;
   padding: 32px;
   line-height: 1.7;
 }
 
 .content h2 {
-  color: #c5a35a;
+  color: #8B1E2D;
   margin-top: 0;
 }
 
@@ -166,17 +169,17 @@ h1 {
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  color: #777;
+  color: #A48A92;   /* faded noble dust */
   margin-top: 5rem;
   padding-bottom: 2rem;
   opacity: 0.8;
 }
 
 .chapter-date .line {
-  color: #e2d2a2;  
-  font-family: "Cinzel", serif;  
+  color: #D8C2C7;
+  font-family: "Cinzel", serif;
   opacity: 0;
-  margin: 4rem 0 5rem 0;  
+  margin: 4rem 0 5rem 0;
   transform: translateY(6px);
   font-weight: 800;
   animation: fadeInUp 0.8s ease forwards;
