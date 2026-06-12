@@ -3,21 +3,9 @@
     src: url("../../fonts/OMWAyembedt.otf") format("opentype");
 }
 
-
-
-@font-face {
-    font-family: "Arena";
-    src: url("../../fonts/DorovarFLF-Carolus.ttf") format("truetype");
-}
-
 @font-face {
     font-family: "Shadowkey";
     src: url("../../fonts/Copperplate-Gothic.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Battlespire";
-    src: url("../../fonts/Aramente-Regular.ttf") format("truetype");
 }
 
 body {
