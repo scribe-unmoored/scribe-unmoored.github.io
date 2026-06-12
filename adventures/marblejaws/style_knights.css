@@ -5,8 +5,8 @@
 
 body {
   margin: 0;
-  background: #0E0F12;            /* deep quarry shadow */
-  color: #D8D6D2;                /* cold marble-lit text */
+  background: #E6E3DD;            /* weathered limestone / holy stone */
+  color: #2E2C29;                /* carved inscription text */
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -18,21 +18,22 @@ body {
 
 .site-header {
   text-align: center;
-  border-top: 1px solid #6F6A62;     /* carved stone line */
-  border-bottom: 1px solid #6F6A62;
+  border-top: 1px solid #B7B1A6;     /* aged stone seam */
+  border-bottom: 1px solid #B7B1A6;
   padding: 32px 0;
   margin-bottom: 32px;
+  background: #DEDAD3;
 }
 
 .website-title {
-  color: #E6E2DA;    /* polished marble face */
+  color: #3A3632;    /* carved title into pale stone */
   font-size: 3.00rem;
   letter-spacing: 0.5em;
   font-family: "Cinzel", serif;
 }
 
 h1 {
-  color: #C5A35A;  /* restrained imperial metal accent (kept as relic logic) */
+  color: #8C2F2F;  /* sanctioned red seal (not decorative) */
   font-size: 1.00rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -40,7 +41,7 @@ h1 {
 }
 
 .subtitle {
-  color: #9A948C; /* softened stone inscription grey */
+  color: #5A5650; /* soft chisel shadow text */
   font-style: italic;
 }
 
@@ -51,7 +52,7 @@ h1 {
 
 .sidebar {
   width: 220px;
-  border-right: 1px solid #5C5852;  /* iron-stone seam */
+  border-right: 1px solid #B7B1A6;  /* carved panel division */
   padding-right: 24px;
 }
 
@@ -76,8 +77,8 @@ h1 {
     transform: scale(1.15);
 
     filter:
-        brightness(1.12)
-        drop-shadow(0 0 6px rgba(230, 226, 218, 0.25)); /* marble sheen */
+        brightness(1.05)
+        drop-shadow(0 0 6px rgba(140,47,47,0.25)); /* faint sacred glow */
 }
 
 @keyframes slowspin {
@@ -88,7 +89,7 @@ h1 {
 
 .sidebar a:not(.wheel-link) {
   display: block;
-  color: #BDB7AE; /* carved inscription text */
+  color: #3A3632; /* carved navigation text */
   text-decoration: none;
   margin-bottom: 18px;
   letter-spacing: 0.08em;
@@ -97,31 +98,31 @@ h1 {
 }
 
 .sidebar a:hover {
-  color: #E6E2DA; /* marble highlight */
+  color: #8C2F2F; /* oath-red highlight */
   text-decoration: underline;
 }
 
 .sealed {
     font-family: "Daedric";
-    color: #8C2F2F; /* iron-blood stain in stone */
-    opacity: 0.85;
+    color: #8C2F2F; /* oath mark / martyr script */
+    opacity: 0.9;
     letter-spacing: 0.05em;
     margin-bottom: 18px;
 
     text-shadow:
-        0 0 6px rgba(140,47,47,0.35);
+        0 0 4px rgba(140,47,47,0.25);
 }
 
 .published {
     font-family: "Cinzel";
-    color: #C5A35A;
+    color: #3A3632;
     text-decoration: none;
 }
 
 #themeButton {
   background: transparent;
-  color: #BDB7AE;
-  border: 1px solid #5C5852;
+  color: #3A3632;
+  border: 1px solid #B7B1A6;
   padding: 12px 24px;
   font-family: "Cinzel", serif;
   font-size: 0.9rem;
@@ -132,9 +133,9 @@ h1 {
 }
 
 #themeButton:hover {
-  background-color: rgba(230, 226, 218, 0.06); /* faint polished stone reflection */
-  color: #E6E2DA;
-  border-color: #BDB7AE;
+  background-color: rgba(140, 47, 47, 0.08); /* faint ritual stain */
+  color: #8C2F2F;
+  border-color: #8C2F2F;
 }
 
 #themeButton:active {
@@ -143,19 +144,19 @@ h1 {
 
 #themeButton:focus {
   outline: none;
-  box-shadow: 0 0 6px rgba(230, 226, 218, 0.25);
+  box-shadow: 0 0 6px rgba(140, 47, 47, 0.25);
 }
 
 .content {
   flex: 1;
-  background: #14161A; /* carved interior slab */
-  border: 1px solid #5C5852;
+  background: #F2EFEA; /* interior cathedral stone */
+  border: 1px solid #B7B1A6;
   padding: 32px;
   line-height: 1.7;
 }
 
 .content h2 {
-  color: #C5A35A; /* relic inscription header */
+  color: #8C2F2F; /* chapter header = decree / oath */
   margin-top: 0;
 }
 
@@ -163,17 +164,17 @@ h1 {
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  color: #8F8A83;
+  color: #6A6660;
   margin-top: 5rem;
   padding-bottom: 2rem;
   opacity: 0.8;
 }
 
 .chapter-date .line {
-  color: #D8D6D2;  
-  font-family: "Cinzel", serif;  
+  color: #3A3632;
+  font-family: "Cinzel", serif;
   opacity: 0;
-  margin: 4rem 0 5rem 0;  
+  margin: 4rem 0 5rem 0;
   transform: translateY(6px);
   font-weight: 800;
   animation: fadeInUp 0.8s ease forwards;
@@ -194,3 +195,13 @@ h1 {
     transform: translateY(0);
   }
 }
+
+/*PELINAL ONLY*/
+.readout {
+  font-family: "Turret Road", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2E2C29;
+}
+    
