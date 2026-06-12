@@ -1,3 +1,4 @@
+```css
 @font-face {
     font-family: "Daedric";
     src: url("../../fonts/OMWAyembedt.otf") format("opentype");
@@ -20,8 +21,8 @@
 
 body {
   margin: 0;
-  background: #0B0E10;            /*background color*/
-  color: #B89B6B;                /*default text color*/
+  background: #06040A;            /* velvet midnight background */
+  color: #C6B8E3;                 /* default text color */
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -33,21 +34,21 @@ body {
 
 .site-header {
   text-align: center;
-  border-top: 1px solid #6F523A;     /*border lines*/
-  border-bottom: 1px solid #6F523A;    
+  border-top: 1px solid #241735;     /* plum border lines */
+  border-bottom: 1px solid #241735;
   padding: 32px 0;
   margin-bottom: 32px;
 }
 
 .website-title {
-  color: #C2B29A;    /*title color*/
+  color: #DDD3F4;    /* moonlit title color */
   font-size: 3.00rem;
   letter-spacing: 0.5em;
   font-family: "Shadowkey";
 }
 
 h1 {
-  color: #c5a35a;  /*this is unused currently*/
+  color: #8D7BB8;  /* unused currently */
   font-size: 1.00rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -55,7 +56,7 @@ h1 {
 }
 
 .subtitle {
-  color: #7D7364; /*subtitles should be same color as hover-over links and fade-in text*/
+  color: #8D7BB8; /* subtitles */
   font-style: italic;
 }
 
@@ -66,7 +67,7 @@ h1 {
 
 .sidebar {
   width: 220px;
-  border-right: 1px solid #4B392C;  /*grey border of the side menu*/
+  border-right: 1px solid #241735;  /* side menu border */
   padding-right: 24px;
 }
 
@@ -92,8 +93,8 @@ h1 {
 
     filter:
         brightness(1.15)
-        drop-shadow(0 0 4px #6A8D86) /*hover color for homepage link*/
-        drop-shadow(0 0 8px #6A8D86);
+        drop-shadow(0 0 4px #6A56A5) /* occult glow */
+        drop-shadow(0 0 8px #6A56A5);
 }
 
 @keyframes slowspin {
@@ -107,9 +108,9 @@ h1 {
 }
 
 
-.sidebar  a:not(.wheel-link){
+.sidebar a:not(.wheel-link){
   display: block;
-  color: #9A623E; /*side menu links color, should be same as post titles*/
+  color: #3B2461; /* side menu links */
   text-decoration: none;
   margin-bottom: 18px;
   letter-spacing: 0.08em;
@@ -118,32 +119,34 @@ h1 {
 
 /*hover behavior for sidebar*/
 .sidebar a:hover {
-  color: #5D8A7D; /*color that appears when you hover over a link*/
+  color: #6A56A5; /* hover color */
   text-decoration: underline;
 }
+
+/*if this is too dark, try #51307A*/
 
 /*typical color: #8a2d2d*/
 .sealed {
     font-family: "Daedric";
-    color: #496A66; /*color of locked entries*/
-    opacity: 0.8;
+    color: #5E4AA0; /* forbidden magic purple */
+    opacity: 0.85;
     letter-spacing: 0.05em;
     margin-bottom: 18px;
 
     text-shadow:
-        0 0 3px rgba(138,45,45,0.4);  
+        0 0 4px rgba(94,74,160,0.45);
 }
 
 .published {
     font-family: "Shadowkey";
-    color: #9A623E;
+    color: #3B2461;
     text-decoration: none;
 }
 
 #themeButton {
   background: transparent;
-  color: #9A623E; /*color of play button for music, should be same as sidebar text*/
-  border: 1px solid #9A623E;
+  color: #3B2461; /* play button color */
+  border: 1px solid #3B2461;
   padding: 12px 24px;
   font-family: "Cinzel", serif;
   font-size: 0.9rem;
@@ -154,9 +157,9 @@ h1 {
 }
 
 #themeButton:hover {
-  background-color: rgba(197, 163, 90, 0.1);
-  color: #5D8A7D; /*hover color for play button*/
-  border-color: #5D8A7D;
+  background-color: rgba(106, 86, 165, 0.12);
+  color: #8D7BB8;
+  border-color: #6A56A5;
 }
 
 #themeButton:active {
@@ -165,19 +168,19 @@ h1 {
 
 #themeButton:focus {
   outline: none;
-  box-shadow: 0 0 6px rgba(154, 98, 62, 0.45);
+  box-shadow: 0 0 6px rgba(106, 86, 165, 0.45);
 }
 
 .content {
   flex: 1;
-  background: #111314; /*post background*/
-  border: 1px solid #4B392C; /*border for posts should be same as sidebar border*/
+  background: #110C18; /* content background */
+  border: 1px solid #241735;
   padding: 32px;
   line-height: 1.7;
 }
 
 .content h2 {
-  color: #9A623E; /*post titles, same as side links*/
+  color: #51307A; /* post titles */
   margin-top: 0;
 }
 
@@ -185,17 +188,17 @@ h1 {
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  color: #777;
+  color: #6F6783;
   margin-top: 5rem;
   padding-bottom: 2rem;
   opacity: 0.8;
 }
 
 .chapter-date .line {
-  color: #7D7364; /*fade in text color, same as hover-over for side links*/
-  font-family: "Cinzel", serif;  
+  color: #8D7BB8; /* fade in text */
+  font-family: "Cinzel", serif;
   opacity: 0;
-  margin: 4rem 0 5rem 0;  
+  margin: 4rem 0 5rem 0;
   transform: translateY(6px);
   font-weight: 800;
   animation: fadeInUp 0.8s ease forwards;
@@ -216,3 +219,4 @@ h1 {
     transform: translateY(0);
   }
 }
+```
