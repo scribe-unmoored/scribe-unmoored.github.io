@@ -1,4 +1,4 @@
-```css
+
 @font-face {
     font-family: "Daedric";
     src: url("../../fonts/OMWAyembedt.otf") format("opentype");
@@ -119,7 +119,7 @@ h1 {
 
 /*hover behavior for sidebar*/
 .sidebar a:hover {
-  color: #6A56A5; /* hover color */
+  color: #51307A; /* hover color */
   text-decoration: underline;
 }
 
@@ -219,4 +219,3 @@ h1 {
     transform: translateY(0);
   }
 }
-```
