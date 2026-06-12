@@ -10,8 +10,8 @@
 
 body {
   margin: 0;
-  background: #07070A;            /* void obsidian */
-  color: #D6D0C2;                /* bone ash text */
+  background: #07070A;          
+  color: #D6D0C2;                
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -23,21 +23,21 @@ body {
 
 .site-header {
   text-align: center;
-  border-top: 1px solid #3A2F2A;     /* aged imperial metal */
+  border-top: 1px solid #3A2F2A;     
   border-bottom: 1px solid #3A2F2A;    
   padding: 32px 0;
   margin-bottom: 32px;
 }
 
 .website-title {
-  color: #E2D6B8;    /* imperial parchment-gold */
+  color: #E2D6B8;  
   font-size: 3.00rem;
   letter-spacing: 0.5em;
   font-family: "Battlespire";
 }
 
 h1 {
-  color: #B79A5C;  /* unused imperial gold */
+  color: #B79A5C; 
   font-size: 1.00rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -45,7 +45,7 @@ h1 {
 }
 
 .subtitle {
-  color: #8B8496; /* cold arcane ash-violet */
+  color: #8B8496;
   font-style: italic;
 }
 
@@ -56,7 +56,7 @@ h1 {
 
 .sidebar {
   width: 220px;
-  border-right: 1px solid #3A2F2A;  /* imperial seam metal */
+  border-right: 1px solid #3A2F2A;
   padding-right: 24px;
 }
 
@@ -82,7 +82,7 @@ h1 {
 
     filter:
         brightness(1.15)
-        drop-shadow(0 0 4px #6B5FA8) /* aether violet glow */
+        drop-shadow(0 0 4px #6B5FA8) 
         drop-shadow(0 0 8px #6B5FA8);
 }
 
@@ -99,7 +99,7 @@ h1 {
 
 .sidebar  a:not(.wheel-link){
   display: block;
-  color: #B79A5C; /* imperial gold links */
+  color: #B79A5C;
   text-decoration: none;
   margin-bottom: 18px;
   letter-spacing: 0.08em;
@@ -108,14 +108,14 @@ h1 {
 
 /*hover behavior for sidebar*/
 .sidebar a:hover {
-  color: #6B5FA8; /* aether violet hover */
+  color: #6B5FA8; 
   text-decoration: underline;
 }
 
 /*typical color: sealed arcane glyph containment*/
 .sealed {
     font-family: "Daedric";
-    color: #7A6BB8; /* contained magical sigil violet */
+    color: #7A6BB8; 
     opacity: 0.85;
     letter-spacing: 0.05em;
     margin-bottom: 18px;
@@ -126,7 +126,7 @@ h1 {
 
 .published {
     font-family: "Battlespire";
-    color: #B79A5C; /* imperial gold */
+    color: #B79A5C;
     text-decoration: none;
 }
 
@@ -144,7 +144,7 @@ h1 {
 }
 
 #themeButton:hover {
-  background-color: rgba(107, 95, 168, 0.12); /* aether tint */
+  background-color: rgba(107, 95, 168, 0.12); 
   color: #E2D6B8;
   border-color: #6B5FA8;
 }
@@ -160,14 +160,14 @@ h1 {
 
 .content {
   flex: 1;
-  background: #0B0C10; /* inner void chamber */
+  background: #0B0C10; 
   border: 1px solid #3A2F2A;
   padding: 32px;
   line-height: 1.7;
 }
 
 .content h2 {
-  color: #B79A5C; /* imperial gold title */
+  color: #B79A5C; 
   margin-top: 0;
 }
 
@@ -182,7 +182,7 @@ h1 {
 }
 
 .chapter-date .line {
-  color: #8B8496; /* arcane ash text */
+  color: #8B8496;
   font-family: "Cinzel", serif;  
   opacity: 0;
   margin: 4rem 0 5rem 0;  
