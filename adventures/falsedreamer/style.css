@@ -1,0 +1,202 @@
+@font-face {
+    font-family: "Daedric";
+    src: url("../../fonts/OMWAyembedt.otf") format("opentype");
+}
+
+body {
+  margin: 0;
+  background: #1D0C06;            /*background color*/
+  color: #CAA560;                /*default text color*/
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.site-header {
+  text-align: center;
+  border-top: 1px solid #9E7134;     /*border lines*/
+  border-bottom: 1px solid #9E7134;    
+  padding: 32px 0;
+  margin-bottom: 32px;
+}
+
+.website-title {
+  color: #501E10;    /*title color*/
+  font-size: 3.00rem;
+  letter-spacing: 0.5em;
+  font-family: "Cinzel", serif;
+}
+
+h1 {
+  color: #c5a35a;  /*this is unused currently*/
+  font-size: 1.00rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subtitle {
+  color: #8D7857; /*subtitle*/
+  font-style: italic;
+}
+
+.layout {
+  display: flex;
+  gap: 32px;
+}
+
+.sidebar {
+  width: 220px;
+  border-right: 1px solid #706132;  /*grey border of the side menu*/
+  padding-right: 24px;
+}
+
+
+/*homepage link setup*/
+.wheel-link {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.wheel-link img {
+    width: 120px;
+    max-width: 120px;
+    animation: slowspin 120s linear infinite;
+
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+}
+
+.wheel-link img:hover {
+    transform: scale(1.15);
+
+    filter:
+        brightness(1.15)
+        drop-shadow(0 0 4px #8a2d2d) /*hover color for homepage link*/
+        drop-shadow(0 0 8px #8a2d2d);
+}
+
+@keyframes slowspin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sidebar a:not(.wheel-link) {
+  display: block;
+  color: #9E7134; /*side menu links color*/
+  text-decoration: none;
+  margin-bottom: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+<!--hover behavior-->
+.sidebar a:hover {
+  color: #8D7857; /*color that appears when you hover over a link*/
+  text-decoration: underline;
+}
+
+.sealed {
+    font-family: "Daedric";
+    color: #8a2d2d; /*color of locked entries*/
+    opacity: 0.8;
+    letter-spacing: 0.05em;
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 0 3px rgba(138,45,45,0.4);  
+}
+
+.published {
+    font-family: "Cinzel";
+    color: #9E7134; /*color of unlocked entries; should be the same as sidebar text*/
+    text-decoration: none;
+}
+
+#themeButton {
+  background: transparent;
+  color: #9E7134; /*color of play button for music, should be same as sidebar text*/
+  border: 1px solid #9E7134;
+  padding: 12px 24px;
+  font-family: "Cinzel", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#themeButton:hover {
+  background-color: rgba(197, 163, 90, 0.1);
+  color: #8D7857; /*hover color for play button*/
+  border-color: #8D7857;
+}
+
+#themeButton:active {
+  transform: translateY(1px);
+}
+
+#themeButton:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(197, 163, 90, 0.4);
+}
+
+.content {
+  flex: 1;
+  background: #000000; /*post background*/
+  border: 1px solid #706132; /*border for posts should be same as sidebar border*/
+  padding: 32px;
+  line-height: 1.7;
+}
+
+.content h2 {
+  color: #9E7134; /*post title*/
+  margin-top: 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #777;
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.chapter-date .line {
+  color: #8D7857; /*fade in text color*/
+  font-family: "Cinzel", serif;  
+  opacity: 0;
+  margin: 4rem 0 5rem 0;  
+  transform: translateY(6px);
+  font-weight: 800;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* staggered delays */
+.chapter-date .line-1 { animation-delay: 0.8s; }
+.chapter-date .line-2 { animation-delay: 1.7s; }
+.chapter-date .line-3 { animation-delay: 3.3s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
