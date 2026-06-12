@@ -45,7 +45,7 @@ body {
   color: #C2B29A;    /*title color*/
   font-size: 3.00rem;
   letter-spacing: 0.5em;
-  font-family: "Arena";
+  font-family: "Battlespire";
 }
 
 h1 {
@@ -137,7 +137,7 @@ h1 {
 }
 
 .published {
-    font-family: "Arena";
+    font-family: "Battlespire";
     color: #9A623E;
     text-decoration: none;
 }
