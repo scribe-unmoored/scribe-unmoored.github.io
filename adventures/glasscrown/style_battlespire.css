@@ -20,8 +20,8 @@
 
 body {
   margin: 0;
-  background: #0B0E10;            /*background color*/
-  color: #B89B6B;                /*default text color*/
+  background: #07070A;            /* void obsidian */
+  color: #D6D0C2;                /* bone ash text */
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -33,21 +33,21 @@ body {
 
 .site-header {
   text-align: center;
-  border-top: 1px solid #6F523A;     /*border lines*/
-  border-bottom: 1px solid #6F523A;    
+  border-top: 1px solid #3A2F2A;     /* aged imperial metal */
+  border-bottom: 1px solid #3A2F2A;    
   padding: 32px 0;
   margin-bottom: 32px;
 }
 
 .website-title {
-  color: #C2B29A;    /*title color*/
+  color: #E2D6B8;    /* imperial parchment-gold */
   font-size: 3.00rem;
   letter-spacing: 0.5em;
   font-family: "Battlespire";
 }
 
 h1 {
-  color: #c5a35a;  /*this is unused currently*/
+  color: #B79A5C;  /* unused imperial gold */
   font-size: 1.00rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -55,7 +55,7 @@ h1 {
 }
 
 .subtitle {
-  color: #7D7364; /*subtitle*/
+  color: #8B8496; /* cold arcane ash-violet */
   font-style: italic;
 }
 
@@ -66,7 +66,7 @@ h1 {
 
 .sidebar {
   width: 220px;
-  border-right: 1px solid #4B392C;  /*grey border of the side menu*/
+  border-right: 1px solid #3A2F2A;  /* imperial seam metal */
   padding-right: 24px;
 }
 
@@ -92,8 +92,8 @@ h1 {
 
     filter:
         brightness(1.15)
-        drop-shadow(0 0 4px #6A8D86) /*hover color for homepage link*/
-        drop-shadow(0 0 8px #6A8D86);
+        drop-shadow(0 0 4px #6B5FA8) /* aether violet glow */
+        drop-shadow(0 0 8px #6B5FA8);
 }
 
 @keyframes slowspin {
@@ -109,7 +109,7 @@ h1 {
 
 .sidebar  a:not(.wheel-link){
   display: block;
-  color: #9A623E; /*side menu links color*/
+  color: #B79A5C; /* imperial gold links */
   text-decoration: none;
   margin-bottom: 18px;
   letter-spacing: 0.08em;
@@ -118,32 +118,32 @@ h1 {
 
 /*hover behavior for sidebar*/
 .sidebar a:hover {
-  color: #5D8A7D; /*color that appears when you hover over a link*/
+  color: #6B5FA8; /* aether violet hover */
   text-decoration: underline;
 }
 
-/*typical color: #8a2d2d*/
+/*typical color: sealed arcane glyph containment*/
 .sealed {
     font-family: "Daedric";
-    color: #496A66; /*color of locked entries*/
-    opacity: 0.8;
+    color: #7A6BB8; /* contained magical sigil violet */
+    opacity: 0.85;
     letter-spacing: 0.05em;
     margin-bottom: 18px;
 
     text-shadow:
-        0 0 3px rgba(138,45,45,0.4);  
+        0 0 4px rgba(107,95,168,0.45);
 }
 
 .published {
     font-family: "Battlespire";
-    color: #9A623E;
+    color: #B79A5C; /* imperial gold */
     text-decoration: none;
 }
 
 #themeButton {
   background: transparent;
-  color: #9A623E; /*color of play button for music, should be same as sidebar text*/
-  border: 1px solid #9A623E;
+  color: #B79A5C;
+  border: 1px solid #B79A5C;
   padding: 12px 24px;
   font-family: "Cinzel", serif;
   font-size: 0.9rem;
@@ -154,9 +154,9 @@ h1 {
 }
 
 #themeButton:hover {
-  background-color: rgba(197, 163, 90, 0.1);
-  color: #5D8A7D; /*hover color for play button*/
-  border-color: #5D8A7D;
+  background-color: rgba(107, 95, 168, 0.12); /* aether tint */
+  color: #E2D6B8;
+  border-color: #6B5FA8;
 }
 
 #themeButton:active {
@@ -165,19 +165,19 @@ h1 {
 
 #themeButton:focus {
   outline: none;
-  box-shadow: 0 0 6px rgba(154, 98, 62, 0.45);
+  box-shadow: 0 0 6px rgba(107, 95, 168, 0.45);
 }
 
 .content {
   flex: 1;
-  background: #111314; /*post background*/
-  border: 1px solid #4B392C; /*border for posts should be same as sidebar border*/
+  background: #0B0C10; /* inner void chamber */
+  border: 1px solid #3A2F2A;
   padding: 32px;
   line-height: 1.7;
 }
 
 .content h2 {
-  color: #9A623E; /*post title*/
+  color: #B79A5C; /* imperial gold title */
   margin-top: 0;
 }
 
@@ -185,14 +185,14 @@ h1 {
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  color: #777;
+  color: #6E6A78;
   margin-top: 5rem;
   padding-bottom: 2rem;
   opacity: 0.8;
 }
 
 .chapter-date .line {
-  color: #7D7364; /*fade in text color*/
+  color: #8B8496; /* arcane ash text */
   font-family: "Cinzel", serif;  
   opacity: 0;
   margin: 4rem 0 5rem 0;  
