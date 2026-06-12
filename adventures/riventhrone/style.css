@@ -11,88 +11,86 @@
 body {
   margin: 0;
   min-height: 100vh;
-  display: flex;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #E7E1D6;
+
+  /* base split background only (no layout changes) */
   background: linear-gradient(
     90deg,
     #071427 0%,
-    #071427 49.5%,
-    #140A1F 50.5%,
+    #071427 50%,
+    #140A1F 50%,
     #140A1F 100%
   );
-  color: #E7E1D6;
-  font-family: Georgia, "Times New Roman", serif;
 }
 
-/* central rift seam */
+/* subtle seam only (no structural impact) */
 body::before {
   content: "";
   position: fixed;
   left: 50%;
   top: 0;
-  width: 2px;
+  width: 1px;
   height: 100vh;
   background: linear-gradient(
     to bottom,
-    rgba(212,175,55,0),
-    rgba(212,175,55,0.8),
-    rgba(212,175,55,0)
+    transparent,
+    rgba(212,175,55,0.5),
+    transparent
   );
-  box-shadow:
-    0 0 10px rgba(212,175,55,0.35),
-    0 0 20px rgba(90,160,255,0.15),
-    0 0 20px rgba(190,90,255,0.15);
   pointer-events: none;
+  opacity: 0.8;
 }
 
+/* keep your layout unchanged */
 .page {
   max-width: 1100px;
   margin: 0 auto;
   padding: 32px;
-  display: flex;
-  gap: 32px;
 }
 
-/* HEADER */
 .site-header {
   text-align: center;
+  border-top: 1px solid rgba(212,175,55,0.25);
+  border-bottom: 1px solid rgba(212,175,55,0.25);
   padding: 32px 0;
   margin-bottom: 32px;
-  border-top: 1px solid rgba(212,175,55,0.35);
-  border-bottom: 1px solid rgba(212,175,55,0.35);
-  background: rgba(0,0,0,0.15);
-  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.12);
 }
 
 .website-title {
-  color: #E8D6A5;
+  color: #D8D0C2;
   font-size: 3rem;
   letter-spacing: 0.5em;
   font-family: "Cinzel", serif;
 }
 
 h1 {
+  color: #D4AF37;
   font-size: 1rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin: 0;
-  color: #D4AF37;
 }
 
-/* split subtitle moods */
 .subtitle {
   font-style: italic;
-  background: linear-gradient(90deg, #4DA3FF, #D4AF37 45%, #B56CFF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #B9B0A3;
 }
 
-/* SIDEBAR */
+.layout {
+  display: flex;
+  gap: 32px;
+}
+
+/* SIDEBAR (color split behavior via direction, not layout split) */
 .sidebar {
   width: 220px;
+  border-right: 1px solid rgba(212,175,55,0.15);
   padding-right: 24px;
-  border-right: 1px solid rgba(212,175,55,0.2);
 }
 
+/* default (blue-side influence) */
 .sidebar a:not(.wheel-link) {
   display: block;
   text-decoration: none;
@@ -100,16 +98,16 @@ h1 {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 0.9rem;
-  color: #E8D6A5;
+  color: #BFD7FF;
   transition: 0.2s ease;
 }
 
 .sidebar a:hover {
-  color: #4DA3FF;
-  text-shadow: 0 0 10px rgba(77,163,255,0.5);
+  color: #7FCBFF;
+  text-shadow: 0 0 10px rgba(127,203,255,0.35);
 }
 
-/* wheel */
+/* wheel stays neutral gold anchor */
 .wheel-link {
   display: block;
   margin-bottom: 30px;
@@ -125,8 +123,8 @@ h1 {
   transform: scale(1.15);
   filter:
     brightness(1.2)
-    drop-shadow(0 0 10px rgba(77,163,255,0.5))
-    drop-shadow(0 0 10px rgba(181,108,255,0.35));
+    drop-shadow(0 0 10px rgba(212,175,55,0.4))
+    drop-shadow(0 0 12px rgba(127,203,255,0.25));
 }
 
 @keyframes slowspin {
@@ -134,22 +132,51 @@ h1 {
   to { transform: rotate(360deg); }
 }
 
-/* SEAL TEXT */
+/* headers remain gold anchor (both realities agree here) */
+.content h2 {
+  color: #D4AF37;
+  text-shadow:
+    0 0 10px rgba(127,203,255,0.15),
+    0 0 10px rgba(181,108,255,0.15);
+}
+
+/* CONTENT PANEL (neutral midpoint between realms) */
+.content {
+  flex: 1;
+  padding: 32px;
+  line-height: 1.7;
+
+  background: rgba(10, 8, 14, 0.65);
+  border: 1px solid rgba(212,175,55,0.18);
+}
+
+/* RIGHT-SIDE TEXT (purple influence via selective overrides) */
+.content p:nth-of-type(even),
+.content .chapter-date .line:nth-child(even) {
+  color: #C9A3FF; /* purple realm bleed */
+}
+
+/* LEFT-SIDE TEXT (blue influence) */
+.content p:nth-of-type(odd),
+.content .chapter-date .line:nth-child(odd) {
+  color: #A7D0FF; /* manic clarity blue */
+}
+
+/* sealed script = unstable bleed point */
 .sealed {
   font-family: "Daedric";
   color: #D4AF37;
-  letter-spacing: 0.05em;
   opacity: 0.9;
   text-shadow:
-    0 0 6px rgba(212,175,55,0.35),
-    0 0 10px rgba(181,108,255,0.2);
+    0 0 6px rgba(212,175,55,0.25),
+    0 0 10px rgba(201,163,255,0.25);
 }
 
-/* BUTTON */
+/* button stays gold but reacts to both sides */
 #themeButton {
   background: transparent;
+  color: #D4AF37;
   border: 1px solid #D4AF37;
-  color: #E8D6A5;
   padding: 12px 24px;
   font-family: "Cinzel", serif;
   text-transform: uppercase;
@@ -159,44 +186,26 @@ h1 {
 }
 
 #themeButton:hover {
-  background: linear-gradient(90deg, rgba(77,163,255,0.15), rgba(181,108,255,0.15));
-  border-color: #4DA3FF;
+  background: linear-gradient(
+    90deg,
+    rgba(127,203,255,0.15),
+    rgba(201,163,255,0.15)
+  );
+  border-color: #A7D0FF;
   color: #FFFFFF;
 }
 
-/* CONTENT PANELS */
-.content {
-  flex: 1;
-  padding: 32px;
-  line-height: 1.7;
-  border: 1px solid rgba(212,175,55,0.25);
-  background: linear-gradient(
-    90deg,
-    rgba(10,25,45,0.85) 0%,
-    rgba(20,10,30,0.85) 100%
-  );
-  backdrop-filter: blur(8px);
-}
-
-/* headings */
-.content h2 {
-  color: #D4AF37;
-  text-shadow:
-    0 0 10px rgba(77,163,255,0.25),
-    0 0 10px rgba(181,108,255,0.25);
-}
-
-/* copyright */
+/* copyright fades into the “rift boundary” */
 .copyright {
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  color: #B9B0A3;
+  color: #AFA79B;
   margin-top: 5rem;
   opacity: 0.8;
 }
 
-/* chapter dates */
+/* animation unchanged */
 .chapter-date .line {
   font-family: "Cinzel", serif;
   font-weight: 800;
@@ -204,32 +213,13 @@ h1 {
   margin: 4rem 0 5rem 0;
   transform: translateY(6px);
   animation: fadeInUp 0.8s ease forwards;
-  color: #E8D6A5;
 }
 
-/* alternating madness/order tint */
-.chapter-date .line:nth-child(odd) {
-  color: #4DA3FF;
-}
-
-.chapter-date .line:nth-child(even) {
-  color: #B56CFF;
-}
+.chapter-date .line-1 { animation-delay: 0.8s; }
+.chapter-date .line-2 { animation-delay: 1.7s; }
+.chapter-date .line-3 { animation-delay: 3.3s; }
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-/* optional rift shimmer overlay */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(212,175,55,0.08),
-    transparent 60%
-  );
-  pointer-events: none;
 }
