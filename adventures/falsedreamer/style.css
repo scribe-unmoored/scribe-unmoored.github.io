@@ -98,7 +98,8 @@ h1 {
     }
 }
 
-.sidebar a:not(.wheel-link) {
+/*a:not(.wheel-link)*/
+.sidebar  {
   display: block;
   color: #9E7134; /*side menu links color*/
   text-decoration: none;
