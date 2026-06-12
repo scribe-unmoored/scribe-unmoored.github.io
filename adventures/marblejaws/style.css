@@ -5,8 +5,8 @@
 
 body {
   margin: 0;
-  background: #0E0F12;            /* deep quarry shadow */
-  color: #D8D6D2;                /* cold marble-lit text */
+  background: #0A0A0C;            /* volcanic basalt night */
+  color: #D6D0C6;                /* ash-lit bone text */
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -18,21 +18,21 @@ body {
 
 .site-header {
   text-align: center;
-  border-top: 1px solid #6F6A62;     /* carved stone line */
-  border-bottom: 1px solid #6F6A62;
+  border-top: 1px solid #3B2A24;     /* cracked obsidian seam */
+  border-bottom: 1px solid #3B2A24;
   padding: 32px 0;
   margin-bottom: 32px;
 }
 
 .website-title {
-  color: #E6E2DA;    /* polished marble face */
+  color: #E7E1D6;    /* ash-white exposed stone */
   font-size: 3.00rem;
   letter-spacing: 0.5em;
   font-family: "Cinzel", serif;
 }
 
 h1 {
-  color: #C5A35A;  /* restrained imperial metal accent (kept as relic logic) */
+  color: #FFB000;  /* ember-gold heat signal */
   font-size: 1.00rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -40,7 +40,7 @@ h1 {
 }
 
 .subtitle {
-  color: #9A948C; /* softened stone inscription grey */
+  color: #A89A8C; /* cooled ash haze */
   font-style: italic;
 }
 
@@ -51,7 +51,7 @@ h1 {
 
 .sidebar {
   width: 220px;
-  border-right: 1px solid #5C5852;  /* iron-stone seam */
+  border-right: 1px solid #3B2A24;  /* fractured volcanic plate boundary */
   padding-right: 24px;
 }
 
@@ -76,8 +76,9 @@ h1 {
     transform: scale(1.15);
 
     filter:
-        brightness(1.12)
-        drop-shadow(0 0 6px rgba(230, 226, 218, 0.25)); /* marble sheen */
+        brightness(1.2)
+        drop-shadow(0 0 6px rgba(255, 80, 0, 0.35)) /* ember flare */
+        drop-shadow(0 0 12px rgba(255, 0, 0, 0.25));
 }
 
 @keyframes slowspin {
@@ -88,7 +89,7 @@ h1 {
 
 .sidebar a:not(.wheel-link) {
   display: block;
-  color: #BDB7AE; /* carved inscription text */
+  color: #FFB000; /* ember-metal text markers */
   text-decoration: none;
   margin-bottom: 18px;
   letter-spacing: 0.08em;
@@ -97,31 +98,32 @@ h1 {
 }
 
 .sidebar a:hover {
-  color: #E6E2DA; /* marble highlight */
+  color: #FFD36A; /* flare-lit ash gold */
   text-decoration: underline;
 }
 
 .sealed {
     font-family: "Daedric";
-    color: #8C2F2F; /* iron-blood stain in stone */
-    opacity: 0.85;
+    color: #8B1E1E; /* deep volcanic blood / molten rune */
+    opacity: 0.9;
     letter-spacing: 0.05em;
     margin-bottom: 18px;
 
     text-shadow:
-        0 0 6px rgba(140,47,47,0.35);
+        0 0 6px rgba(139,30,30,0.45),
+        0 0 12px rgba(255,60,0,0.15);
 }
 
 .published {
     font-family: "Cinzel";
-    color: #C5A35A;
+    color: #FFB000;
     text-decoration: none;
 }
 
 #themeButton {
   background: transparent;
-  color: #BDB7AE;
-  border: 1px solid #5C5852;
+  color: #FFB000;
+  border: 1px solid #3B2A24;
   padding: 12px 24px;
   font-family: "Cinzel", serif;
   font-size: 0.9rem;
@@ -132,9 +134,9 @@ h1 {
 }
 
 #themeButton:hover {
-  background-color: rgba(230, 226, 218, 0.06); /* faint polished stone reflection */
-  color: #E6E2DA;
-  border-color: #BDB7AE;
+  background-color: rgba(255, 80, 0, 0.08); /* heat shimmer overlay */
+  color: #FFD36A;
+  border-color: #8B1E1E;
 }
 
 #themeButton:active {
@@ -143,19 +145,19 @@ h1 {
 
 #themeButton:focus {
   outline: none;
-  box-shadow: 0 0 6px rgba(230, 226, 218, 0.25);
+  box-shadow: 0 0 8px rgba(255, 80, 0, 0.35);
 }
 
 .content {
   flex: 1;
-  background: #14161A; /* carved interior slab */
-  border: 1px solid #5C5852;
+  background: #0E0E10; /* cooled lava basin */
+  border: 1px solid #3B2A24;
   padding: 32px;
   line-height: 1.7;
 }
 
 .content h2 {
-  color: #C5A35A; /* relic inscription header */
+  color: #FFB000; /* ember-inscribed header */
   margin-top: 0;
 }
 
@@ -163,14 +165,14 @@ h1 {
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  color: #8F8A83;
+  color: #8F857A;
   margin-top: 5rem;
   padding-bottom: 2rem;
   opacity: 0.8;
 }
 
 .chapter-date .line {
-  color: #D8D6D2;  
+  color: #D6D0C6;  
   font-family: "Cinzel", serif;  
   opacity: 0;
   margin: 4rem 0 5rem 0;  
