@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: "Imperial";
-    src: url("../../fonts/EagleLake-Regular.ttf"
+    src: url("../../fonts/EagleLake-Regular.ttf" format("truetype");
 }
 
 body {
