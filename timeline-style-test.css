@@ -219,9 +219,10 @@ body {
 
 .copyright {
   text-align: center;
-  padding: 32px 0;
-  color: #555;
   font-size: 0.75rem;
-  border-top: 1px solid #222;
-  margin-top: 60px;
+  letter-spacing: 0.08em;
+  color: #777;
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+  opacity: 0.8;
 }
