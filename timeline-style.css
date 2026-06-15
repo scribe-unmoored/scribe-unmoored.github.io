@@ -23,9 +23,10 @@
 /* this is what makes everything stack vertically instead of collapsing */
 .timeline-content {
   position: relative;
-  width: 100%;
   display: block;
   display: inline-block;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .timeline-header {
