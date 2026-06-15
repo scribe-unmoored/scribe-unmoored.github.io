@@ -56,6 +56,45 @@ body {
   font-family: "Cinzel", serif;
 }
 
+/* Hide the actual checkbox */
+#header-toggle {
+  display: none;
+}
+
+/* The toggle button */
+.header-toggle-btn {
+  display: block;
+  cursor: pointer;
+  color: #9a9488;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+/* ─── TOGGLE BUTTON ─────────────────────────────────────── */
+.header-toggle-btn:hover {
+  color: #c5a35a;
+}
+
+/* Collapse the content when unchecked */
+.header-content {
+  overflow: hidden;
+  max-height: 300px; /* tall enough to fit your content */
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+#header-toggle:not(:checked) ~ .header-content {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Flip the arrow when collapsed */
+#header-toggle:not(:checked) ~ .header-toggle-btn {
+  content: "▼";
+}
+
 /* ─── TIMELINE LAYOUT ─────────────────────────────────────── */
 
 .timeline-container {
