@@ -9,12 +9,14 @@
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
+  background: black;
 }
 
 .timeline-track {
   display: inline-block;
   position: relative;
   min-width: max-content;
+  height: 600px; /* adjust as need be */
 }
 
 /* this is what makes everything stack vertically instead of collapsing */
@@ -92,6 +94,10 @@
 .star {
   position: relative;
   display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #c5a35a;
+  border-radius: 50%;
 }
 
 .toppest { transform: translateY(-180px); }
