@@ -12,12 +12,12 @@
 }
 
 .timeline-track {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: relative;
-  min-width: max-content;
-  height: 600px; /* adjust as need be */
-  white-space: nowrap;
-  background: black;
+  width: max-content;
+  height: 600px;
 }
 
 .timeline-header {
@@ -126,12 +126,12 @@
 }
 
 .star {
-  display: inline-block;
-  position: relative;
+  flex: 0 0 auto;
   width: 8px;
   height: 8px;
   background: #c5a35a;
   border-radius: 50%;
+  position: relative;
 }
 
 .star:hover .content {
