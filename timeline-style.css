@@ -1,10 +1,26 @@
 body {
   margin: 0;
-  background: #000; /* starfield effect */
+  background: #000;
   color: #d8d5cc;
   font-family: Georgia, "Times New Roman", serif;
-  overflow-x: auto; /* important for sideways scroll */
+  overflow-x: auto;
   overflow-y: hidden;
+}
+
+.timeline-header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 1000;
+}
+
+.title {
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.4em;
+  color: #c5a35a;
+  margin-top: 10px;
 }
 
 .timeline-container {
@@ -98,6 +114,11 @@ body {
 }
 
 .star-group:hover .content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.star-group:hover .content-box {
   opacity: 1;
   transform: translateY(0);
 }
