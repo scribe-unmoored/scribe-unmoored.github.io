@@ -262,6 +262,20 @@ body {
   pointer-events: auto;
 }
 
+/* Daedric->Garamond Transition*/
+.letter {
+  font-family: "Daedric", serif;
+  color: #8a2d2d;
+  display: inline-block;
+  transition: font-family 0s ease, color 0.2s ease;
+  transition-delay: 0ms;
+}
+
+.star-slot:hover .letter {
+  font-family: "Cinzel", serif;
+  color: #c5a35a;
+}
+
 /* ─── STAR TYPES ───────────────────────────────────── */
 
 .story-star .dot {
