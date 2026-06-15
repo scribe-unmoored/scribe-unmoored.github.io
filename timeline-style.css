@@ -20,15 +20,6 @@
   background: black;
 }
 
-/* this is what makes everything stack vertically instead of collapsing */
-.timeline-content {
-  position: relative;
-  display: block;
-  display: inline-block;
-  white-space: nowrap;
-  overflow-x: auto;
-}
-
 .timeline-header {
   text-align: center;
   border-top: 1px solid #c5a35a;
