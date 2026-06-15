@@ -95,6 +95,11 @@ body {
   content: "▼";
 }
 
+.arrow-closed { display: none; }
+
+#header-toggle:not(:checked) ~ .header-toggle-btn .arrow-open { display: none; }
+#header-toggle:not(:checked) ~ .header-toggle-btn .arrow-closed { display: inline; }
+
 /* ─── TIMELINE LAYOUT ─────────────────────────────────────── */
 
 .timeline-container {
