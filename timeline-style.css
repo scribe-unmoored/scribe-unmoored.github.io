@@ -5,10 +5,9 @@
 
 
 .timeline-container {
-  margin-top: 180px; /* prevents overlap with fixed header */
+  margin-top: 180px;
   overflow-x: auto;
   overflow-y: hidden;
-  white-space: nowrap;
   background: black;
 }
 
@@ -43,9 +42,8 @@
   top: 50%;
   left: 0;
   right: 0;
-
   height: 2px;
-  background: #c5a35a;
+  background: #FFFFFF;
 }
 
 .wheel-link {
