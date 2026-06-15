@@ -13,6 +13,11 @@
   border-bottom: 1px solid #c5a35a;
   padding: 32px 0;
   margin-bottom: 32px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #0b0b0b; /* or whatever your page background is */
+}
 }
 
 .wheel-link {
