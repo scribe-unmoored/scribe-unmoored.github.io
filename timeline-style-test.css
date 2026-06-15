@@ -1,0 +1,221 @@
+/* Ignore — font import for later */
+@font-face {
+  font-family: "Daedric";
+  src: url("fonts/OMWAyembedt.otf") format("opentype");
+}
+
+/* ─── HEADER ─────────────────────────────────────────────── */
+
+.timeline-header {
+  text-align: center;
+  border-top: 1px solid #c5a35a;
+  border-bottom: 1px solid #c5a35a;
+  padding: 32px 0;
+  margin-bottom: 32px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #0b0b0b;
+}
+
+.wheel-link {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.wheel-link img {
+  width: 120px;
+  max-width: 120px;
+  animation: slowspin 120s linear infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.wheel-link img:hover {
+  transform: scale(1.15);
+  filter:
+    brightness(1.15)
+    drop-shadow(0 0 4px #c5a35a)
+    drop-shadow(0 0 8px #c5a35a);
+}
+
+@keyframes slowspin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.title {
+  color: #9a9488;
+  font-size: 3.00rem;
+  letter-spacing: 0.5em;
+  font-family: "Cinzel", serif;
+}
+
+/* ─── TIMELINE LAYOUT ─────────────────────────────────────── */
+
+.timeline-container {
+  margin-top: 180px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: black;
+}
+
+.timeline-track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: max-content;
+  height: 600px;
+  gap: 120px;
+  padding: 0 80px;
+}
+
+/* The gold centerline */
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #c5a35a;
+  pointer-events: none;
+}
+
+/* ─── STAR SLOTS ──────────────────────────────────────────── */
+
+/*
+  Each .star-slot is a flex child of .timeline-track.
+  It owns horizontal space automatically via the track's gap.
+  Position classes shift it vertically; the dot and tooltip
+  are positioned relative to the slot.
+*/
+
+.star-slot {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 8px; /* slot is dot-width; tooltip overflows absolutely */
+}
+
+/* Vertical positions */
+.toppest     { transform: translateY(-180px); }
+.top         { transform: translateY(-90px);  }
+.top-middle  { transform: translateY(-45px);  }
+.middle      { transform: translateY(0px);    }
+.bottom-middle { transform: translateY(45px); }
+.bottom      { transform: translateY(90px);   }
+.bottomest   { transform: translateY(140px);  }
+
+/* ─── THE DOT ─────────────────────────────────────────────── */
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #c5a35a;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Clickable dots get a pointer and a hover glow */
+.star-slot a {
+  display: block;
+  line-height: 0; /* removes ghost space around inline anchor */
+}
+
+.star-slot a .dot:hover {
+  transform: scale(1.6);
+  filter:
+    drop-shadow(0 0 4px #c5a35a)
+    drop-shadow(0 0 8px #c5a35a);
+}
+
+/* ─── TOOLTIPS ────────────────────────────────────────────── */
+
+.content {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  background: #151515;
+  border: 1px solid #3a3323;
+  padding: 16px 20px;
+  z-index: 10;
+}
+
+.content h2 {
+  color: #c5a35a;
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  margin: 0 0 8px 0;
+}
+
+.content p {
+  color: #9a9488;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Tooltips appear BELOW the dot for bottom-half positions */
+.bottomest .content,
+.bottom .content,
+.bottom-middle .content,
+.middle .content {
+  top: 20px;
+}
+
+/* Tooltips appear ABOVE the dot for top-half positions */
+.toppest .content,
+.top .content,
+.top-middle .content {
+  bottom: 20px;
+}
+
+/* Reveal on hover */
+.star-slot:hover .content {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ─── STAR TYPE BORDERS ───────────────────────────────────── */
+
+.event-star .content {
+  border-color: #888;
+  background: rgba(30, 30, 30, 0.95);
+}
+
+.episode-star .content {
+  border-color: #c5a35a;
+}
+
+.chapter-star .content {
+  border-color: #c5a35a;
+}
+
+.story-star .content {
+  border-color: #6aa6ff;
+}
+
+.special-star .content {
+  border-color: #ff4d4d;
+}
+
+/* ─── FOOTER ──────────────────────────────────────────────── */
+
+.copyright {
+  text-align: center;
+  padding: 32px 0;
+  color: #555;
+  font-size: 0.75rem;
+  border-top: 1px solid #222;
+  margin-top: 60px;
+}
