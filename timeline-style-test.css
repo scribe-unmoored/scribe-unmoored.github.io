@@ -4,6 +4,12 @@
   src: url("fonts/OMWAyembedt.otf") format("opentype");
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
 /* ─── HEADER ─────────────────────────────────────────────── */
 
 .timeline-header {
