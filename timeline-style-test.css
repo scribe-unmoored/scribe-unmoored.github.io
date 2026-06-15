@@ -263,7 +263,7 @@ body {
   pointer-events: auto;
 }
 
-/* Daedric->Garamond Transition*/
+/* Daedric->Garamond Transition
 .letter {
   font-family: "Daedric", serif;
   color: #8a2d2d;
@@ -275,7 +275,7 @@ body {
 .star-slot:hover .letter {
   font-family: "Cinzel", serif;
   color: #c5a35a;
-}
+}*/
 
 /* ─── STAR TYPES ───────────────────────────────────── */
 
