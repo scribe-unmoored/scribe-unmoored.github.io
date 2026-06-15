@@ -120,9 +120,10 @@ body {
   width: 8px;
   height: 8px;
   background: #c5a35a;
-  border-radius: 50%;
+  border-radius: 0;
   flex-shrink: 0;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transform: rotate(45deg);
+  transition: filter 0.2s ease;
 }
 
 /* Clickable dots get a pointer and a hover glow */
@@ -192,29 +193,42 @@ body {
   pointer-events: auto;
 }
 
-/* ─── STAR TYPE BORDERS ───────────────────────────────────── */
+/* ─── STAR TYPES ───────────────────────────────────── */
 
-.event-star .content {
-  border-color: #888;
-  background: rgba(30, 30, 30, 0.95);
+.story-star .dot {
+  width: 8px;
+  height: 8px;
+  background: #6aa6ff;
+  border-radius: 2px;
 }
 
-.episode-star .content {
-  border-color: #c5a35a;
+.chapter-star .dot {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 2px;
 }
 
-.chapter-star .content {
-  border-color: #c5a35a;
+.special-star .dot {
+  width: 16px;
+  height: 16px;
+  background: #4dff88;
+  border-radius: 3px;
 }
 
-.story-star .content {
-  border-color: #6aa6ff;
+.episode-star .dot {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-radius: 3px;
 }
 
-.special-star .content {
-  border-color: #ff4d4d;
+.event-star .dot {
+  width: 16px;
+  height: 16px;
+  background: #6aa6ff;
+  border-radius: 3px;
 }
-
 /* ─── FOOTER ──────────────────────────────────────────────── */
 
 .copyright {
