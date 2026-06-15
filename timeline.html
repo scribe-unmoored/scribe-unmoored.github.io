@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script data-goatcounter="https://scribe-unmoored.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js">
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="timeline-style.css">
+</head>
+
+<body>
+
+
+<div class="timeline-header">
+  <input type="checkbox" id="header-toggle" checked>
+  <label for="header-toggle" class="header-toggle-btn">
+    <span class="arrow-open">▲</span>
+    <span class="arrow-closed">▼</span>
+  </label>
+  <div class="header-content">
+    <a href="/index.html" class="wheel-link">
+      <img src="images/main/gold.png" alt="Homepage">
+    </a>
+    <div class="title">HORORECORD ARCHIVE</div>
+    <div class="subtitle">Browse entries in <i>horological</i> order!</div>
+  </div>
+</div>
+  
+<section class="timeline-container">
+  <div class="timeline-track">
+
+    <div class="timeline-line"></div>
+    <div class="magnus"></div>
+
+    <!--
+      HOW TO ADD ENTRIES:
+      ==================
+      Every entry is a <div class="star-slot [position] [type]"> block.
+
+      POSITION classes (vertical placement):
+        toppest | top | top-middle | middle | bottom-middle | bottom | bottomest
+
+      TYPE classes (tooltip border color):
+        event-star    — grey border, site events/announcements
+        episode-star  — gold border, episode starts
+        chapter-star  — gold border, chapters
+        story-star    — blue border, standalone stories
+        special-star  — red border, secrets
+
+      FOR NON-CLICKABLE entries (events, announcements):
+        <div class="star-slot [position] [type]">
+          <div class="dot"></div>
+          <div class="content">
+            <h2>TITLE</h2>
+            <p>Description.</p>
+          </div>
+        </div>
+
+      FOR CLICKABLE entries (chapters, stories, episodes):
+        <div class="star-slot [position] [type]">
+          <a href="/your/link/here"><div class="dot"></div></a>
+          <div class="content">
+            <h2>TITLE</h2>
+            <p>Description.</p>
+          </div>
+        </div>
+
+      Tooltips automatically appear ABOVE the dot for top-half positions
+      (toppest, top, top-middle) and BELOW for bottom-half positions
+      (middle, bottom-middle, bottom, bottomest).
+    -->
+
+    <!-- Event #1: Archive Online -->
+    <div class="star-slot bottomest event-star">
+      <div class="dot"></div>
+      <div class="content">
+        <h2>ARCHIVE ONLINE</h2>
+        <p>Greetings, Dreamer. The archive is online. Standby for future transmissions.</p>
+      </div>
+    </div>
+
+    <!-- BRASS TOWER START -->
+    <div class="star-slot toppest episode-star">
+      <a href="/adventures/brasstower/index"><div class="dot"></div></a>
+      <div class="content">
+        <h2>EPISODE II: BRASS TOWER</h2>
+        <p>The Adventure begins...</p>
+      </div>
+    </div>
+
+    <!-- Brass Tower: Chapter 1: The Atronach -->
+    <div class="star-slot top-middle chapter-star">
+      <a href="/adventures/brasstower/chapter_1"><div class="dot"></div></a>
+      <div class="content">
+        <h2>I: The Atronach</h2>
+        <p>A man wakes in a cave, born beneath broken stars...</p>
+      </div>
+    </div>
+
+    <!-- I, God -->
+    <div class="star-slot middle story-star">
+      <a href="writings/writings/i-god"><div class="dot"></div></a>
+      <div class="content">
+        <h2>I, God</h2>
+        <p>Heduanna has always relied on her goddess, Ananna, for guidance.</p>
+      </div>
+    </div>
+
+    <!-- Brass Tower: Chapter 2: The Lady -->
+    <div class="star-slot bottom-middle chapter-star">
+      <a href="/adventures/brasstower/chapter2"><div class="dot"></div></a>
+      <div class="content">
+        <h2>II: The Lady</h2>
+        <p>An agent of Summerset arrives in the Iliac Bay...</p>
+      </div>
+    </div>
+
+    <!-- Brass Tower: Chapter 3: Privateer's Hold -->
+    <div class="star-slot bottom chapter-star">
+      <a href="/adventures/brasstower/chapter3"><div class="dot"></div></a>
+      <div class="content">
+        <h2>III: Privateer's Hold</h2>
+        <p>The Blade pushes deeper into Privateer's Hold...</p>
+      </div>
+    </div>
+
+    <!-- Innate -->
+    <div class="star-slot middle story-star">
+      <a href="/writings/writings/innate"><div class="dot"></div></a>
+      <div class="content">
+        <h2>Innate</h2>
+        <p>Cancer is a war within the self, between brothers of plasm and protein.</p>
+      </div>
+    </div>
+
+    <!-- Event #2: Timeline Online -->
+    <div class="star-slot bottomest event-star">
+      <div class="dot"></div>
+      <div class="content">
+        <h2>TIMELINE ONLINE</h2>
+        <p>This timeline has been added for your convenience, Dreamer. It provides information for the correct viewing order of my transmissions, as well as site updates and perhaps a few... secrets.</p>
+      </div>
+    </div>
+
+    <!-- Idiomatic Tonal Vectors -->
+    <div class="star-slot middle story-star">
+      <a href="/writings/writings/lexical"><div class="dot"></div></a>
+      <div class="content">
+        <h2>Tonal Vectors</h2>
+        <p>A submission to the journal of artificial divinity, by Chief Tonal Architect Kagrenac.</p>
+      </div>
+    </div>
+
+    <!-- Event #3: Dead Moon Archive Unstable -->
+    <div class="star-slot toppest event-star">
+      <div class="dot"></div>
+      <div class="content">
+        <h2>BEWARE: ARCHIVE UNSTABLE</h2>
+        <p>My tampering appears to have activated a long-dormant, potentially malicious eidolon-class artificial intelligence stored in the corpus of "The Adventures...". Though I am working tirelessly to contain it, exercise caution if you attempt to access the archive designated "DEAD DEAD DEAD DEAD." Whatever it is, I have contained it there for the time being.</p>
+      </div>
+    </div>
+
+    <!-- Brass Tower: Chapter 4: The Blade -->
+    <div class="star-slot top chapter-star">
+      <a href="/adventures/brasstower/chapter4"><div class="dot"></div></a>
+      <div class="content">
+        <h2>IV: The Blade</h2>
+        <p>The Blade makes his escape...</p>
+      </div>
+    </div>
+
+    <!-- Secret #1: Visage Reveal -->
+    <div class="star-slot toppest special-star">
+      <a href="/secrets/visage"><div class="dot"></div></a>
+      <div class="content">
+        <h2>GR3371NG5 DR34M3R</h2>
+        <p>INCOMING TRANSMISSION FROM THE REPOSITORY OF SILENCE, MOTHSHIP 17b: VISAGE REVEAL!</p>
+      </div>
+    </div>
+
+    <div class="sublime"></div>
+
+  </div>
+</section>
+
+<footer class="copyright">
+  <p>The Elder Scrolls and all related intellectual property are owned by Bethesda Softworks.</p>
+  <p>This is an unofficial, non-commercial fan work.</p>
+  <p>All original characters, stories, text, and music are © 2026 The Scribe Unmoored.</p>
+</footer>
+
+<!-- Scripts -->
+
+<!-- Daedric -> Garamond -->
+<!-- <script>
+  document.querySelectorAll('.content h2, .content p').forEach(el => {
+    el.innerHTML = el.textContent.split('').map((char, i) =>
+      `<span class="letter" style="transition-delay: ${i * 30}ms">${char === ' ' ? '&nbsp;' : char}</span>`
+    ).join('');
+  });
+</script> -->
+
+
+<!-- Twinkling Stars --> 
+  <script>
+  const container = document.querySelector('.timeline-container');
+  const track = document.querySelector('.timeline-track');
+
+  const STAR_COUNT = 200;
+
+  for (let i = 0; i < STAR_COUNT; i++) {
+    const star = document.createElement('div');
+    star.classList.add('bg-star');
+
+    // Random position across the full scrollable width and height
+    const x = Math.random() * track.scrollWidth;
+    const y = Math.random() * 600; // match your track height
+
+    // Random size between 1px and 3px
+    const size = Math.random() * 2 + 1;
+
+    // Random grey/white color
+    const brightness = Math.floor(Math.random() * 80 + 150); // 150-230
+    const color = `rgb(${brightness}, ${brightness}, ${brightness})`;
+
+    // Random twinkle duration between 4s and 10s, random delay so they're out of phase
+    const duration = (Math.random() * 6 + 4).toFixed(2);
+    const delay = (Math.random() * 10).toFixed(2);
+
+    star.style.cssText = `
+      left: ${x}px;
+      top: ${y}px;
+      width: ${size}px;
+      height: ${size}px;
+      background: ${color};
+      animation-duration: ${duration}s;
+      animation-delay: -${delay}s;
+    `;
+
+    track.appendChild(star);
+  }
+</script>
+</body>
+</html>

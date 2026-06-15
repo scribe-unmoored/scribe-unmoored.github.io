@@ -1,0 +1,379 @@
+/* Ignore — font import for later */
+@font-face {
+  font-family: "Daedric";
+  src: url("fonts/OMWAyembedt.otf") format("opentype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+/* ─── HEADER ─────────────────────────────────────────────── */
+
+.timeline-header {
+  text-align: center;
+  border-top: 1px solid #c5a35a;
+  border-bottom: 1px solid #c5a35a;
+  padding: 32px 0;
+  margin-bottom: 32px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #0b0b0b;
+}
+
+.wheel-link {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.wheel-link img {
+  width: 120px;
+  max-width: 120px;
+  animation: slowspin 120s linear infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.wheel-link img:hover {
+  transform: scale(1.15);
+  filter:
+    brightness(1.15)
+    drop-shadow(0 0 4px #c5a35a)
+    drop-shadow(0 0 8px #c5a35a);
+}
+
+@keyframes slowspin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.title {
+  color: #9a9488;
+  font-size: 3.00rem;
+  letter-spacing: 0.5em;
+  font-family: "Cinzel", serif;
+}
+
+.subtitle {
+  color: #e2d2a2;
+}
+
+/* Hide the actual checkbox */
+#header-toggle {
+  display: none;
+}
+
+/* The toggle button */
+.header-toggle-btn {
+  display: block;
+  cursor: pointer;
+  color: #9a9488;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+/* ─── TOGGLE BUTTON ─────────────────────────────────────── */
+.header-toggle-btn:hover {
+  color: #c5a35a;
+}
+
+/* Collapse the content when unchecked */
+.header-content {
+  overflow: hidden;
+  max-height: 300px; /* tall enough to fit your content */
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+#header-toggle:not(:checked) ~ .header-content {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Flip the arrow when collapsed */
+#header-toggle:not(:checked) ~ .header-toggle-btn {
+  content: "▼";
+}
+
+.arrow-closed { display: none; }
+
+#header-toggle:not(:checked) ~ .header-toggle-btn .arrow-open { display: none; }
+#header-toggle:not(:checked) ~ .header-toggle-btn .arrow-closed { display: inline; }
+
+/* ─── TIMELINE LAYOUT ─────────────────────────────────────── */
+
+.timeline-container {
+  margin-top: 240px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: black;
+}
+
+.timeline-track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: max-content;
+  height: 600px;
+  gap: 120px;
+  padding: 0 160px;
+}
+
+/* The gold centerline */
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #FFFFFF;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── STAR SLOTS ──────────────────────────────────────────── */
+
+/*
+  Each .star-slot is a flex child of .timeline-track.
+  It owns horizontal space automatically via the track's gap.
+  Position classes shift it vertically; the dot and tooltip
+  are positioned relative to the slot.
+*/
+
+.star-slot {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 8px; /* slot is dot-width; tooltip overflows absolutely */
+  z-index: 2;
+}
+
+/* Vertical positions */
+.toppest     { transform: translateY(-120px); }
+.top         { transform: translateY(-60px);  }
+.top-middle  { transform: translateY(-30px);  }
+.middle      { transform: translateY(0px);    }
+.bottom-middle { transform: translateY(30px); }
+.bottom      { transform: translateY(60px);   }
+.bottomest   { transform: translateY(120px);  }
+
+/* ─── THE DOT ─────────────────────────────────────────────── */
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #c5a35a;
+  border-radius: 0;
+  flex-shrink: 0;
+  transform: rotate(45deg);
+  transition: filter 0.2s ease;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    filter: none;
+  }
+  50% {
+    opacity: 0.5;
+    filter:
+      drop-shadow(0 0 3px currentColor)
+      drop-shadow(0 0 6px currentColor);
+  }
+}
+
+.dot {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Clickable dots get a pointer and a hover glow */
+.star-slot a {
+  display: block;
+  line-height: 0; /* removes ghost space around inline anchor */
+}
+
+.star-slot a .dot:hover {
+  transform: scale(1.6);
+  filter:
+    drop-shadow(0 0 4px #c5a35a)
+    drop-shadow(0 0 8px #c5a35a);
+}
+
+.star-slot:hover .dot {
+  animation-play-state: paused;
+  opacity: 1;
+  filter: none;
+}
+
+/* ─── TOOLTIPS ────────────────────────────────────────────── */
+
+.content {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  background: #151515;
+  border: 1px solid #3a3323;
+  padding: 16px 20px;
+  z-index: 10;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.content h2 {
+  color: #c5a35a;
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  margin: 0 0 8px 0;
+}
+
+.content p {
+  color: #9a9488;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Tooltips appear BELOW the dot for bottom-half positions */
+.bottomest .content,
+.bottom .content,
+.bottom-middle .content,
+.middle .content {
+  top: 20px;
+}
+
+/* Tooltips appear ABOVE the dot for top-half positions */
+.toppest .content,
+.top .content,
+.top-middle .content {
+  bottom: 20px;
+}
+
+/* Reveal on hover */
+.star-slot:hover .content {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Daedric->Garamond Transition
+.letter {
+  font-family: "Daedric", serif;
+  color: #8a2d2d;
+  display: inline-block;
+  transition: font-family 0s ease, color 0.2s ease;
+  transition-delay: 0ms;
+}
+
+.star-slot:hover .letter {
+  font-family: "Cinzel", serif;
+  color: #c5a35a;
+}*/
+
+/* ─── STAR TYPES ───────────────────────────────────── */
+
+.story-star .dot {
+  width: 8px;
+  height: 8px;
+  background: #6aa6ff;
+  border-radius: 2px;
+}
+
+.chapter-star .dot {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+.special-star .dot {
+  width: 16px;
+  height: 16px;
+  background: #4dff88;
+  border-radius: 3px;
+}
+
+.episode-star .dot {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+.event-star .dot {
+  width: 16px;
+  height: 16px;
+  background: #6aa6ff;
+  border-radius: 3px;
+}
+
+.story-star .dot  { animation: twinkle 3s ease-in-out infinite; }
+.chapter-star .dot { animation: twinkle 4s ease-in-out infinite; }
+.episode-star .dot { animation: twinkle 2.5s ease-in-out infinite; }
+.event-star .dot  { animation: twinkle 3.5s ease-in-out infinite; }
+.special-star .dot { animation: twinkle 2s ease-in-out infinite; }
+/* ─── FOOTER ──────────────────────────────────────────────── */
+
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #777;
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+  opacity: 0.8;
+  border-top: 1px solid #444;
+}
+
+.magnus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: radial-gradient(ellipse at left center, #2a2a2a 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sublime {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: radial-gradient(ellipse at right center, #000000 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── BACKGROUND STARFIELD ────────────────────────────────── */
+
+.timeline-container {
+  position: relative; /* needed to contain absolute bg-stars */
+}
+
+@keyframes bg-twinkle {
+  0%, 100% { opacity: 0.8; }
+  50%       { opacity: 0.1; }
+}
+
+.bg-star {
+  position: absolute;
+  border-radius: 50%;        /* round, not diamond */
+  animation: bg-twinkle ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
