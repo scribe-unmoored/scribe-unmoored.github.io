@@ -17,6 +17,7 @@
   min-width: max-content;
   height: 600px; /* adjust as need be */
   white-space: nowrap;
+  background: black;
 }
 
 /* this is what makes everything stack vertically instead of collapsing */
