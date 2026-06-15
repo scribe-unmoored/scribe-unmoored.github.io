@@ -196,6 +196,7 @@
 
 <!-- Scripts -->
 
+<!-- Daedric -> Garamond -->
 <!-- <script>
   document.querySelectorAll('.content h2, .content p').forEach(el => {
     el.innerHTML = el.textContent.split('').map((char, i) =>
@@ -203,5 +204,46 @@
     ).join('');
   });
 </script> -->
+
+
+<!-- Twinkling Stars --> 
+  <script>
+  const container = document.querySelector('.timeline-container');
+  const track = document.querySelector('.timeline-track');
+
+  const STAR_COUNT = 200;
+
+  for (let i = 0; i < STAR_COUNT; i++) {
+    const star = document.createElement('div');
+    star.classList.add('bg-star');
+
+    // Random position across the full scrollable width and height
+    const x = Math.random() * track.scrollWidth;
+    const y = Math.random() * 600; // match your track height
+
+    // Random size between 1px and 3px
+    const size = Math.random() * 2 + 1;
+
+    // Random grey/white color
+    const brightness = Math.floor(Math.random() * 80 + 150); // 150-230
+    const color = `rgb(${brightness}, ${brightness}, ${brightness})`;
+
+    // Random twinkle duration between 4s and 10s, random delay so they're out of phase
+    const duration = (Math.random() * 6 + 4).toFixed(2);
+    const delay = (Math.random() * 10).toFixed(2);
+
+    star.style.cssText = `
+      left: ${x}px;
+      top: ${y}px;
+      width: ${size}px;
+      height: ${size}px;
+      background: ${color};
+      animation-duration: ${duration}s;
+      animation-delay: -${delay}s;
+    `;
+
+    container.appendChild(star);
+  }
+</script>
 </body>
 </html>
