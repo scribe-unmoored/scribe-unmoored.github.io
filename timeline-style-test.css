@@ -283,4 +283,5 @@ body {
   margin-top: 5rem;
   padding-bottom: 2rem;
   opacity: 0.8;
+  border-top: 1px solid #444;
 }
