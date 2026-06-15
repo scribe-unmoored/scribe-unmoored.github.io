@@ -150,13 +150,13 @@ body {
 }
 
 /* Vertical positions */
-.toppest     { transform: translateY(-180px); }
-.top         { transform: translateY(-90px);  }
-.top-middle  { transform: translateY(-45px);  }
+.toppest     { transform: translateY(-120px); }
+.top         { transform: translateY(-60px);  }
+.top-middle  { transform: translateY(-30px);  }
 .middle      { transform: translateY(0px);    }
-.bottom-middle { transform: translateY(45px); }
-.bottom      { transform: translateY(90px);   }
-.bottomest   { transform: translateY(140px);  }
+.bottom-middle { transform: translateY(30px); }
+.bottom      { transform: translateY(60px);   }
+.bottomest   { transform: translateY(120px);  }
 
 /* ─── THE DOT ─────────────────────────────────────────────── */
 
