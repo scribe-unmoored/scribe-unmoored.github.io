@@ -92,7 +92,7 @@
 }
 
 .star {
-  position: relative;
+  position: absolute;
   display: inline-block;
   width: 8px;
   height: 8px;
