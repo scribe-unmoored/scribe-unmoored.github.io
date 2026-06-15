@@ -114,7 +114,7 @@
 .bottomest { transform: translateY(140px); }
 
 .content {
-  opacity: 0
+  opacity: 0;
   postion: absolute;
   visibility: hidden;
   pointer-events: none;
@@ -124,6 +124,7 @@
   padding: 32px;
   margin-bottom: 32px;
   z-index: 10;
+  transform: translateX(-50%);
 }
 
 .content h2 {
