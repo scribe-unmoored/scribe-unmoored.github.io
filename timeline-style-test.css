@@ -357,3 +357,22 @@ body {
   pointer-events: none;
   z-index: 0;
 }
+
+/* ─── BACKGROUND STARFIELD ────────────────────────────────── */
+
+.timeline-container {
+  position: relative; /* needed to contain absolute bg-stars */
+}
+
+@keyframes bg-twinkle {
+  0%, 100% { opacity: 0.8; }
+  50%       { opacity: 0.1; }
+}
+
+.bg-star {
+  position: absolute;
+  border-radius: 50%;        /* round, not diamond */
+  animation: bg-twinkle ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
