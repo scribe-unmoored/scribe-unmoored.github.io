@@ -221,6 +221,8 @@ body {
   border: 1px solid #3a3323;
   padding: 16px 20px;
   z-index: 10;
+  max-height: 100px;
+  overflow-y: auto;
 }
 
 .content h2 {
