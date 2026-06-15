@@ -18,6 +18,7 @@
   position: relative;
   width: max-content;
   height: 600px;
+  gap: 120px; /* THIS is what creates timeline spacing */
 }
 
 .timeline-header {
