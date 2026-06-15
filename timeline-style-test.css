@@ -103,7 +103,7 @@ body {
 /* ─── TIMELINE LAYOUT ─────────────────────────────────────── */
 
 .timeline-container {
-  margin-top: 180px;
+  margin-top: 240px;
   overflow-x: auto;
   overflow-y: hidden;
   background: black;
