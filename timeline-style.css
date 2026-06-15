@@ -63,42 +63,65 @@
 }
 
 .star {
+  position: relative;
+  display: inline-block;
 }
 
 .toppest {
-  transformY: (-180px);
+  transform: translateY(-180px);
 }
 
 .top {
-  transformY: (-90px);
+  transform: translateY(-90px);
 }
 
 .top-middle {
-  transformY: (-45px);
+  transform: translateY(-45px);
 }
 
 .middle {
-  transformY: (0px);
+  transform: translateY(0px);
 }
 
 .bottom-middle {
-  transformY: (45px);
+  transform: translateY(45px);
 }
 
 .bottom {
-  transformY: (90px);
+  transform: translateY(90px);
 }
 
 .bottomest {
-  transformY: (140px);
+  transform: translateY(140px);
 }
 
 .content {
   opacity: 0
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
 }
 
-.story-star
-.episode-star
-.chapter-star
-.secret-star
-.event-star
+.star:hover .content,
+.star:focus-within .content {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.event-star .content {
+  border: 1px solid #888;
+  background: rgba(30,30,30,0.9);
+}
+
+.chapter-star .content {
+  border: 1px solid #c5a35a;
+}
+
+.story-star .content {
+  border: 1px solid #6aa6ff;
+}
+
+.secret-star .content {
+  border: 1px solid #ff4d4d;
+}
