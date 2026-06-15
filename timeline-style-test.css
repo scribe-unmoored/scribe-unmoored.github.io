@@ -168,7 +168,6 @@ body {
   flex-shrink: 0;
   transform: rotate(45deg);
   transition: filter 0.2s ease;
-  animation: twinkle 3s ease-in-out infinite;
 }
 
 @keyframes twinkle {
@@ -291,6 +290,12 @@ body {
   background: #6aa6ff;
   border-radius: 3px;
 }
+
+.story-star .dot  { animation: twinkle 3s ease-in-out infinite; }
+.chapter-star .dot { animation: twinkle 4s ease-in-out infinite; }
+.episode-star .dot { animation: twinkle 2.5s ease-in-out infinite; }
+.event-star .dot  { animation: twinkle 3.5s ease-in-out infinite; }
+.special-star .dot { animation: twinkle 2s ease-in-out infinite; }
 /* ─── FOOTER ──────────────────────────────────────────────── */
 
 .copyright {
