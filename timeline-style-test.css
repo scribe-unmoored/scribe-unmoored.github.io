@@ -200,6 +200,12 @@ body {
     drop-shadow(0 0 8px #c5a35a);
 }
 
+.star-slot:hover .dot {
+  animation-play-state: paused;
+  opacity: 1;
+  filter: none;
+}
+
 /* ─── TOOLTIPS ────────────────────────────────────────────── */
 
 .content {
