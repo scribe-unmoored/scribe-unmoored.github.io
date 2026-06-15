@@ -16,6 +16,7 @@
   position: relative;
   min-width: max-content;
   height: 600px; /* adjust as need be */
+  white-space: nowrap;
 }
 
 /* this is what makes everything stack vertically instead of collapsing */
@@ -23,6 +24,7 @@
   position: relative;
   width: 100%;
   display: block;
+  display: inline-block;
 }
 
 .timeline-header {
@@ -133,6 +135,10 @@
 .star {
   display: inline-block;
   position: relative;
+  width: 8px;
+  height: 8px;
+  background: #c5a35a;
+  border-radius: 50%;
 }
 
 .star:hover .content {
