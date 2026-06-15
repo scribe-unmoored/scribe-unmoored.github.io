@@ -168,6 +168,24 @@ body {
   flex-shrink: 0;
   transform: rotate(45deg);
   transition: filter 0.2s ease;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    filter: none;
+  }
+  50% {
+    opacity: 0.5;
+    filter:
+      drop-shadow(0 0 3px currentColor)
+      drop-shadow(0 0 6px currentColor);
+  }
+}
+
+.dot {
+  animation: twinkle 3s ease-in-out infinite;
 }
 
 /* Clickable dots get a pointer and a hover glow */
