@@ -8,33 +8,97 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style.css" />
-</head>
 
+  <style>
+    /* ── Title animation ── */
+    .anim-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 0 32px;
+    }
+
+    .anim-title-group {
+      display: flex;
+      align-items: baseline;
+      white-space: nowrap;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+    }
+
+    .anim-the-adventures {
+      font-size: clamp(18px, 3.5vw, 36px);
+      color: #e8d5a3;
+      opacity: 0;
+      letter-spacing: 0.06em;
+      text-shadow: 0 0 40px rgba(232, 213, 163, 0.2);
+      animation: anim-slowFade 4s ease forwards 1s;
+    }
+
+    .anim-ellipsis {
+      font-size: clamp(18px, 3.5vw, 36px);
+      color: #e8d5a3;
+      letter-spacing: 0.06em;
+      opacity: 0;
+      animation: anim-slowFade 4s ease forwards 1s, anim-ellipsisFade 1s ease forwards 7s;
+    }
+
+    .anim-of-steve {
+      font-size: clamp(18px, 3.5vw, 36px);
+      color: #e8d5a3;
+      opacity: 0;
+      max-width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      letter-spacing: 0.06em;
+      text-shadow: 0 0 40px rgba(232, 213, 163, 0.2);
+      animation: anim-slideIn 2s cubic-bezier(0.22, 1, 0.36, 1) forwards 8.5s;
+    }
+
+    @keyframes anim-slowFade {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes anim-ellipsisFade {
+      from { opacity: 1; max-width: 80px; }
+      to   { opacity: 0; max-width: 0; overflow: hidden; }
+    }
+
+    @keyframes anim-slideIn {
+      from { opacity: 0; max-width: 0; }
+      to   { opacity: 1; max-width: 500px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .anim-the-adventures, .anim-ellipsis, .anim-of-steve {
+        animation: none;
+        opacity: 1;
+        max-width: 500px;
+      }
+    }
+  </style>
+</head>
 <body>
   <div class="page">
     <header class="site-header">
       <p class="website-title">BRASS TOWER</p>
       <p class="subtitle">Episode II of The Adventures...</p>
     </header>
-
     <div class="layout">
       <nav class="sidebar">
         <a href="/index.html" class="wheel-link">
-        <img src="../../images/main/gold.png" alt="Homepage"> 
+          <img src="../../images/main/gold.png" alt="Homepage">
         </a>
         <a class="published" href="chapter_1">Chapter 1</a>
         <a class="published" href="chapter2">Chapter 2</a>
         <a class="published" href="chapter3">Chapter 3</a>
-       
       </nav>
-
       <main class="content">
+
         <h2>Morning Star 4, 3E405.</h2>
-        <button id="themeButton" class="theme-button">▶ Play Theme</button>
-        <audio id="themeAudio">
-          <source src="../../music/brasstower.wav">
-        </audio>
+
         <br>
         <p>The Wheel turns. In its revolutions, fate has shifted. A Blade comes from the east, wielded by no hand but his own. An agent, hailing from the halls of Summerset, rises to meet him.</p>
         <p>He is a mage, born beneath the stars of the spelldrinker. She is a duelist, bearing words sharper than steel. The latter seeks a scandal bold enough to topple an Empire. The former, to lay to rest a king betrayed.</p>
@@ -43,27 +107,40 @@
         <br>
         <p>And remember where you were...
         <br>
-        <p>...when the Dragon Broke.</p>  
+        <p>...when the Dragon Broke.</p>
+
+        <div class="anim-stage">
+          <div class="anim-title-group">
+            <span class="anim-the-adventures">The Adventures</span><span class="anim-ellipsis">...</span><span class="anim-of-steve">&nbsp;of Steve</span>
+          </div>
+        </div>
+
+        <button id="themeButton" class="theme-button">▶ Play Theme</button>
+        <audio id="themeAudio">
+          <source src="../../music/brasstower.wav">
+        </audio>
+
       </main>
     </div>
   </div>
+
   <script>
-  const button = document.getElementById("themeButton");
-  const audio = document.getElementById("themeAudio");
-  
-  button.addEventListener("click", function() {
+    const button = document.getElementById("themeButton");
+    const audio = document.getElementById("themeAudio");
+
+    button.addEventListener("click", function() {
       if (audio.paused) {
-          audio.play();
-          button.textContent = "♫ Silence Theme ♫";
+        audio.play();
+        button.textContent = "♫ Silence Theme ♫";
       } else {
-          audio.pause();
-          button.textContent = "♫ Hear Theme ♫";
+        audio.pause();
+        button.textContent = "♫ Hear Theme ♫";
       }
-  });
+    });
   </script>
 </body>
 <footer class="copyright">
-  <p>The Elder Scrolls and all related intellectual property are owned by Bethesda Softworks. </p>
+  <p>The Elder Scrolls and all related intellectual property are owned by Bethesda Softworks.</p>
   <p>This is an unofficial, non-commercial fan work.</p>
   <p>All original characters, stories, text, and music are © 2026 The Scribe Unmoored.</p>
 </footer>
