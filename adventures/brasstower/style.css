@@ -3,6 +3,10 @@
     src: url("../../fonts/OMWAyembedt.otf") format("opentype");
 }
 
+.ellipses {
+	Text-align: center;
+}
+
 body {
   margin: 0;
   background: #0b0b0b;
