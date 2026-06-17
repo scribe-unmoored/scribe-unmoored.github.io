@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script data-goatcounter="https://scribe-unmoored.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js">
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRASS TOWER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+  .decode-wrap { font-family: var(--font-serif, Georgia, serif); padding: 1.5rem 0; max-width: 640px; }
+  .prose p { font-size: 15px; line-height: 1.8; color: var(--color-text-primary); margin: 0 0 0.9rem; }
+  .cipher { font-style: italic; color: var(--color-text-secondary); transition: color 0.3s; }
+  .decoded-text { display: inline; }
+  .letter { display: inline-block; transition: transform 0.2s, color 0.3s; }
+  .letter.scrambling { color: #888780; animation: scramble-jitter 0.08s infinite; }
+  .letter.landed { color: var(--color-text-primary); transform: none; }
+  .decode-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin: 1.2rem 0 0.4rem;
+    padding: 10px 20px;
+    background: transparent;
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: var(--border-radius-md);
+    font-family: var(--font-sans); font-size: 14px; font-weight: 500;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+  }
+  .decode-btn:hover { background: var(--color-background-secondary); }
+  .decode-btn:active { transform: scale(0.98); }
+  .decode-btn:disabled { opacity: 0.45; cursor: default; transform: none; }
+  @keyframes scramble-jitter {
+    0% { transform: translateY(-1px) rotate(-2deg); }
+    50% { transform: translateY(1px) rotate(2deg); }
+    100% { transform: translateY(-1px) rotate(-1deg); }
+  }
+  .answer-line {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    font-style: italic;
+  }
+  .answer-line.visible { max-height: 60px; opacity: 1; }
+</style>
+  
+<body>
+  <div class="page">
+    <header class="site-header">
+      <p class="website-title">BRASS TOWER</p>
+      <p class="subtitle">Episode II of The Adventures...</p>
+    </header>
+
+    <div class="layout">
+      <nav class="sidebar">
+        <a href="/index.html" class="wheel-link">
+        <img src="../../images/main/gold.png" alt="Homepage"> 
+        </a>
+        <a class="published" href="chapter1.html">Chapter 1</a>
+        <a class="published" href="chapter2">Chapter 2</a>
+        <a class="published" href="chapter3">Chapter 3</a>
+        <a class="published" href="chapter4">Chapter 4</a>
+        <div class="published" href="chapter5">Chapter 5</div>
+        <div class="sealed">Chapter 6</div>
+        <div class="sealed">Chapter 7</div>
+        <div class="sealed">Chapter 8</div>
+        <div class="sealed">Chapter 9</div>
+        <div class="sealed">Chapter 10</div>
+       
+      </nav>
+
+      <main class="content">
+        <section class="content-box">
+          <h2>Chapter V: Wayrest</h2>
+          
+            <div class="chapter-date">
+              <p class="line line-1">11th of Morning Star, 3E405</p>
+              <p class="line line-2">Midday</p>
+              <p class="line line-3">Office of Altmer Relations, Wayrest</p>
+            </div>
+            
+
+<div class="decode-wrap">
+  <h2 class="sr-only">Levoline decodes an encoded message in real time</h2>
+  <p>She opened the cover, bulging with the promise of something hidden within. Inside, a fragment of parchment, folded neatly into a small, dense square.</p>
+  <p>Unfolding it, Levoline smirked to herself again.</p>
+  <p><span class="cipher" id="cipher-line">"A sanely prude act fits not work. Feral. A liar touched."</span></p>
+  <p>So, he wanted to test her skills so soon? Fine, she figured. Whatever it was, it was likely to be time sensitive. She began with the clearest outliers, thinking to herself of names she would need to know. Places. Objects. Gods.</p>
+  <p>The answer was easy enough to decipher when she made out the words 'Elysana' and 'Auriel'.</p>
+
+  <button class="decode-btn" id="decodeBtn" onclick="startDecode()">
+    <i class="ti ti-eye" aria-hidden="true"></i> Decode
+  </button>
+
+  <p class="answer-line" id="answer-line">"Elysana captured. First to know. Cathedral of Auriel."</p>
+</div>
+
+<script>
+const encoded = '"A sanely prude act fits not work. Feral. A liar touched."';
+const decoded = '"Elysana captured. First to know. Cathedral of Auriel."';
+
+function startDecode() {
+  const btn = document.getElementById('decodeBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="ti ti-loader" aria-hidden="true"></i> Decoding…';
+
+  const cipherEl = document.getElementById('cipher-line');
+
+  const encChars = encoded.split('');
+  const decChars = decoded.split('');
+  const maxLen = Math.max(encChars.length, decChars.length);
+
+  let spans = [];
+  let html = '';
+  for (let i = 0; i < encChars.length; i++) {
+    if (encChars[i] === ' ' || encChars[i] === '.' || encChars[i] === '"' || encChars[i] === ',') {
+      html += `<span class="letter" id="l${i}">${encChars[i]}</span>`;
+    } else {
+      html += `<span class="letter scrambling" id="l${i}">${encChars[i]}</span>`;
+    }
+  }
+  cipherEl.innerHTML = html;
+
+  const letterChars = ''.split('').concat(
+    encoded.replace(/[^a-zA-Z]/g, '').split('')
+  );
+  const allLetters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+  const scrambleIntervals = {};
+  for (let i = 0; i < encChars.length; i++) {
+    const ch = encChars[i];
+    if (ch === ' ' || ch === '.' || ch === '"' || ch === ',') continue;
+    const el = document.getElementById('l' + i);
+    scrambleIntervals[i] = setInterval(() => {
+      el.textContent = allLetters[Math.floor(Math.random() * allLetters.length)];
+    }, 80);
+  }
+
+  const decLetters = decoded.split('');
+  const totalDuration = 2800;
+  const startDelay = 300;
+
+  let letterPositions = [];
+  for (let i = 0; i < encChars.length; i++) {
+    const ch = encChars[i];
+    if (ch !== ' ' && ch !== '.' && ch !== '"' && ch !== ',') {
+      letterPositions.push(i);
+    }
+  }
+  letterPositions = letterPositions.sort(() => Math.random() - 0.5);
+
+  let targetLetterPositions = [];
+  for (let i = 0; i < decChars.length; i++) {
+    const ch = decChars[i];
+    if (ch !== ' ' && ch !== '.' && ch !== '"' && ch !== ',' && ch !== '!') {
+      targetLetterPositions.push({ idx: i, ch: ch });
+    }
+  }
+
+  const encSpanMap = {};
+  let lpi = 0;
+  for (let i = 0; i < encChars.length; i++) {
+    const ch = encChars[i];
+    if (ch !== ' ' && ch !== '.' && ch !== '"' && ch !== ',') {
+      encSpanMap[i] = lpi++;
+    }
+  }
+
+  const total = letterPositions.length;
+  letterPositions.forEach((spanIdx, order) => {
+    const delay = startDelay + (order / total) * totalDuration;
+    setTimeout(() => {
+      clearInterval(scrambleIntervals[spanIdx]);
+      const el = document.getElementById('l' + spanIdx);
+      if (!el) return;
+      const targetIdx = order < targetLetterPositions.length ? targetLetterPositions[order].ch : encChars[spanIdx];
+      el.textContent = targetIdx;
+      el.classList.remove('scrambling');
+      el.classList.add('landed');
+    }, delay);
+  });
+
+  setTimeout(() => {
+    const cipherEl2 = document.getElementById('cipher-line');
+    cipherEl2.style.transition = 'opacity 0.5s';
+    cipherEl2.style.opacity = '0';
+    setTimeout(() => {
+      cipherEl2.textContent = decoded;
+      cipherEl2.style.opacity = '1';
+      document.getElementById('answer-line').classList.add('visible');
+      btn.innerHTML = '<i class="ti ti-check" aria-hidden="true"></i> Decoded';
+    }, 500);
+  }, startDelay + totalDuration + 400);
+}
+</script>
+
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+<footer class="copyright">
+  <p>The Elder Scrolls and all related intellectual property are owned by Bethesda Softworks. </p>
+  <p>This is an unofficial, non-commercial fan work.</p>
+  <p>All original characters, stories, text, and music are © 2026 The Scribe Unmoored.</p>
+</footer>
+</html>
