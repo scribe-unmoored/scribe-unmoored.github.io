@@ -230,3 +230,8 @@ h1 {
     transform: translateY(0);
   }
 }
+
+.fade-in-text {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
