@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRASS TOWER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .anim-stage {
+      background: #000;
+      border: 1px solid #3a3323;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 160px;
+      margin: 24px 0 16px;
+      overflow: hidden;
+    }
+
+    .anim-title-group {
+      display: flex;
+      align-items: baseline;
+      font-family: 'Cinzel', serif;
+      white-space: nowrap;
+    }
+
+    .anim-the-adventures {
+      font-size: clamp(16px, 3vw, 32px);
+      color: #e8d5a3;
+      letter-spacing: 0.06em;
+      text-shadow: 0 0 40px rgba(232, 213, 163, 0.2);
+      opacity: 0;
+    }
+
+    .anim-ellipsis {
+      font-size: clamp(16px, 3vw, 32px);
+      color: #e8d5a3;
+      letter-spacing: 0.06em;
+      opacity: 0;
+    }
+
+    .anim-of-steve {
+      font-size: clamp(16px, 3vw, 32px);
+      color: #e8d5a3;
+      letter-spacing: 0.06em;
+      text-shadow: 0 0 40px rgba(232, 213, 163, 0.2);
+      opacity: 0;
+      max-width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    
+    .anim-stage.anim-running .anim-the-adventures {
+      animation: anim-slowFade 4s ease forwards 1s;
+    }
+
+    .anim-stage.anim-running .anim-ellipsis {
+      animation: anim-slowFade 4s ease forwards 1s, anim-ellipsisFade 1s ease forwards 7s;
+    }
+
+    .anim-stage.anim-running .anim-of-steve {
+      animation: anim-slideIn 2s cubic-bezier(0.22, 1, 0.36, 1) forwards 9.5s;
+    }
+
+    @keyframes anim-slowFade {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes anim-ellipsisFade {
+      from { opacity: 1; max-width: 80px; }
+      to   { opacity: 0; max-width: 0; overflow: hidden; }
+    }
+
+    @keyframes anim-slideIn {
+      from { opacity: 0; max-width: 0; }
+      to   { opacity: 1; max-width: 500px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .anim-stage.anim-running .anim-the-adventures,
+      .anim-stage.anim-running .anim-ellipsis,
+      .anim-stage.anim-running .anim-of-steve {
+        animation: none;
+        opacity: 1;
+        max-width: 500px;
+      }
+      .anim-stage.anim-running .anim-subtitle {
+        animation: none;
+        opacity: 1;
+      }
+    }
+    
+        .anim-subtitle {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(10px, 1.8vw, 18px);
+      color: #c5a35a;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0;
+      margin-top: 12px;
+    }
+    
+    .anim-stage.anim-running .anim-subtitle {
+      animation: anim-slowFade 2s ease forwards 12s;
+    }
+    
+  </style>
+  
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <p class="website-title">BRASS TOWER</p>
+      <p class="subtitle">Episode II of The Adventures...</p>
+    </header>
+    <div class="layout">
+      <nav class="sidebar">
+        <a href="/index.html" class="wheel-link">
+          <img src="../../images/main/gold.png" alt="Homepage">
+        </a>
+        <a class="published" href="chapter_1">Chapter 1</a>
+        <a class="published" href="chapter2">Chapter 2</a>
+        <a class="published" href="chapter3">Chapter 3</a>
+      </nav>
+      <main class="content">
+
+        <h2>Chapter VII: Gothway Garden</h2>
+
+        <div class="chapter-date">
+              <p class="line line-1">7th of Morning Star, 3E405</p>
+              <p class="line line-2">Midmorning</p>
+              <p class="line line-3">Gothway Garden, Daggerfall Kingdom</p>
+        </div>
+
+        <p></p>
+
+        
+        <div class="anim-stage" id="animStage">
+          <div class="anim-title-group">
+            <span class="anim-the-adventures" id="animAdventures">The Adventures</span><span class="anim-ellipsis" id="animEllipsis">...</span><span class="anim-of-steve" id="animOfSteve">&nbsp;of Steve</span>
+          </div>
+          <div class="anim-subtitle" id="animSubtitle">Episode II: Brass Tower</div>
+        </div>
+        
+        <button id="themeButton" class="theme-button">▶ Play Animation</button>
+        <audio id="themeAudio">
+          <source src="../../music/steveintro-bt.wav">
+        </audio>
+
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const button     = document.getElementById("themeButton");
+    const audio      = document.getElementById("themeAudio");
+    const stage      = document.getElementById("animStage");
+    const adventures = document.getElementById("animAdventures");
+    const ellipsis   = document.getElementById("animEllipsis");
+    const ofSteve    = document.getElementById("animOfSteve");
+    const subtitle = document.getElementById("animSubtitle");
+
+    let running = false;
+
+    function resetAnimation() {
+      stage.classList.remove("anim-running");
+      // Force reflow so the browser forgets the animation state entirely
+      [adventures, ellipsis, ofSteve, subtitle].forEach(el => {
+        el.style.animation = "none";
+        el.offsetHeight; // trigger reflow
+        el.style.animation = "";
+      });
+    }
+
+    button.addEventListener("click", function () {
+      if (!running) {
+        resetAnimation();
+        stage.classList.add("anim-running");
+        audio.currentTime = 0;
+        audio.play();
+        button.textContent = "■ Stop Animation";
+        running = true;
+      } else {
+        resetAnimation();
+        audio.pause();
+        audio.currentTime = 0;
+        button.textContent = "▶ Play Animation";
+        running = false;
+      }
+    });
+
+    // Reset button when audio finishes naturally
+    audio.addEventListener("ended", function () {
+      resetAnimation();
+      button.textContent = "▶ Play Animation";
+      running = false;
+    });
+  </script>
+</body>
+<footer class="copyright">
+  <p>The Elder Scrolls and all related intellectual property are owned by Bethesda Softworks.</p>
+  <p>This is an unofficial, non-commercial fan work.</p>
+  <p>All original characters, stories, text, and music are © 2026 The Scribe Unmoored.</p>
+</footer>
+</html>
