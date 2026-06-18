@@ -153,7 +153,7 @@ h1 {
   box-shadow: 0 0 6px rgba(197, 163, 90, 0.4);
 }
 
-#decode-button {
+#decodebutton {
   background: transparent;
   color: #c5a35a;
   border: 1px solid #c5a35a;
@@ -166,17 +166,17 @@ h1 {
   transition: all 0.2s ease;
 }
 
-#decode-button:hover {
+#decodebutton:hover {
   background-color: rgba(197, 163, 90, 0.1);
   color: #e2d2a2;
   border-color: #e2d2a2;
 }
 
-#decode-button:active {
+#decodebutton:active {
   transform: translateY(1px);
 }
 
-#decode-button:focus {
+#decodebutton:focus {
   outline: none;
   box-shadow: 0 0 6px rgba(197, 163, 90, 0.4);
 }
