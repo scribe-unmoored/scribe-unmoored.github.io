@@ -319,11 +319,19 @@ body {
   border-radius: 3px;
 }
 
+.corrupt-star .dot {
+  width: 8px;
+  height: 8px;
+  background: #FF0000;
+  border-radius: 3px;
+}
+
 .story-star .dot  { animation: twinkle 3s ease-in-out infinite; }
 .chapter-star .dot { animation: twinkle 4s ease-in-out infinite; }
 .episode-star .dot { animation: twinkle 2.5s ease-in-out infinite; }
 .event-star .dot  { animation: twinkle 3.5s ease-in-out infinite; }
 .special-star .dot { animation: twinkle 2s ease-in-out infinite; }
+.corrupt-star .dot { animation: twinkle 3s ease-in-out infinite; }
 /* ─── FOOTER ──────────────────────────────────────────────── */
 
 .copyright {
