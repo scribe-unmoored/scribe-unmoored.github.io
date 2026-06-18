@@ -129,6 +129,7 @@
 	let resolved = [];
 
 	decodebutton.addEventListener("click", function() {
+		const anagram = scrambleText.textContent;
 		decodebutton.disabled = true;
 		const interval = setInterval(function() {
 			const randomLetter = randomChar();
@@ -141,8 +142,8 @@
 			  tries = 0;
 			}
 
-			scrambletext.textcontent = resolved.join("") + target.slice(currentposition + 1);
-
+			scrambleText.textContent = resolved.join("") + anagram.slice(currentPosition + 1);
+			
 			if (currentposition >= target.length) {
 			  clearInterval(interval);
 			  scrambletext.textcontent = target;
