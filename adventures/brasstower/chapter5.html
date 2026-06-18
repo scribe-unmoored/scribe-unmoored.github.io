@@ -60,19 +60,29 @@
           <p>The front was deformed, bulging with the promise of something hidden beneath. Levoline opened it curiously. Inside, a fragment of parchment, folded neatly into a small, dense square.</p>
           
           <p>Unfolding it, Levoline smirked to herself again.</p>
-                  
-          <div class="decode-wrap">
-            <p><span class="cipher" id="cipher-line">"A sanely prude act fits not work. Feral. A liar touched."</span></p>
-            
-            <p>So, he wanted to test her skills so soon? Fine, she figured. Whatever it was, it would need to be deciphered in haste. Uuelmo would not have left her alone so soon otherwise. She began with the clearest outliers, thinking to herself of names she would need to know. Places. Objects. Gods. This was exactly what her training had prepared her for. Her father was sure to have advocated for her by mentioning it.</p>
-            <p>The answer was easy enough once she made out the words ‘Elysana’ and ‘Auriel’.</p>
-            
-            <button class="decode-btn" id="decodeBtn" onclick="startDecode()">
-              <i class="ti ti-eye" aria-hidden="true"></i> Decode
-            </button>
+
           
-            <p class="answer-line" id="answer-line">"Elysana captured. First to know. Cathedral of Auriel."</p>
+          <p id ="scrambletext">a fit work sourced. act sanEly. not a tad feral. A cipher duel.</p>
+
+          <p><i>Ah... So he wishes to test me so soon? Very well.</i></p>
+
+          <p>The message was simple enough to decode once she picked out the word 'Elysana.'</p>
+          
+          <button id="decodebutton" class="decode-button">Decode</button>
+          
+          <div id="hiddencontent" style="display: none;">
+          	
+            
+            
+            
+            <p>The rest of the chapter goes here.</p>
+
+
+
+
           </div>
+                  
+
 
           <br>
           <div class=”ellipses”>
@@ -95,6 +105,62 @@
 </footer>
 </body>
 
+  
 
+
+
+<p id ="scrambletext">A fit work sourced. Act sanely. Not a tad feral. A cipher duel.</p>
+
+<button id="decodebutton" class="decode-button">Decode</button>
+
+<div id="hiddencontent" style="display: none;">
+	<p>The rest of the chapter goes here.</p>
+</div>
+
+<script>
+	const decodebutton = document.getElementById('decodebutton');
+	const scrambletext = document.getElementById('scrambletext');
+	const hiddencontent = document.getElementById('hiddencontent');
+
+	const target = "Elysana captured. First to know. Cathedral of Auriel.";
+
+	let curretposition = 0;
+	let tries = 0;
+	let resolved = [];
+
+	decodebutton.addEventListener("click", function() {
+		decodebutton.disabled = true;
+		const interval = setInterval(function() {
+			const randomLetter = randomChar();
+			resolved[currentposition] = randomLetter;
+			tries++;
+
+			if (randomLetter === target[currentposition] || tries >= 6) {
+			  resolved[currentposition] = target[currentposition];
+			  currentposition++;
+			  tries = 0;
+			}
+
+			scrambletext.textcontent = resolved.join("") + target.slice(currentposition + 1);
+
+			if (currentposition >= target.length) {
+			  clearInterval(interval);
+			  scrambletext.textcontent = target;
+			}
+
+		}, 80);
+	});
+
+	function randomChar() {
+	  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz !?.,";
+	  return chars[Math.floor(Math.random() * chars.length)];
+	}
+
+	const delay = Math.floor(Math.random() * 5000) + 4000;
+	setTimeout(function() {
+	  hiddencontent.style.display = "block";
+	}, delay);
+
+</script>
 
 </html>
