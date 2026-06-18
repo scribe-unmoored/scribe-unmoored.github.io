@@ -89,7 +89,26 @@
         opacity: 1;
         max-width: 500px;
       }
+      .anim-stage.anim-running .anim-subtitle {
+        animation: none;
+        opacity: 1;
+      }
     }
+    
+        .anim-subtitle {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(10px, 1.8vw, 18px);
+      color: #c5a35a;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0;
+      margin-top: 12px;
+    }
+    
+    .anim-stage.anim-running .anim-subtitle {
+      animation: anim-slowFade 2s ease forwards 12s;
+    }
+    
   </style>
   
 </head>
@@ -123,6 +142,7 @@
         
         <div class="anim-stage" id="animStage">
           <div class="anim-title-group">
+            <div class="anim-subtitle" id="animSubtitle">Episode II: Brass Tower</div>
             <span class="anim-the-adventures" id="animAdventures">The Adventures</span><span class="anim-ellipsis" id="animEllipsis">...</span><span class="anim-of-steve" id="animOfSteve">&nbsp;of Steve</span>
           </div>
         </div>
@@ -143,13 +163,14 @@
     const adventures = document.getElementById("animAdventures");
     const ellipsis   = document.getElementById("animEllipsis");
     const ofSteve    = document.getElementById("animOfSteve");
+    const subtitle = document.getElementById("animSubtitle");
 
     let running = false;
 
     function resetAnimation() {
       stage.classList.remove("anim-running");
       // Force reflow so the browser forgets the animation state entirely
-      [adventures, ellipsis, ofSteve].forEach(el => {
+      [adventures, ellipsis, ofSteve, subtitle].forEach(el => {
         el.style.animation = "none";
         el.offsetHeight; // trigger reflow
         el.style.animation = "";
