@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* ── Animation black box ── */
     .anim-stage {
       background: #000;
       border: 1px solid #3a3323;
@@ -54,8 +53,7 @@
       overflow: hidden;
       white-space: nowrap;
     }
-
-    /* Animations only fire when .anim-running is present */
+    
     .anim-stage.anim-running .anim-the-adventures {
       animation: anim-slowFade 4s ease forwards 1s;
     }
@@ -93,6 +91,7 @@
       }
     }
   </style>
+  
 </head>
 <body>
   <div class="page">
@@ -111,27 +110,17 @@
       </nav>
       <main class="content">
 
-        <h2>Morning Star 4, 3E405.</h2>
+        <h2>Chapter VI: Gothway Garden</h2>
 
-        <p>The Wheel turns. In its revolutions, fate has shifted. A Blade comes from the east, wielded by no hand but his own. An agent, hailing from the halls of Summerset, rises to meet him.</p>
-        <p>He is a mage, born beneath the stars of the spelldrinker. She is a duelist, bearing words sharper than steel. The latter seeks a scandal bold enough to topple an Empire. The former, to lay to rest a king betrayed.</p>
-        <p>These are the waning years of the third era; the legends of the Elder Scrolls, retold.</p>
-        <p>Join me on a journey that will span eras.</p>
-        <br>
-        <p>And remember where you were...</p>
-        <p>...when the Dragon Broke.</p>
-        <br>
-        <br>
-        <p>The Scribe Unmoored Presents...</p>
+        <p></p>
 
-        <!-- Animation box -->
+        
         <div class="anim-stage" id="animStage">
           <div class="anim-title-group">
             <span class="anim-the-adventures" id="animAdventures">The Adventures</span><span class="anim-ellipsis" id="animEllipsis">...</span><span class="anim-of-steve" id="animOfSteve">&nbsp;of Steve</span>
           </div>
         </div>
-
-        <!-- Button sits below the box -->
+        
         <button id="themeButton" class="theme-button">▶ Play Animation</button>
         <audio id="themeAudio">
           <source src="../../music/steveintro.wav">
