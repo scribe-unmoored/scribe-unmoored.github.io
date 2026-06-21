@@ -227,3 +227,118 @@ margin-top: 2rem;
   object-fit: cover;
   display: block;
 }
+
+/* -------- SOUNDTRACK BELOW HERE -------- */
+
+.soundtrack-group {
+  margin-bottom: 36px;
+}
+.soundtrack-group:last-child {
+  margin-bottom: 0;
+}
+.soundtrack-title {
+  font-family: "Cinzel", Georgia, serif;
+  color: #c5a35a;
+  font-size: 0.92rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #3a3323;
+}
+.track-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.track-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 9px 4px;
+  border-bottom: 1px solid #211d14;
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+.track-list li:last-child .track-row {
+  border-bottom: none;
+}
+.track-row:hover {
+  background: rgba(197, 163, 90, 0.05);
+  padding-left: 10px;
+}
+.track-index {
+  flex-shrink: 0;
+  width: 1.6em;
+  font-family: "Courier New", monospace;
+  font-size: 0.72rem;
+  color: #6b6457;
+  text-align: right;
+}
+.track-name {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  color: #d8d5cc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.track-duration {
+  flex-shrink: 0;
+  font-family: "Courier New", monospace;
+  font-size: 0.72rem;
+  color: #6b6457;
+  letter-spacing: 0.02em;
+}
+.track-play {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #c5a35a;
+  font-family: Georgia, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 2px;
+  transition: color 0.2s ease;
+}
+.track-play:hover {
+  color: #e2d2a2;
+}
+.track-play:focus-visible {
+  outline: 1px solid #c5a35a;
+  outline-offset: 3px;
+}
+.track-play svg {
+  width: 9px;
+  height: 9px;
+  fill: currentColor;
+}
+.icon-pause { display: none; }
+@keyframes trackGlow {
+  0%, 100% { text-shadow: 0 0 0 rgba(197, 163, 90, 0); }
+  50%      { text-shadow: 0 0 6px rgba(197, 163, 90, 0.45); }
+}
+.track-row.is-playing .track-name {
+  color: #e2d2a2;
+  animation: trackGlow 2.4s ease-in-out infinite;
+}
+.track-row.is-playing .track-play {
+  color: #e2d2a2;
+}
+.track-row.is-playing .icon-play  { display: none; }
+.track-row.is-playing .icon-pause { display: inline-block; }
+@media (prefers-reduced-motion: reduce) {
+  .track-row.is-playing .track-name { animation: none; }
+}
+@media (max-width: 520px) {
+  .track-duration { display: none; }
+  .track-index { width: 1.3em; }
+  .soundtrack-title { font-size: 0.82rem; letter-spacing: 0.1em; }
+}
