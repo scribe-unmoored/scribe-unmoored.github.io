@@ -100,7 +100,3 @@ for file in directory.rglob("*.html"):
     file.write_text(text, encoding="utf-8")					# Readout showing updated files.
     print(f"Updated {file}")
 
-
-
-
-#planning to put something for placing chapters in the correct directory so I don't have to do it by hand each time
