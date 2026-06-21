@@ -8,14 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <div class="page">
     <header class="site-header">
       <p class="website-title">FALSE DREAMER</p>
-      <p class="subtitle"></p>
+      <p class="subtitle">"Each event is preceded by Prophecy. But without the hero, there is no Event."</p>
+      <p class="subtitle">- Zurin Arctus | The Underking</p>
     </header>
 
     <div class="layout">
@@ -23,14 +23,44 @@
         <a href="/index.html" class="wheel-link">
         <img src="../images/main/gold.png" alt="Homepage"> 
         </a>
-        <a href="chapter_1/">Chapter 1</a>
+        <a class="published" href="chapter_1.html/">Chapter 1</a>
+        <div class="sealed">DO NOT DISMAY</div>
+        <div class="sealed">HE IS COME</div>
+        <div class="sealed">NAIVE EVER RESTS</div>
       </nav>
 
       <main class="content">
-        <h2>False Dreamer</h2>
-        <p></p>
+        <section class="content-box">
+          <h2>Last Seed 16, 3E427</h2>
+          <button id="themeButton" class="theme-button">▶ Play Theme</button>
+          <audio id="themeAudio">
+            <source src="../../music/falsedreamer.m4a">
+          </audio>
+          <br>
+          <p>A Tower has fallen. By the works of two heroes, Tamriel is safe.</p>
+          <p>Forgotten, one is sent away. A prisoner of the Empire. The other, her fate unknown, is lost to time.</p>
+          <p>In the east, a shadow rises from the ashes of Red Mountain.</p>
+          <p>Ashamed, the gods turn their three-fold face away.</p>
+          <p>Only one can save them. Born beneath certain stars, to uncertain parents.</p>
+          <p>Join me on a journey that will span eras.</p>
+          <br>
+          <p>Come, and look upon the Heart.</p>
       </main>
     </div>
   </div>
+  <script>
+    const button = document.getElementById("themeButton");
+    const audio = document.getElementById("themeAudio");
+    
+    button.addEventListener("click", function() {
+        if (audio.paused) {
+            audio.play();
+            button.textContent = "♫ Silence Theme ♫";
+        } else {
+            audio.pause();
+            button.textContent = "♫ Hear Theme ♫";
+        }
+    });
+  </script>  
 </body>
 </html>

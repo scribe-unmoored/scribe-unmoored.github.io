@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLEEDING SUN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_dawn.css">
+</head>
 
+<body>
+  <div class="page">
+    <header class="site-header">
+      <p class="website-title">BLEEDING SUN</p>
+      <p class="subtitle">Serana gets an arc</p>
+    </header>
+
+    <div class="layout">
+      <nav class="sidebar">
+        <a href="/index.html" class="wheel-link">
+        <img src="../../images/main/gold.png" alt="Homepage"> 
+        </a>
+        <a class="published" href="chapter_1">Chapter 1</a>
+        <div class="sealed">Chapter Two</div>
+       
+      </nav>
+
+      <main class="content">
+        <h2>Hearthfire 1, 4E202.</h2>
+        <button id="themeButton" class="theme-button">▶ Play Theme</button>
+        <audio id="themeAudio">
+          <source src="../../music/brasstower.wav">
+        </audio>
+        <br>
+        <p>Vampire time!</p>  
+      </main>
+    </div>
+  </div>
+  <script>
+  const button = document.getElementById("themeButton");
+  const audio = document.getElementById("themeAudio");
+  
+  button.addEventListener("click", function() {
+      if (audio.paused) {
+          audio.play();
+          button.textContent = "♫ Silence Theme ♫";
+      } else {
+          audio.pause();
+          button.textContent = "♫ Hear Theme ♫";
+      }
+  });
+  </script>
+</body>
+<footer class="copyright">
+  <p>The Elder Scrolls and all related intellectual property are owned by Bethesda Softworks. </p>
+  <p>This is an unofficial, non-commercial fan work.</p>
+  <p>All original characters, stories, text, and music are © 2026 The Scribe Unmoored.</p>
+</footer>
+</html>

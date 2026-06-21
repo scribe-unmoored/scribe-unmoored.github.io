@@ -1,0 +1,202 @@
+@font-face {
+    font-family: "Daedric";
+    src: url("../../fonts/OMWAyembedt.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Battlespire";
+    src: url("../../fonts/Amarante-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  background: #05090A;   /* deeper abyssal teal-black */
+  color: #CFE7E4;       /* softened spectral aqua text */
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.site-header {
+  text-align: center;
+  border-top: 1px solid #2F7F7A;   /* oxidized teal metal */
+  border-bottom: 1px solid #2F7F7A;
+  padding: 32px 0;
+  margin-bottom: 32px;
+  background: #071114;
+}
+
+.website-title {
+  color: #9FB7C2;   /* cold dragonsteel silver-blue */
+  font-size: 3.00rem;
+  letter-spacing: 0.5em;
+  font-family: "Battlespire";
+}
+
+h1 {
+  color: #D4AF37;   /* antique gold seal */
+  font-size: 1.00rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subtitle {
+  color: #4FB6B0;   /* glowing teal breath */
+  font-style: italic;
+}
+
+.layout {
+  display: flex;
+  gap: 32px;
+}
+
+.sidebar {
+  width: 220px;
+  border-right: 1px solid #1F2C30;  /* dark forged metal */
+  padding-right: 24px;
+}
+
+/* wheel link */
+.wheel-link {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.wheel-link img {
+    width: 120px;
+    max-width: 120px;
+    animation: slowspin 120s linear infinite;
+
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+}
+
+.wheel-link img:hover {
+    transform: scale(1.15);
+
+    filter:
+        brightness(1.25)
+        drop-shadow(0 0 8px #4FB6B0)
+        drop-shadow(0 0 14px rgba(212,175,55,0.35)); /* teal + gold aura */
+}
+
+@keyframes slowspin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.sidebar a:not(.wheel-link) {
+  display: block;
+  color: #D4AF37;   /* gold navigation */
+  text-decoration: none;
+  margin-bottom: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.sidebar a:hover {
+  color: #4FB6B0;   /* teal highlight */
+  text-decoration: underline;
+}
+
+.sealed {
+    font-family: "Daedric";
+    color: #D94B4B;   /* dragon blood rune red */
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 0 6px rgba(217,75,75,0.5),
+        0 0 14px rgba(79,182,176,0.15); /* faint arcane teal bleed */
+}
+
+.published {
+    font-family: "Battlespire";
+    color: #D4AF37;
+    text-decoration: none;
+}
+
+#themeButton {
+  background: transparent;
+  color: #D4AF37;
+  border: 1px solid #D4AF37;
+  padding: 12px 24px;
+  font-family: "Cinzel", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#themeButton:hover {
+  background-color: rgba(79, 182, 176, 0.12); /* teal mist */
+  color: #4FB6B0;
+  border-color: #4FB6B0;
+}
+
+#themeButton:active {
+  transform: translateY(1px);
+}
+
+#themeButton:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(79, 182, 176, 0.45);
+}
+
+.content {
+  flex: 1;
+  background: #0A1116;   /* deep forge-water */
+  border: 1px solid #1F2C30;
+  padding: 32px;
+  line-height: 1.7;
+}
+
+.content h2 {
+  color: #D4AF37;
+  margin-top: 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #7E9AA3;   /* cooled metal text */
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.chapter-date .line {
+  color: #4FB6B0;
+  font-family: "Cinzel", serif;
+  opacity: 0;
+  margin: 4rem 0 5rem 0;
+  transform: translateY(6px);
+  font-weight: 800;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* staggered delays */
+.chapter-date .line-1 { animation-delay: 0.8s; }
+.chapter-date .line-2 { animation-delay: 1.7s; }
+.chapter-date .line-3 { animation-delay: 3.3s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "Daedric";
+    src: url("../../fonts/OMWAyembedt.otf") format("opentype");
+}
+
+body {
+  margin: 0;
+  background: #D8D2C8;            /* weathered limestone / aged stone */
+  color: #1F1E1C;                /* deeper carved inscription text */
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.site-header {
+  text-align: center;
+  border-top: 1px solid #9F988C;     /* aged stone seam */
+  border-bottom: 1px solid #9F988C;
+  padding: 32px 0;
+  margin-bottom: 32px;
+  background: #D2CCC2;
+}
+
+.website-title {
+  color: #26231F;    /* carved title into darker pale stone */
+  font-size: 3.00rem;
+  letter-spacing: 0.5em;
+  font-family: "Turret Road", sans-serif;
+}
+
+h1 {
+  color: #6F1F22;  /* deeper oath-wine seal */
+  font-size: 1.00rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subtitle {
+  color: #3F3B36; /* muted chisel shadow text */
+  font-style: italic;
+}
+
+.layout {
+  display: flex;
+  gap: 32px;
+}
+
+.sidebar {
+  width: 220px;
+  border-right: 1px solid #9F988C;  /* carved panel division */
+  padding-right: 24px;
+}
+
+/*homepage link setup*/
+.wheel-link {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.wheel-link img {
+    width: 120px;
+    max-width: 120px;
+    animation: slowspin 120s linear infinite;
+
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+}
+
+.wheel-link img:hover {
+    transform: scale(1.15);
+
+    filter:
+        brightness(1.05)
+        drop-shadow(0 0 6px rgba(111,31,34,0.25)); /* faint sacred stain glow */
+}
+
+@keyframes slowspin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.sidebar a:not(.wheel-link) {
+  display: block;
+  color: #26231F; /* carved navigation text */
+  text-decoration: none;
+  margin-bottom: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.sidebar a:hover {
+  color: #6F1F22; /* oath-red highlight */
+  text-decoration: underline;
+}
+
+.sealed {
+    font-family: "Daedric";
+    color: #6F1F22; /* oath mark / martyr script */
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 0 4px rgba(111,31,34,0.25);
+}
+
+.published {
+    font-family: "Cinzel";
+    color: #26231F;
+    text-decoration: none;
+}
+
+#themeButton {
+  background: transparent;
+  color: #26231F;
+  border: 1px solid #9F988C;
+  padding: 12px 24px;
+  font-family: "Cinzel", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#themeButton:hover {
+  background-color: rgba(111, 31, 34, 0.08);
+  color: #6F1F22;
+  border-color: #6F1F22;
+}
+
+#themeButton:active {
+  transform: translateY(1px);
+}
+
+#themeButton:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(111, 31, 34, 0.25);
+}
+
+.content {
+  flex: 1;
+  background: #E6DFD6; /* softened cathedral stone */
+  border: 1px solid #9F988C;
+  padding: 32px;
+  line-height: 1.7;
+}
+
+.content h2 {
+  color: #6F1F22; /* chapter header = oath / decree */
+  margin-top: 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #4B4741;
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.chapter-date .line {
+  color: #26231F;
+  font-family: "Cinzel", serif;
+  opacity: 0;
+  margin: 4rem 0 5rem 0;
+  transform: translateY(6px);
+  font-weight: 800;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* staggered delays */
+.chapter-date .line-1 { animation-delay: 0.8s; }
+.chapter-date .line-2 { animation-delay: 1.7s; }
+.chapter-date .line-3 { animation-delay: 3.3s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*PELINAL ONLY*/
+.readout {
+  font-family: "Turret Road", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1F1E1C;
+}

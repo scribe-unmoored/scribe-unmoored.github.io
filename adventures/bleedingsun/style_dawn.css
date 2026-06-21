@@ -1,0 +1,202 @@
+@font-face {
+    font-family: "Daedric";
+    src: url("../../fonts/OMWAyembedt.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Vampire";
+    src: url("../../fonts/KONSTANTINE.otf") format("opentype");
+}
+
+body {
+  margin: 0;
+  background: #070407;   /* near-black velvet night */
+  color: #E7DDE0;       /* pale, blood-bleached parchment */
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.site-header {
+  text-align: center;
+  border-top: 1px solid #3B1B22;   /* old iron stained with blood */
+  border-bottom: 1px solid #3B1B22;
+  padding: 32px 0;
+  margin-bottom: 32px;
+  background: #12080B;   /* interior of a sealed crypt */
+}
+
+.website-title {
+  color: #D8C2C7;   /* faded noble marble */
+  font-size: 3.00rem;
+  letter-spacing: 0.5em;
+  font-family: "Vampire";
+}
+
+h1 {
+  color: #8B1E2D;   /* vampiric seal red */
+  font-size: 1.00rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subtitle {
+  color: #A48A92;   /* dusted rose-shadow */
+  font-style: italic;
+}
+
+.layout {
+  display: flex;
+  gap: 32px;
+}
+
+.sidebar {
+  width: 220px;
+  border-right: 1px solid #2A141A;  /* blackened iron */
+  padding-right: 24px;
+}
+
+/* wheel link */
+.wheel-link {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.wheel-link img {
+    width: 120px;
+    max-width: 120px;
+    animation: slowspin 120s linear infinite;
+
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+}
+
+.wheel-link img:hover {
+    transform: scale(1.15);
+
+    filter:
+        brightness(1.2)
+        drop-shadow(0 0 10px rgba(139,30,45,0.55))  /* blood glow */
+        drop-shadow(0 0 18px rgba(164,138,146,0.25)); /* pale ghost light */
+}
+
+@keyframes slowspin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.sidebar a:not(.wheel-link) {
+  display: block;
+  color: #D8C2C7;   /* faded parchment silver */
+  text-decoration: none;
+  margin-bottom: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.sidebar a:hover {
+  color: #8B1E2D;   /* vampiric red hover */
+  text-decoration: underline;
+}
+
+.sealed {
+    font-family: "Daedric";
+    color: #8B1E2D;   /* blood rune script */
+    opacity: 0.95;
+    letter-spacing: 0.05em;
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 0 6px rgba(139,30,45,0.55),
+        0 0 14px rgba(59,27,34,0.35); /* deep crypt glow */
+}
+
+.published {
+    font-family: "Vampire";
+    color: #D8C2C7;
+    text-decoration: none;
+}
+
+#themeButton {
+  background: transparent;
+  color: #D8C2C7;
+  border: 1px solid #3B1B22;
+  padding: 12px 24px;
+  font-family: "Cinzel", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#themeButton:hover {
+  background-color: rgba(139, 30, 45, 0.12); /* blood wash */
+  color: #8B1E2D;
+  border-color: #8B1E2D;
+}
+
+#themeButton:active {
+  transform: translateY(1px);
+}
+
+#themeButton:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(139, 30, 45, 0.45);
+}
+
+.content {
+  flex: 1;
+  background: #0E070A;   /* castle interior at night */
+  border: 1px solid #2A141A;
+  padding: 32px;
+  line-height: 1.7;
+}
+
+.content h2 {
+  color: #8B1E2D;
+  margin-top: 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #A48A92;   /* faded noble dust */
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.chapter-date .line {
+  color: #D8C2C7;
+  font-family: "Cinzel", serif;
+  opacity: 0;
+  margin: 4rem 0 5rem 0;
+  transform: translateY(6px);
+  font-weight: 800;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* staggered delays */
+.chapter-date .line-1 { animation-delay: 0.8s; }
+.chapter-date .line-2 { animation-delay: 1.7s; }
+.chapter-date .line-3 { animation-delay: 3.3s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

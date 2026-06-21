@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "Daedric";
+    src: url("../../fonts/OMWAyembedt.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Battlespire";
+    src: url("../../fonts/Amarante-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #E7E1D6;
+
+  /* base split background only (no layout changes) */
+  background: linear-gradient(
+    90deg,
+    #071427 0%,
+    #071427 50%,
+    #140A1F 50%,
+    #140A1F 100%
+  );
+}
+
+
+body::before {
+  display: none;
+}
+/*
+body::before {
+  content: "";
+  position: fixed;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(212,175,55,0.5),
+    transparent
+  );
+  pointer-events: none;
+  opacity: 0.8;
+}
+*/
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.site-header {
+  text-align: center;
+  border-top: 1px solid rgba(212,175,55,0.25);
+  border-bottom: 1px solid rgba(212,175,55,0.25);
+  padding: 32px 0;
+  margin-bottom: 32px;
+  background: rgba(0,0,0,0.12);
+}
+
+.website-title {
+  color: #D8D0C2;
+  font-size: 3rem;
+  letter-spacing: 0.5em;
+  font-family: "Cinzel", serif;
+  transform: translateX(300px);
+}
+
+h1 {
+  color: #D4AF37;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #B9B0A3;
+}
+
+.layout {
+  display: flex;
+  gap: 32px;
+}
+
+/* SIDEBAR (color split behavior via direction, not layout split) */
+.sidebar {
+  width: 220px;
+  border-right: 1px solid rgba(212,175,55,0.15);
+  padding-right: 24px;
+}
+
+/* default (blue-side influence) */
+.sidebar a:not(.wheel-link) {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #BFD7FF;
+  transition: 0.2s ease;
+}
+
+.sidebar a:hover {
+  color: #7FCBFF;
+  text-shadow: 0 0 10px rgba(127,203,255,0.35);
+}
+
+/* wheel stays neutral gold anchor */
+.wheel-link {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.wheel-link img {
+  width: 120px;
+  animation: slowspin 120s linear infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.wheel-link img:hover {
+  transform: scale(1.15);
+  filter:
+    brightness(1.2)
+    drop-shadow(0 0 10px rgba(212,175,55,0.4))
+    drop-shadow(0 0 12px rgba(127,203,255,0.25));
+}
+
+@keyframes slowspin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* headers remain gold anchor (both realities agree here) */
+.content h2 {
+  color: #D4AF37;
+  text-shadow:
+    0 0 10px rgba(127,203,255,0.15),
+    0 0 10px rgba(181,108,255,0.15);
+}
+
+/* CONTENT PANEL (neutral midpoint between realms) */
+.content {
+  flex: 1;
+  padding: 32px;
+  line-height: 1.7;
+
+  background: rgba(10, 8, 14, 1);
+  border: 1px solid rgba(212,175,55,0.18);
+}
+
+/* RIGHT-SIDE TEXT (purple influence via selective overrides) */
+.content p:nth-of-type(even),
+.content .chapter-date .line:nth-child(even) {
+  color: #C9A3FF; /* purple realm bleed */
+}
+
+/* LEFT-SIDE TEXT (blue influence) */
+.content p:nth-of-type(odd),
+.content .chapter-date .line:nth-child(odd) {
+  color: #A7D0FF; /* manic clarity blue */
+}
+
+/* sealed script = unstable bleed point */
+.sealed {
+  font-family: "Daedric";
+  color: #D4AF37;
+  opacity: 0.9;
+  text-shadow:
+    0 0 6px rgba(212,175,55,0.25),
+    0 0 10px rgba(201,163,255,0.25);
+}
+
+/* button stays gold but reacts to both sides */
+#themeButton {
+  background: transparent;
+  color: #D4AF37;
+  border: 1px solid #D4AF37;
+  padding: 12px 24px;
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#themeButton:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(127,203,255,0.15),
+    rgba(201,163,255,0.15)
+  );
+  border-color: #A7D0FF;
+  color: #FFFFFF;
+}
+
+/* copyright fades into the “rift boundary” */
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #AFA79B;
+  margin-top: 5rem;
+  opacity: 0.8;
+}
+
+/* animation unchanged */
+.chapter-date .line {
+  font-family: "Cinzel", serif;
+  font-weight: 800;
+  opacity: 0;
+  margin: 4rem 0 5rem 0;
+  transform: translateY(6px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.chapter-date .line-1 { animation-delay: 0.8s; }
+.chapter-date .line-2 { animation-delay: 1.7s; }
+.chapter-date .line-3 { animation-delay: 3.3s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
