@@ -2,51 +2,52 @@ The Soundtrack for the Adventures of Steve is a side project I am working on the
 
 
 BRASS TOWER: 
-- Brass Tower (this needs an update, the audio isn't great on the original)
-- BT Titlecard
-- Counterstep
-- Dam of Destriers
-- Voice of Reason
+- [x] Brass Tower
+- [x] BT Titlecard
+- [x] Counterstep
+- [] Dam of Destriers
+- [] Voice of Reason
 
 FALSE DREAMER:
-- False Dreamer
-- FD Titlecard
-- Lucky Bastard
-- The Law, The Land
+- [x] False Dreamer
+- [] FD Titlecard
+- [] Lucky Bastard
+- [] The Law, The Land
 
 MARBLE JAWS:
-- Marble Jaws
-- MJ Titlecard
-- Chained Wraith
-- Killing Light
-- The Wall
+- [] Marble Jaws
+- [] MJ Titlecard
+- [] Chained Wraith
+- [] Killing Light
+- [] The Wall
 
 RIVEN THRONE:
-- Riven Throne
-- RT Titlecard
-- Nix Company
-- Probably something whimsical as hell
+- [] Riven Throne
+- [] RT Titlecard
+- [] Nix Company
+- [] Probably something whimsical as hell
 
 WORLD EATER:
-- World Eater
-- Terminal Invocation
+- [] World Eater
+- [] Terminal Invocation
 
 GLASS CROWN:
-- Glass Crown
-- Blades Theme
+- [] Glass Crown
+- [] Blades Theme
 
 BLEEDING SUN:
-- Bleeding Sun
-- Memory of Sunlight
+- [] Bleeding Sun
+- [] Memory of Sunlight
 
 STARLESS SKY:
-- Starless Sky
+- [] Starless Sky
 
 DEAD MOON:
-- Dead Moon
-- Tribunal
-- Emperor Crab
+- [] Dead Moon
+- [] Tribunal
+- [] Emperor Crab
 
 BONUS:
-- Reckoning
-- The Restless
+- [] Reckoning
+- [] The Restless
+- [] March of the Empire
