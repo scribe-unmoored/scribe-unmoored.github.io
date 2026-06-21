@@ -6,26 +6,20 @@ BRASS TOWER:
 - [x] BT Titlecard
 - [x] Counterstep
 - [] Dam of Destriers
-- [] Voice of Reason
 
 FALSE DREAMER:
 - [x] False Dreamer
 - [] FD Titlecard
 - [] Lucky Bastard
-- [] The Law, The Land
 
 MARBLE JAWS:
 - [] Marble Jaws
 - [] MJ Titlecard
-- [] Chained Wraith
-- [] Killing Light
-- [] The Wall
 
 RIVEN THRONE:
 - [] Riven Throne
 - [] RT Titlecard
 - [] Nix Company
-- [] Probably something whimsical as hell
 
 WORLD EATER:
 - [] World Eater
@@ -33,11 +27,9 @@ WORLD EATER:
 
 GLASS CROWN:
 - [] Glass Crown
-- [] Blades Theme
 
 BLEEDING SUN:
-- [] Bleeding Sun
-- [] Memory of Sunlight
+- [x] Bleeding Sun
 
 STARLESS SKY:
 - [] Starless Sky
@@ -46,8 +38,8 @@ DEAD MOON:
 - [] Dead Moon
 - [] Tribunal
 - [] Emperor Crab
+- [] Sublime
 
 BONUS:
 - [] Reckoning
 - [] The Restless
-- [] March of the Empire
