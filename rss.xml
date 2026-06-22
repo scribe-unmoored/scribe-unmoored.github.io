@@ -4,95 +4,134 @@
     <title>The Scribe Unmoored</title>
     <link>https://scribe-unmoored.github.io</link>
     <description>Home of The Adventures. A repository of fiction, essays, and miscellanies.</description>
+
+
     <item>
-      <title>Brasstower — Index</title>
-      <link>https://scribe-unmoored.github.io/adventures/brasstower/index.html</link>
-      <guid>https://scribe-unmoored.github.io/adventures/brasstower/index.html</guid>
+      <title>Hororecord Archive - The Scribe Unmoored</title>
+      <link>https://scribe-unmoored.github.io/timeline.html</link>
+      <guid>https://scribe-unmoored.github.io/timeline.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>Browse entries in <i>horological</i> order!</description>
     </item>
+
+    
     <item>
-      <title>Brasstower — Chapter9</title>
-      <link>https://scribe-unmoored.github.io/adventures/brasstower/chapter9.html</link>
-      <guid>https://scribe-unmoored.github.io/adventures/brasstower/chapter9.html</guid>
-      <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
-    </item>
-    <item>
-      <title>Brasstower — Chapter8</title>
+      <title>Brass Tower - Chapter VIII: The Steed</title>
       <link>https://scribe-unmoored.github.io/adventures/brasstower/chapter8.html</link>
       <guid>https://scribe-unmoored.github.io/adventures/brasstower/chapter8.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      description>Every hero needs a horse...</description>
     </item>
     <item>
-      <title>Brasstower — Chapter7</title>
+      <title>Brass Tower - Chapter VII: Gothway Garden</title>
       <link>https://scribe-unmoored.github.io/adventures/brasstower/chapter7.html</link>
       <guid>https://scribe-unmoored.github.io/adventures/brasstower/chapter7.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      description>The Blade's true identity revealed...</description>
     </item>
     <item>
-      <title>Brasstower — Chapter6</title>
+      <title>Brass Tower - Chapter VI: Thorn</title>
       <link>https://scribe-unmoored.github.io/adventures/brasstower/chapter6.html</link>
       <guid>https://scribe-unmoored.github.io/adventures/brasstower/chapter6.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>A duelist, wielding words sharper than any blade...</description>
     </item>
     <item>
-      <title>Brasstower — Chapter5</title>
+      <title>Dead Moon - Nerevengers</title>
+      <link>https://scribe-unmoored.github.io/adventures/deadmoon/nerevengers</link>
+      <guid>https://scribe-unmoored.github.io/adventures/deadmoon/nerevengers</guid>
+      <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>"That's my secret, sera. I'm always upset."</description>
+    <item>
+      <title>Brass Tower - Chapter V: Wayrest</title>
       <link>https://scribe-unmoored.github.io/adventures/brasstower/chapter5.html</link>
       <guid>https://scribe-unmoored.github.io/adventures/brasstower/chapter5.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>A plot to undermine the throne...</description>
     </item>
     <item>
-      <title>Brasstower — Chapter4</title>
+      <title>Brass Tower - Chapter IV: The Atronach</title>
       <link>https://scribe-unmoored.github.io/adventures/brasstower/chapter4.html</link>
       <guid>https://scribe-unmoored.github.io/adventures/brasstower/chapter4.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>The Blade makes his escape...</description>
     </item>
     <item>
-      <title>Brasstower — Chapter3</title>
+      <title>Brass Tower - Chapter III: Privateer's Hold</title>
       <link>https://scribe-unmoored.github.io/adventures/brasstower/chapter3.html</link>
       <guid>https://scribe-unmoored.github.io/adventures/brasstower/chapter3.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>The Blade pushes deeper into Privateer's Hold...</description>
     </item>
     <item>
-      <title>Brasstower — Chapter2</title>
+      <title>Brass Tower - Chapter II: The Lady</title>
       <link>https://scribe-unmoored.github.io/adventures/brasstower/chapter2.html</link>
       <guid>https://scribe-unmoored.github.io/adventures/brasstower/chapter2.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>An agent of Summerset arrives in the Iliac Bay...</description>
     </item>
     <item>
-      <title>Brasstower — Chapter1</title>
+      <title>Brass Tower - Chapter I: The Blade</title>
       <link>https://scribe-unmoored.github.io/adventures/brasstower/chapter1.html</link>
       <guid>https://scribe-unmoored.github.io/adventures/brasstower/chapter1.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>A man wakes up in a cave, born beneath broken stars...</description>
+    </item>
+    <item>
+      <title>Dead Moon - Wolfe & Borges, Attorneys at Large</title>
+      <link>https://scribe-unmoored.github.io/adventures/deadmoon/lawyers</link>
+      <guid>https://scribe-unmoored.github.io/adventures/deadmoon/lawyers</guid>
+      <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>YOU MAY BE ENTITLED TO COMPENSATION</description>
+    </item>
+    <item>
+      <title>The Adventures: Episode II: Brass Tower</title>
+      <link>https://scribe-unmoored.github.io/adventures/brasstower/index.html</link>
+      <guid>https://scribe-unmoored.github.io/adventures/brasstower/index.html</guid>
+      <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>The Adventure begins...</description>
     </item>
     <item>
       <title>I God</title>
       <link>https://scribe-unmoored.github.io/writings/writings/i-god.html</link>
       <guid>https://scribe-unmoored.github.io/writings/writings/i-god.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>Heduanna had always relied on her goddess, Ananna, for guidance.</description>
     </item>
     <item>
       <title>Blow Me Away</title>
       <link>https://scribe-unmoored.github.io/writings/writings/blow-me-away.html</link>
       <guid>https://scribe-unmoored.github.io/writings/writings/blow-me-away.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>FIRE YOUR GUN, CUZ ITS TIME TO RUN. A tribute to my younger self.</description>
     </item>
     <item>
       <title>On Worldbuilding</title>
       <link>https://scribe-unmoored.github.io/writings/writings/on-worldbuilding.html</link>
       <guid>https://scribe-unmoored.github.io/writings/writings/on-worldbuilding.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>A comprehensive guide.</description>
     </item>
     <item>
       <title>Lexical</title>
       <link>https://scribe-unmoored.github.io/writings/writings/lexical.html</link>
       <guid>https://scribe-unmoored.github.io/writings/writings/lexical.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>A submission to the journal of artificial divinity, by Chief Tonal Architect Kagrenac</description>
     </item>
     <item>
       <title>Innate</title>
       <link>https://scribe-unmoored.github.io/writings/writings/innate.html</link>
       <guid>https://scribe-unmoored.github.io/writings/writings/innate.html</guid>
       <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>Cancer is a war within the self, between brothers of plasm and protein.</description>
+    </item>
+    <item>
+      <title>Brasstower — Index</title>
+      <link>https://scribe-unmoored.github.io/adventures/brasstower/index.html</link>
+      <guid>https://scribe-unmoored.github.io/adventures/brasstower/index.html</guid>
+      <pubDate>Mon, 22 Jun 2026 03:08:22 GMT</pubDate>
+      <description>The Scribe Unmoored is live!</description>
     </item>
   </channel>
 </rss>
