@@ -58,9 +58,9 @@ items.sort(key=lambda x: x["date"])
 rss = ET.Element("rss", version="2.0")
 channel = ET.SubElement(rss, "channel")
 
-ET.SubElement(channel, "title").text = "The Adventures"
+ET.SubElement(channel, "title").text = "The Scribe Unmoored"
 ET.SubElement(channel, "link").text = SITE_URL
-ET.SubElement(channel, "description").text = "Serialized fiction and short stories."
+ET.SubElement(channel, "description").text = "Home of The Adventures. A repository of fiction, essays, and miscellanies."
 
 for item in items:
     node = ET.SubElement(channel, "item")
