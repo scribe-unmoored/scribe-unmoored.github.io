@@ -65,7 +65,7 @@ number_translate = {
 # MUST CHECK THESE BEFORE RUNNING!!!! ---------------------------------------------------
 													#									|
 directory = Path("adventures/brasstower")			# DO YOU HAVE THE RIGHT EPISODE?  	|
-chapter = 19										# DO YOU HAVE THE RIGHT CHAPTER?  	|
+chapter = 11										# DO YOU HAVE THE RIGHT CHAPTER?  	|
 add_sealed_placeholders = True						# DO YOU WANT A PLACEHOLDER AFTER?	|
 													# KNOW BEFORE YOU WOE				|
 #----------------------------------------------------------------------------------------
@@ -80,10 +80,10 @@ new_link = f'<a class="published" href="chapter{chapter}">Chapter {chapter}</a>'
 # Determine what to do if add_sealed_placeholders is True or False.
 
 if add_sealed_placeholders:
-	new_placeholder = ("\n" + f'        <div class="sealed">Chapter {number_translate[chapter + 1]}</div>')
-    replacement = new_link + "\n" + next_placeholder	# Add new chapter, newline, and new placeholder.
+    new_placeholder = f'        <div class="sealed">Chapter {number_translate[chapter + 1]}</div>'
+    replacement = new_link + "\n" + new_placeholder  # Add new chapter, one newline, then new placeholder.
 else:
-    replacement = new_link								# OR only add new chapter. Useful towards the end.
+    replacement = new_link  # OR only add new chapter. Useful towards the end.
 
 
 # Search every file in episode directory.

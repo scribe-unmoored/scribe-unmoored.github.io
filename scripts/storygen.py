@@ -5,12 +5,12 @@
 
 from pathlib import Path
 
-directory = Path("writing/writing")	
+directory = Path("writings/writings")
 
 # MUST CHECK THESE BEFORE RUNNING!!!! ---------------------------------------------------
 
-name =                                    # DO YOU HAVE THE RIGHT STORY NAME?           
-html =                                    # DO YOU HAVE THE RIGHT LINK?     	          
+name = "test"         
+html = "test.html"      	          
 													                # KNOW BEFORE YOU WOE - Lucien Lachance
 
 #----------------------------------------------------------------------------------------
@@ -21,7 +21,7 @@ html =                                    # DO YOU HAVE THE RIGHT LINK?
 placeholder = '<!-- placeholder -->'
 new_link = f'<a class="published" href="{html}">{name}</a>'
 
-replacement = placeholder + "\n" + new_link
+replacement = placeholder + "\n" + new_link  # keep placeholder then indented link
 
 
 # Search every file in directory.
