@@ -12,6 +12,71 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+(function(){
+  const FLEE_RADIUS = 120;
+  const ATTRACT_RADIUS = 320;
+  const MAX_SPEED = 5;
+  const DAMPING = 0.82;
+  const DESTINATION = 'ominouswarning.html';
+  const APPEAR_DELAY = 15000;
+  const SYMBOL = '⊛';
+
+  let mx = window.innerWidth/2, my = window.innerHeight/2;
+  let ex, ey, vx = 0, vy = 0;
+  let el, active = false;
+
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+  function spawn() {
+    const w = window.innerWidth, h = window.innerHeight;
+    const edge = Math.floor(Math.random()*4);
+    switch(edge){
+      case 0: ex=Math.random()*w; ey=10; break;
+      case 1: ex=w-10; ey=Math.random()*h; break;
+      case 2: ex=Math.random()*w; ey=h-10; break;
+      case 3: ex=10; ey=Math.random()*h; break;
+    }
+    el = document.createElement('div');
+    el.textContent = SYMBOL;
+    el.style.cssText = 'position:fixed;font-family:monospace;font-size:20px;color:#8b0000;text-shadow:0 0 10px #cc0000,0 0 20px #660000;cursor:pointer;user-select:none;z-index:99999;opacity:0;transition:opacity 1s;transform:translate(-50%,-50%);pointer-events:auto;';
+    el.style.left = ex+'px';
+    el.style.top = ey+'px';
+    document.body.appendChild(el);
+    setTimeout(()=>el.style.opacity='1', 50);
+    el.addEventListener('click',()=>{ window.location.href = DESTINATION; });
+    active = true;
+    requestAnimationFrame(tick);
+  }
+
+  function tick() {
+    if(!active) return;
+    const dx=mx-ex, dy=my-ey;
+    const dist=Math.sqrt(dx*dx+dy*dy);
+    if(dist < FLEE_RADIUS){
+      const a=Math.atan2(dy,dx), f=((FLEE_RADIUS-dist)/FLEE_RADIUS)*2.2;
+      vx-=Math.cos(a)*f; vy-=Math.sin(a)*f;
+    } else if(dist > ATTRACT_RADIUS){
+      vx+=(dx/dist)*0.25; vy+=(dy/dist)*0.25;
+    }
+    vx+=(Math.random()-0.5)*0.4; vy+=(Math.random()-0.5)*0.4;
+    vx*=DAMPING; vy*=DAMPING;
+    const spd=Math.sqrt(vx*vx+vy*vy);
+    if(spd>MAX_SPEED){vx=(vx/spd)*MAX_SPEED;vy=(vy/spd)*MAX_SPEED;}
+    ex+=vx; ey+=vy;
+    const m=16, w=window.innerWidth, h=window.innerHeight;
+    if(ex<m){ex=m;vx=Math.abs(vx)*0.8;}
+    if(ex>w-m){ex=w-m;vx=-Math.abs(vx)*0.8;}
+    if(ey<m){ey=m;vy=Math.abs(vy)*0.8;}
+    if(ey>h-m){ey=h-m;vy=-Math.abs(vy)*0.8;}
+    el.style.left=ex+'px'; el.style.top=ey+'px';
+    requestAnimationFrame(tick);
+  }
+
+  setTimeout(spawn, APPEAR_DELAY);
+})();
+</script>
+
 <body>
   <div class="page">
     <header class="site-header">
