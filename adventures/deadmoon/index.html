@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<script>
-(function(){
+<script> // This script creates a floating symbol that follows the mouse cursor and can be clicked to navigate to another page.
+(function(){                                  // Function determines the behavior of the floating symbol.
   const FLEE_RADIUS = 120;
   const ATTRACT_RADIUS = 320;
   const MAX_SPEED = 5;
@@ -22,12 +22,14 @@
   const APPEAR_DELAY = 15000;
   const SYMBOL = '⊛';
 
-  let mx = window.innerWidth/2, my = window.innerHeight/2;
-  let ex, ey, vx = 0, vy = 0;
-  let el, active = false;
+  let mx = window.innerWidth/2, my = window.innerHeight/2; // Mouse coordinates
+  let ex, ey, vx = 0, vy = 0;                              // Symbol coordinates and velocity
+  let el, active = false;                                  // Symbol element and active state
 
+  // Update mouse coordinates on mouse move
   document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
 
+  // Function to spawn the floating symbol at a random edge of the window
   function spawn() {
     const w = window.innerWidth, h = window.innerHeight;
     const edge = Math.floor(Math.random()*4);
@@ -49,6 +51,7 @@
     requestAnimationFrame(tick);
   }
 
+  // Function to update the position of the floating symbol based on mouse position and velocity
   function tick() {
     if(!active) return;
     const dx=mx-ex, dy=my-ey;
@@ -73,6 +76,7 @@
     requestAnimationFrame(tick);
   }
 
+  // Start the spawn function after a delay
   setTimeout(spawn, APPEAR_DELAY);
 })();
 </script>

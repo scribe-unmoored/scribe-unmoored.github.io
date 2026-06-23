@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
+  /* Animation Style for title */
   <style>
     .anim-stage {
       background: #000;
@@ -22,6 +23,7 @@
       overflow: hidden;
     }
 
+    /* Animation Elements */
     .anim-title-group {
       display: flex;
       align-items: baseline;
@@ -29,6 +31,7 @@
       white-space: nowrap;
     }
 
+    /* Animation Keyframes */
     .anim-the-adventures {
       font-size: clamp(16px, 3vw, 32px);
       color: #e8d5a3;
@@ -37,6 +40,7 @@
       opacity: 0;
     }
 
+    /* Animation Keyframes for the ellipsis */
     .anim-ellipsis {
       font-size: clamp(16px, 3vw, 32px);
       color: #e8d5a3;
@@ -44,6 +48,7 @@
       opacity: 0;
     }
 
+    /* Animation Keyframes for of Steve */
     .anim-of-steve {
       font-size: clamp(16px, 3vw, 32px);
       color: #e8d5a3;
@@ -55,33 +60,40 @@
       white-space: nowrap;
     }
     
+    /* This part tells the browser to start "The Adventures" animation when the stage is running */
     .anim-stage.anim-running .anim-the-adventures {
-      animation: anim-slowFade 4s ease forwards 1s;
+      animation: anim-slowFade 4s ease forwards 1s; /* Fade in over 4 seconds, starting after 1 second */
     }
 
+    /* This part tells the browser to start "..." animation when the stage is running */
     .anim-stage.anim-running .anim-ellipsis {
       animation: anim-slowFade 4s ease forwards 1s, anim-ellipsisFade 1s ease forwards 7s;
-    }
+    } /* Fade in over 4 seconds, starting after 1 second, then fade out over 1 second, starting after 7 seconds */
 
+    /* This part tells the browser to start "of Steve" animation when the stage is running */
     .anim-stage.anim-running .anim-of-steve {
       animation: anim-slideIn 2s cubic-bezier(0.22, 1, 0.36, 1) forwards 9.5s;
-    }
+    } /* Slide in over 2 seconds, starting after 9.5 seconds */
 
+    /* Go from 0 opacity to 1 opacity */
     @keyframes anim-slowFade {
       from { opacity: 0; }
       to   { opacity: 1; }
     }
 
+    /* Go from 1 opacity to 0 opacity and reduce max-width to 0 */
     @keyframes anim-ellipsisFade {
       from { opacity: 1; max-width: 80px; }
       to   { opacity: 0; max-width: 0; overflow: hidden; }
     }
 
+    /* Go from 0 opacity to 1 opacity */
     @keyframes anim-slideIn {
       from { opacity: 0; max-width: 0; }
       to   { opacity: 1; max-width: 500px; }
     }
 
+    /* This media query respects users' preference for reduced motion */
     @media (prefers-reduced-motion: reduce) {
       .anim-stage.anim-running .anim-the-adventures,
       .anim-stage.anim-running .anim-ellipsis,
@@ -96,6 +108,7 @@
       }
     }
     
+    /* Subtitle Animation Style */
         .anim-subtitle {
       font-family: 'Cinzel', serif;
       font-size: clamp(10px, 1.8vw, 18px);
@@ -106,6 +119,7 @@
       margin-top: 12px;
     }
     
+    /*Subtitle Fades in after 12 seconds of the animation running*/
     .anim-stage.anim-running .anim-subtitle {
       animation: anim-slowFade 2s ease forwards 12s;
     }
