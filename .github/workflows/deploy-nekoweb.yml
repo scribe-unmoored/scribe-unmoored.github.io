@@ -28,9 +28,14 @@ jobs:
           cd build
           zip -r ../site.zip .
 
-      - name: Deploy to Nekoweb (UPLOAD STEP)
+      - name: Deploy to Nekoweb
         run: |
+          cd build
+          zip -r ../site.zip .
+      
           curl -X POST \
             -H "Authorization: ${{ secrets.NEKOWEB_API_KEY }}" \
             -F "file=@site.zip" \
-            https://nekoweb.org/api/files/upload
+            -F "path=/" \
+            -F "clean=true" \
+            https://nekoweb.org/api/upload
