@@ -1,5 +1,3 @@
-#rerun
-
 name: Deploy to Nekoweb
 
 on:
@@ -15,10 +13,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Prepare files
+        run: |
+          mkdir -p ./build
+          cp -r $(ls -A | grep -v build) ./build/
+
       - name: Deploy to Nekoweb
         uses: indiefellas/deploy2nekoweb@main
         with:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-domain: 'scribe-unmoored.nekoweb.org'
           nekoweb-username: 'scribe-unmoored'
-          directory: '.'
+          directory: './build'
+
+          #fingers crossed
