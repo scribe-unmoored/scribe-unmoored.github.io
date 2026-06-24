@@ -10,23 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Prepare build
+      - name: Build site
         run: |
-          mkdir build
+          mkdir -p build
           rsync -av \
             --exclude='.git' \
             --exclude='.github' \
-            --exclude='build' \
-            ./ ./build/
+            ./ build/
 
-      - name: Deploy to Nekoweb
-        uses: mp-pinheiro/nekoweb-deploy@0.2.1
-        with:
-          API_KEY: ${{ secrets.NEKOWEB_API_KEY }}
-          BUILD_DIR: './build'
-          DEPLOY_DIR: '/'
-          DELAY: '0.5'
-          NEKOWEB_PAGENAME: 'scribe-unmoored'
-          ENCRYPTION_KEY: ${{ secrets.NEKOWEB_ENCRYPTION_KEY }}
+      - name: Create deploy archive
+        run: |
+          cd build
+          zip -r ../site.zip .
+
+      - name: Deploy to Nekoweb (UPLOAD STEP)
+        run: |
+          curl -X POST \
+            -H "Authorization: ${{ secrets.NEKOWEB_API_KEY }}" \
+            -F "file=@site.zip" \
+            https://nekoweb.org/api/files/upload
