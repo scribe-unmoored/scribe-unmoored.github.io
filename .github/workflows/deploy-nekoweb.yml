@@ -15,7 +15,7 @@ jobs:
           mkdir -p ./deploy
           rsync -av --exclude='.git' --exclude='.github' --exclude='deploy' --exclude='deploy2nekoweb' ./ ./deploy/
       - name: Debug
-        run: ls -la ./build/
+        run: ls -la ./deploy/
       - name: Deploy to Nekoweb
         uses: indiefellas/deploy2nekoweb@main
         with:
