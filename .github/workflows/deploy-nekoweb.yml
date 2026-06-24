@@ -10,25 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build site
+      - name: Sync files to Nekoweb (root-safe)
         run: |
-          mkdir -p build
-          rsync -av \
-            --exclude='.git' \
-            --exclude='.github' \
-            ./ build/
-
-      - name: Create deploy archive (absolute path)
-        run: |
-          cd build
-          zip -r /tmp/site.zip .
-
-      - name: Deploy to Nekoweb
-        run: |
-          curl -X POST \
-            -H "Authorization: ${{ secrets.NEKOWEB_API_KEY }}" \
-            -F "file=@/tmp/site.zip" \
-            https://nekoweb.org/api/files/upload
+          find . -type f \
+            ! -path "./.git/*" \
+            ! -path "./.github/*" \
+            ! -path "./build/*" \
+          | while read file; do
+              curl -X POST \
+                -H "Authorization: ${{ secrets.NEKOWEB_API_KEY }}" \
+                -F "file=@${file}" \
+                -F "path=/${file#./}" \
+                https://nekoweb.org/api/upload
+            done
