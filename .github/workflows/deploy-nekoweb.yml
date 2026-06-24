@@ -24,7 +24,7 @@ jobs:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-domain: 'scribe-unmoored.nekoweb.org'
           nekoweb-username: 'scribe-unmoored'
-          directory: './build'
+          directory: './build/build'
 
           #fingers crossed
           
