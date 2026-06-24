@@ -8,19 +8,23 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Create zip
+      - name: Prepare build
         run: |
-          zip -r site.zip . \
-            -x ".git/*" \
-            -x ".github/*"
+          mkdir -p ./build
+          cp -r ./ ./build
 
-      - name: Upload to Nekoweb
-        run: |
-          curl \
-            -H "Authorization: ${{ secrets.NEKOWEB_API_KEY }}" \
-            -F "file=@site.zip" \
-            https://nekoweb.org/api/upload
+      - name: Deploy to Nekoweb
+        uses: mp-pinheiro/nekoweb-deploy@main
+        with:
+          API_KEY: ${{ secrets.NEKOWEB_API_KEY }}
+          BUILD_DIR: './build'
+          DEPLOY_DIR: '/'
+          CLEANUP: 'False'
+          DELAY: '0.5'
+          NEKOWEB_PAGENAME: 'scribe-unmoored'
+          ENCRYPTION_KEY: ${{ secrets.NEKOWEB_ENCRYPTION_KEY }}
