@@ -27,7 +27,6 @@ jobs:
           API_KEY: ${{ secrets.NEKOWEB_API_KEY }}
           BUILD_DIR: './build'
           DEPLOY_DIR: '/'
-          CLEANUP: 'False'
           DELAY: '0.5'
           NEKOWEB_PAGENAME: 'scribe-unmoored'
           ENCRYPTION_KEY: ${{ secrets.NEKOWEB_ENCRYPTION_KEY }}
