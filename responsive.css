@@ -1,5 +1,4 @@
 
-
 /* --- Hamburger button: hidden on desktop, shown on mobile --- */
 .site-header {
   position: relative; /* anchors the button's absolute position */
@@ -71,10 +70,15 @@
 
   /* Menu button drops into normal flow below the title/subtitle
      instead of floating over them — this guarantees no overlap
-     no matter how many lines the title wraps to. */
+     no matter how many lines the title wraps to.
+     top/right are explicitly cleared here — otherwise the base
+     rule's absolute-positioning offsets (top: 50%; right: 16px)
+     still nudge a relatively-positioned element off its normal spot. */
   .menu-toggle {
     display: block;
     position: relative;
+    top: auto;
+    right: auto;
     transform: none;
     margin: 16px auto 0;
   }
