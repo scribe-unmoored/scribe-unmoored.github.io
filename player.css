@@ -3,6 +3,8 @@
    Lives at the site root, referenced by every page via:
      <link rel="stylesheet" href="/player.css">
    Identical everywhere — do NOT duplicate this into subfolders.
+
+   Because this is a globally referenced CSS, put stuff you want everywhere here.
    ============================================================ */
 
 :root {
@@ -184,4 +186,11 @@ body.player-collapsed {
     font-size: 0.65rem;
     padding: 5px 6px;
   }
+}
+
+
+/* global stuff */
+
+body {
+  cursor: url("/images/main/cursor.png") 20 19, auto;
 }
