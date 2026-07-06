@@ -12,12 +12,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href=responsive.css">
 </head>
 <body>
   <div class="page">
     <header class="site-header">
       <p class="website-title">THE SCRIBE UNMOORED</p>
       <p class="subtitle">A Repository of Fiction, Essays, and Miscellanies</p>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </header>
     <div class="layout">
       <nav class="sidebar">
@@ -265,7 +269,7 @@
     });
   })();
   </script>
-
+<script src="nav-toggle.js"></script> 
 </body>
 <footer class="copyright">
   <p>The Elder Scrolls and all related intellectual property are owned by Bethesda Softworks. </p>
