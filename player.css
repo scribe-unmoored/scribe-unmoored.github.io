@@ -192,5 +192,9 @@ body.player-collapsed {
 /* global stuff */
 
 body {
-  cursor: url("/images/main/cursor.png") 20 19, auto;
+  cursor: url("/images/cursor.png") 20 19, auto;
+}
+
+a, button {
+  cursor: url("/images/cursor-hover.png") 20 19, auto;
 }
