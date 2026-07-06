@@ -385,3 +385,21 @@ body {
   pointer-events: none;
   z-index: 0;
 }
+
+/* mobile */
+
+/* ─── MOBILE: TITLE FIX ───────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.6rem;
+    letter-spacing: 0.15em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.3rem;
+    letter-spacing: 0.08em;
+  }
+}
