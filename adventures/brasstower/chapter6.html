@@ -107,55 +107,6 @@
   <p>This is an unofficial, non-commercial fan work.</p>
   <p>All original characters, stories, text, and music are © 2026 The Scribe Unmoored.</p>
 </footer>
-<script>
-	const decodebutton = document.getElementById('decodebutton');
-	const scrambletext = document.getElementById('scrambletext');
-	const hiddencontent = document.getElementById('hiddencontent');
-
-	const target = "Elysana captured. First to know. Cathedral of Auriel.";
-
-	let currentposition = 0;
-	let tries = 0;
-	let resolved = [];
-
-	decodebutton.addEventListener("click", function() {
-		const anagram = scrambletext.textContent;
-		decodebutton.disabled = true;
-		const interval = setInterval(function() {
-			const randomLetter = randomChar();
-			resolved[currentposition] = randomLetter;
-			tries++;
-
-			if (randomLetter === target[currentposition] || tries >= 6) {
-			  resolved[currentposition] = target[currentposition];
-			  currentposition++;
-			  tries = 0;
-			}
-
-			scrambletext.textContent = resolved.join("") + anagram.slice(currentposition + 1);
-			
-			if (currentposition >= target.length) {
-				clearInterval(interval);
-				scrambletext.textContent = target;
-
-				const delay = Math.floor(Math.random() * 5000) + 4000;
-				setTimeout(function() {
-				  hiddencontent.style.display = "block";
-				  setTimeout(function() {
-					  hiddencontent.style.opacity = "1";
-				  }, 20);
-				}, delay);
-			}
-
-		}, 30);
-	});
-
-	function randomChar() {
-	  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz !?.,";
-	  return chars[Math.floor(Math.random() * chars.length)];
-	}
-
-</script>
 <script src="../../nav-toggle.js"></script>
 </body>
 
