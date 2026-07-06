@@ -1,0 +1,134 @@
+/* --- Hamburger button for mobile --- */
+.site-header {
+  position: relative; /* anchors the button's absolute position */
+}
+
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 32px;
+  right: 20px;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.menu-toggle span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #c5a35a;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 10px; }
+.menu-toggle span:nth-child(3) { top: 20px; }
+
+.menu-toggle.is-active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.menu-toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.is-active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* ============================================================
+   BREAKPOINT: tablets and phones
+   ============================================================ */
+@media (max-width: 768px) {
+
+  .page {
+    padding: 20px;
+  }
+
+  /* Site title: 3rem + 0.5em letter-spacing overflows badly */
+  .website-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.15em;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    padding: 0 8px;
+  }
+
+  .site-header {
+    padding: 20px 0;
+  }
+
+  /* Show the hamburger button */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Stack sidebar above content instead of side-by-side */
+  .layout {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Sidebar becomes a collapsible panel, closed by default */
+  .sidebar {
+    display: none;
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #3a3323;
+  }
+
+  .sidebar.open {
+    display: block;
+  }
+
+  .wheel-link {
+    margin-bottom: 16px;
+  }
+
+  .content-box {
+    padding: 20px;
+  }
+
+  /* Gallery: 3 fixed columns is too cramped on a phone */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid img {
+    height: 130px;
+  }
+
+  /* Halt/warning page title has the same oversize problem as site title */
+  .halt-title {
+    font-size: 1.8rem;
+  }
+
+  .warning-container {
+    margin: 2rem auto;
+    padding: 0 12px;
+  }
+}
+
+/* ============================================================
+   BREAKPOINT: small phones
+   ============================================================ */
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .website-title {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+}
