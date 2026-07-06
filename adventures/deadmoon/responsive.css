@@ -1,0 +1,109 @@
+
+
+/* --- Hamburger button: hidden on desktop, shown on mobile --- */
+.site-header {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.menu-toggle span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #c5a35a;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 10px; }
+.menu-toggle span:nth-child(3) { top: 20px; }
+
+.menu-toggle.is-active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.menu-toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.is-active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* ============================================================
+   BREAKPOINT: tablets and phones
+   ============================================================ */
+@media (max-width: 768px) {
+
+  .page {
+    padding: 20px;
+  }
+
+  .site-header {
+    padding: 20px 0;
+  }
+
+  .website-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.15em;
+    padding: 0 12px;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    padding: 0 12px;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: relative;
+    margin: 16px auto 0;
+  }
+
+  .layout {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .sidebar {
+    display: none;
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #3a3323;
+  }
+
+  .sidebar.open {
+    display: block;
+  }
+
+  .wheel-link {
+    margin-bottom: 16px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+/* ============================================================
+   BREAKPOINT: small phones
+   ============================================================ */
+@media (max-width: 480px) {
+  .website-title {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+}
