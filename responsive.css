@@ -1,5 +1,6 @@
 
-/* --- Hamburger button for mobile --- */
+
+/* --- Hamburger button: hidden on desktop, shown on mobile --- */
 .site-header {
   position: relative; /* anchors the button's absolute position */
 }
@@ -56,20 +57,26 @@
   .website-title {
     font-size: 1.5rem;
     letter-spacing: 0.15em;
+    padding: 0 12px;
   }
 
   .subtitle {
     font-size: 0.85rem;
-    padding: 0 8px;
+    padding: 0 12px;
   }
 
   .site-header {
     padding: 20px 0;
   }
 
-  /* Show the hamburger button */
+  /* Menu button drops into normal flow below the title/subtitle
+     instead of floating over them — this guarantees no overlap
+     no matter how many lines the title wraps to. */
   .menu-toggle {
     display: block;
+    position: relative;
+    transform: none;
+    margin: 16px auto 0;
   }
 
   /* Stack sidebar above content instead of side-by-side */
@@ -101,7 +108,7 @@
     padding: 20px;
   }
 
-  /* Gallery */
+  /* Gallery: 3 fixed columns is too cramped on a phone */
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -110,7 +117,7 @@
     height: 130px;
   }
 
-  /* Halt/warning pages */
+  /* Halt/warning page title has the same oversize problem as site title */
   .halt-title {
     font-size: 1.8rem;
   }
