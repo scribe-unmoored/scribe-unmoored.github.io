@@ -1,0 +1,187 @@
+/* ============================================================
+   PLAYER.CSS — site-wide persistent music player
+   Lives at the site root, referenced by every page via:
+     <link rel="stylesheet" href="/player.css">
+   Identical everywhere — do NOT duplicate this into subfolders.
+   ============================================================ */
+
+:root {
+  --player-bar-height: 60px;
+  --player-handle-height: 24px;
+}
+
+/* Reserve room at the bottom of every page so content never sits
+   underneath the fixed bar. Shrinks when the player collapses. */
+body {
+  padding-bottom: calc(var(--player-bar-height) + var(--player-handle-height) + env(safe-area-inset-bottom, 0px));
+  transition: padding-bottom 0.3s ease;
+}
+
+body.player-collapsed {
+  padding-bottom: calc(var(--player-handle-height) + env(safe-area-inset-bottom, 0px));
+}
+
+.player-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: #0f0f0f;
+  border-top: 1px solid #c5a35a;
+  font-family: Georgia, "Times New Roman", serif;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.player-bar.collapsed {
+  transform: translateY(calc(100% - var(--player-handle-height)));
+}
+
+/* --- Collapse handle: always visible, even when collapsed --- */
+.player-handle {
+  height: var(--player-handle-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #6b6457;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  user-select: none;
+  border-bottom: 1px solid #211d14;
+  background: #0b0b0b;
+  transition: color 0.2s ease;
+}
+
+.player-handle:hover {
+  color: #c5a35a;
+}
+
+.player-handle-arrow {
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+.player-bar.collapsed .player-handle-arrow {
+  transform: rotate(180deg);
+}
+
+/* --- Main control row --- */
+.player-bar-inner {
+  height: var(--player-bar-height);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.player-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #c5a35a;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.player-btn:hover {
+  color: #e2d2a2;
+}
+
+.player-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.player-play svg {
+  width: 20px;
+  height: 20px;
+}
+
+.player-divider {
+  width: 1px;
+  height: 28px;
+  background: #3a3323;
+  flex-shrink: 0;
+}
+
+.player-track-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.player-track-title {
+  font-family: "Cinzel", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e2d2a2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-track-sub {
+  font-family: "Courier New", monospace;
+  font-size: 0.65rem;
+  color: #6b6457;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-playlist-select {
+  flex-shrink: 0;
+}
+
+.player-playlist-select select {
+  background: #151515;
+  color: #c5a35a;
+  border: 1px solid #3a3323;
+  font-family: "Cinzel", serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.player-playlist-select select:hover,
+.player-playlist-select select:focus {
+  border-color: #c5a35a;
+  outline: none;
+}
+
+/* --- Small screens: drop the secondary label, tighten spacing --- */
+@media (max-width: 520px) {
+  .player-track-sub {
+    display: none;
+  }
+
+  .player-bar-inner {
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .player-playlist-select select {
+    font-size: 0.65rem;
+    padding: 5px 6px;
+  }
+}
