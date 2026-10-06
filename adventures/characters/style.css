@@ -3,6 +3,19 @@
     src: url("../../fonts/OMWAyembedt.otf") format("opentype");
 }
 
+.character-portrait {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+
+  margin: 2rem auto;
+
+  border: 1px solid #c5a35a;
+  padding: 6px;
+  background: #0b0b0b;
+}
+
 body {
   margin: 0;
   background: #0b0b0b;
