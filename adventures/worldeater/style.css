@@ -43,7 +43,7 @@ h1 {
   margin: 0;
 }
 
-/* ember accent: the one warm color, used sparingly */
+/* Ember accent. Colder alternative: #8fa9c0 */
 .subtitle {
   color: #c98a4b;
   font-style: italic;
